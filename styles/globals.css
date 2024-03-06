@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
+body {
+  font-family: "Open Sans";
+  color: white;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+a:link,
+a:visited,
+a:active {
+  color: white;
+  text-decoration: none;
+  font-size: 22pt;
+}
+p {
+  margin: 0px;
+}
+img {
+  margin: 0px auto 0px auto;
+  aspect-ratio: attr(width) / attr(height);
+}
+div {
+  display: flex;
+}
+
+@media (max-width: 1200px) {
+  body {
+    width: 850px;
+    height: 100%;
+    overflow: scroll;
+    margin: 5px auto 0 auto;
+  }
+  h1 {
+    display: inline;
+    margin: 0;
+  }
+}
+@media (max-width: 800px) {
+  body {
+    width: 320px;
+    height: 100%;
+    overflow: scroll;
+    margin: 5px auto 0 auto;
+  }
+  h1 {
+    margin: 0.2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 23pt;
+  }
+}

@@ -1,0 +1,71 @@
+.container {
+  margin: 0px auto 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 832px;
+  justify-content: center;
+}
+.liste {
+  list-style-type: none;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  position: relative;
+  max-height: 700px;
+  overflow-y: auto;
+}
+.heading {
+  font-size: 28pt;
+  font-weight: bolder;
+  letter-spacing: 0.1rem;
+  border-radius: 0.5em 0.5em 0 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  margin: 0px;
+  padding: 20px;
+  justify-content: center;
+  position: relative;
+}
+.eintrag {
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0px;
+  padding: 20px;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+.liste:first-child {
+  border-top: 2px solid #ffffff;
+}
+.liste:hover .eintrag:not(:hover) {
+  opacity: 0.2;
+}
+.logos {
+  padding: 0px;
+  display: flex;
+}
+.images {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5em;
+}
+.links:first-child {
+  display: block;
+  border-top: 5px solid #ffffff;
+}
+.links:last-child {
+  display: block;
+  border-bottom: 5px solid #ffffff;
+}
+.ribodiv{
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.retro {
+  font-size: 0.4em;
+  font-style: italic;
+}
