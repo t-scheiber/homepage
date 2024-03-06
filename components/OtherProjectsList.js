@@ -12,8 +12,8 @@ const LinkList = ({ links }) => {
                 className={styles.images}
                 alt={`${link.name} Logo`}
                 src={link.logoSrc}
-                width="40px"
-                height="40px"
+                width="40"
+                height="40"
               />
             </span>
             {link.name}
