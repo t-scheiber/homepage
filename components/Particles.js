@@ -10,10 +10,7 @@ const ParticlesComponent = (props) => {
   useEffect(() => {
     const userAgent = navigator.userAgent;
     // Simple check for mobile devices based on the user agent string
-    const mobileCheck =
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        userAgent
-      );
+    const mobileCheck = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
     setIsMobile(mobileCheck);
   }, []);
   // using useMemo is not mandatory, but it's recommended since this value can be memoized if static
@@ -22,9 +19,6 @@ const ParticlesComponent = (props) => {
     // all options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
     return {
       autoPlay: true,
-      background: {
-        color: "#293038", // this sets a background color for the canvas
-      },
       fullScreen: {
         enable: true, // enabling this will make the canvas fill the entire screen, it's enabled by default
         zIndex: -1, // this is the z-index value used when the fullScreen is enabled, it's 0 by default
