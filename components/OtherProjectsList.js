@@ -8,13 +8,7 @@ const LinkList = ({ links }) => {
         <a key={index} className={styles.links} href={link.href}>
           <li className={styles.eintrag}>
             <span className={styles.logos}>
-              <Image
-                className={styles.images}
-                alt={`${link.name} Logo`}
-                src={link.logoSrc}
-                width="40"
-                height="40"
-              />
+              <Image className={styles.images} alt={`${link.name} Logo`} src={link.logoSrc} width="40" height="40" />
             </span>
             {link.name}
           </li>
@@ -26,6 +20,16 @@ const LinkList = ({ links }) => {
 
 const links = [
   {
+    href: "https://www.mayr-dach.thomasscheiber.com/",
+    logoSrc: "/files/logos/mayr.png",
+    name: "Mayr Dach",
+  },
+  {
+    href: "https://www.villa-claudia.eu/",
+    logoSrc: "/files/logos/villaclaudia.png",
+    name: "Villa Claudia",
+  },
+  {
     href: "https://www.villadijana.eu/",
     logoSrc: "/files/logos/villadijana.png",
     name: "Villa Dijana",
@@ -34,11 +38,6 @@ const links = [
     href: "https://www.europetalks.eu/",
     logoSrc: "/files/logos/europetalks.png",
     name: "Europe Talks",
-  },
-  {
-    href: "https://www.mayr-dach.at/",
-    logoSrc: "/files/logos/mayr.png",
-    name: "Mayr Dach",
   },
   {
     href: "https://www.darat-thaimassage.at/",
