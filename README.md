@@ -9,7 +9,7 @@ Hi, I'm Thomas Scheiber, a passionate web developer specializing in front-end de
 * **Certifications:** See the qualifications I've earned.
 * **Contact:**  Get in touch with me for collaborations or inquiries.
 
-Feel free to explore my work and get in touch if you have any questions or project ideas! You can also connect with me on [Instagram](your Instagram link), [Facebook](your Facebook link), and [GitHub](your GitHub link).
+Feel free to explore my work and get in touch if you have any questions or project ideas! You can also connect with me on [Instagram]https://instagram.com/thomasscheiberphotography/, [LinkedIn](your Facebook link), and [GitHub](your GitHub link).
 
 **Built with:** Next.js, Tailwind CSS, JavaScript, React
 
