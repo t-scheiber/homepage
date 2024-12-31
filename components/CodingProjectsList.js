@@ -3,6 +3,10 @@ import styles from "../styles/Codingprojects.module.css";
 const CodingProjectsList = () => {
   const projects = [
     {
+      name: "EuropeTalks Homepage",
+      url: "https://europetalks.eu/",
+    },
+    {
       name: "Rock Paper Scissors App",
       url: "https://schere-stein-papier.thomasscheiber.com/",
     },

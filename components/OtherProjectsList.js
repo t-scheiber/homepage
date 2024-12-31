@@ -8,7 +8,13 @@ const LinkList = ({ links }) => {
         <a key={index} className={styles.links} href={link.href}>
           <li className={styles.eintrag}>
             <span className={styles.logos}>
-              <Image className={styles.images} alt={`${link.name} Logo`} src={link.logoSrc} width="40" height="40" />
+              <Image
+                className={styles.images}
+                alt={`${link.name} Logo`}
+                src={link.logoSrc}
+                width="40"
+                height="40"
+              />
             </span>
             {link.name}
           </li>
@@ -20,9 +26,14 @@ const LinkList = ({ links }) => {
 
 const links = [
   {
-    href: "https://www.mayr-dach.thomasscheiber.com/",
-    logoSrc: "/files/logos/mayr.png",
-    name: "Mayr Dach",
+    href: "https://hd-architekten.at/",
+    logoSrc: "/files/logos/hda.png",
+    name: "HD Architekten",
+  },
+  {
+    href: "https://hd-projekt.at/",
+    logoSrc: "/files/logos/hdp.png",
+    name: "HD Projekt Baumanagement",
   },
   {
     href: "https://www.villa-claudia.eu/",
@@ -35,20 +46,16 @@ const links = [
     name: "Villa Dijana",
   },
   {
-    href: "https://www.europetalks.eu/",
-    logoSrc: "/files/logos/europetalks.png",
-    name: "Europe Talks",
+    href: "https://www.mayr-dach.thomasscheiber.com/",
+    logoSrc: "/files/logos/mayr.png",
+    name: "Mayr Dach",
   },
   {
     href: "https://www.darat-thaimassage.at/",
     logoSrc: "/files/logos/darat.png",
     name: "Darat Thaimassage",
   },
-  {
-    href: "https://hd-projekt.at/",
-    logoSrc: "/files/logos/hdp.png",
-    name: "HD Projekt Baumanagement",
-  },
+
   {
     href: "https://jugendlichefuerjugendliche.wordpress.com/",
     logoSrc: "/files/logos/ju4ju.png",
