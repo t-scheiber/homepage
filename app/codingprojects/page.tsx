@@ -4,10 +4,10 @@ import CodingProjectsList from "@/components/CodingProjectsList";
 
 export const metadata: Metadata = {
   title: "Coding Projects",
-  description: "Explore my coding projects including React applications, Next.js websites, weather apps, calculators, and full-stack web development projects.",
+  description: "Explore my coding projects including AI video generation, finance apps, React applications, Next.js websites, weather apps, calculators, and full-stack web development projects.",
   openGraph: {
     title: "Coding Projects | Thomas Scheiber",
-    description: "Portfolio of coding projects built with React, Next.js, TypeScript, and modern web technologies.",
+    description: "Portfolio of coding projects including AI video generation, finance apps, React, Next.js, TypeScript, and modern web technologies.",
   },
 };
 

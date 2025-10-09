@@ -2,7 +2,7 @@ interface Project {
   name: string;
   url: string;
   githubRepo: string;
-  favicon?: string; // Optional: filename with extension, e.g., "europetalks.png"
+  favicon?: string;
 }
 
 const CodingProjectsList: React.FC = () => {
@@ -18,6 +18,18 @@ const CodingProjectsList: React.FC = () => {
       url: "https://schere-stein-papier.thomasscheiber.com/",
       githubRepo: "https://github.com/t-scheiber/RockPaperScissors",
       favicon: "rock-paper-scissors.svg",
+    },
+    {
+      name: "AI Video Generation",
+      url: "https://aivideogeneration.thomasscheiber.com/",
+      githubRepo: "https://github.com/t-scheiber/aivideogeneration",
+      favicon: "ai-video.svg",
+    },
+    {
+      name: "Finance App",
+      url: "https://finance.thomasscheiber.com/",
+      githubRepo: "https://github.com/t-scheiber/financeapp",
+      favicon: "finance.svg",
     },
     {
       name: "Coffee Guide App",
