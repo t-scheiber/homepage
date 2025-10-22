@@ -1,9 +1,9 @@
+/* Material Icons - keep for icon support */
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Material Icons - keep for icon support */
-@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
 
 @layer base {
   html {
@@ -94,7 +94,7 @@
     button {
       @apply min-h-[44px] min-w-[44px];
     }
-    
+
     a:hover {
       @apply opacity-100;
     }
