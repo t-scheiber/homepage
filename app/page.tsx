@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 import TileLink from "@/components/TileLink";
 import PDFViewer from "@/components/PDFViewer";
 import Image from "next/image";
@@ -24,7 +24,7 @@ export default function Home() {
         <h1 className="text-4xl md:text-3xl sm:text-2xl">Thomas Scheiber</h1>
         <h1 className="text-4xl md:text-3xl sm:text-2xl">Web Developer</h1>
       </header>
-      
+
       <div className="mx-auto flex flex-wrap gap-4 max-w-[850px] justify-center px-4 pb-8 md:gap-4 sm:gap-4">
         {/* CV Viewer */}
         <button
@@ -33,7 +33,7 @@ export default function Home() {
           aria-label="View CV"
         >
           <Image
-            className="rounded-full mx-auto"
+            className="rounded-full mx-auto w-[145px] h-[145px] md:w-[120px] md:h-[120px] sm:w-[100px] sm:h-[100px]"
             src={portrait}
             alt="Thomas Scheiber portrait photo"
             width={145}
@@ -59,6 +59,7 @@ export default function Home() {
           imageHeight={173}
           priority={true}
           className="w-[400px] h-[270px] rounded-2xl bg-white/65 flex flex-col justify-center text-center transition-all duration-300 ease-in-out cursor-pointer hover:-translate-y-1 hover:shadow-xl md:w-80 md:h-[210px] sm:w-80 sm:h-[210px] sm:p-4"
+          imageClassName="mx-auto w-[260px] h-[173px] md:w-[220px] md:h-[146px] sm:w-[180px] sm:h-[120px]"
         />
 
         {/* Certifications */}
@@ -70,6 +71,7 @@ export default function Home() {
           imageWidth={125}
           imageHeight={125}
           className="w-[400px] h-[270px] rounded-2xl bg-white/65 flex flex-col justify-center text-center transition-all duration-300 ease-in-out cursor-pointer hover:-translate-y-1 hover:shadow-xl md:w-80 md:h-[210px] sm:w-80 sm:h-[210px] sm:p-4"
+          imageClassName="mx-auto w-[125px] h-[125px] md:w-[105px] md:h-[105px] sm:w-[90px] sm:h-[90px]"
         />
 
         {/* WordPress & Other Projects */}
@@ -81,28 +83,31 @@ export default function Home() {
           imageWidth={125}
           imageHeight={125}
           className="w-[400px] h-[270px] rounded-2xl bg-white/65 flex flex-col justify-center text-center transition-all duration-300 ease-in-out cursor-pointer hover:-translate-y-1 hover:shadow-xl md:w-80 md:h-[210px] sm:w-80 sm:h-[210px] sm:p-4"
+          imageClassName="mx-auto w-[125px] h-[125px] md:w-[105px] md:h-[105px] sm:w-[90px] sm:h-[90px]"
         />
 
         {/* Social Media - LinkedIn & GitHub */}
         <TileLink
-          href={process.env.NEXT_PUBLIC_LINKEDIN_URL || '#'}
+          href={process.env.NEXT_PUBLIC_LINKEDIN_URL || "#"}
           label="LinkedIn"
           imageSrc={linkedin}
           imageAlt="LinkedIn logo"
           imageWidth={95}
           imageHeight={95}
           className="w-[190px] h-[270px] flex flex-col justify-center text-center bg-white/65 rounded-2xl transition-all duration-300 ease-in-out cursor-pointer hover:-translate-y-1 hover:shadow-xl md:w-[150px] md:h-[210px] sm:w-[calc(50%-0.5rem)] sm:min-w-[140px] sm:h-[210px]"
+          imageClassName="mx-auto w-[95px] h-[95px] md:w-[80px] md:h-[80px] sm:w-[70px] sm:h-[70px]"
           external={true}
         />
 
         <TileLink
-          href={process.env.NEXT_PUBLIC_GITHUB_URL || '#'}
+          href={process.env.NEXT_PUBLIC_GITHUB_URL || "#"}
           label="Github"
           imageSrc={github}
           imageAlt="GitHub logo"
           imageWidth={95}
           imageHeight={95}
           className="w-[190px] h-[270px] flex flex-col justify-center text-center bg-white/65 rounded-2xl transition-all duration-300 ease-in-out cursor-pointer hover:-translate-y-1 hover:shadow-xl md:w-[150px] md:h-[210px] sm:w-[calc(50%-0.5rem)] sm:min-w-[140px] sm:h-[210px]"
+          imageClassName="mx-auto w-[95px] h-[95px] md:w-[80px] md:h-[80px] sm:w-[70px] sm:h-[70px]"
           external={true}
         />
 
@@ -116,6 +121,7 @@ export default function Home() {
             imageWidth={65}
             imageHeight={65}
             className="w-[190px] h-[128px] bg-white/65 rounded-2xl flex flex-col justify-center text-center transition-all duration-300 ease-in-out cursor-pointer hover:-translate-y-1 hover:shadow-xl md:w-[150px] md:h-[99px] sm:w-[calc(50%-0.5rem)] sm:min-w-[140px] sm:h-[99px]"
+            imageClassName="mx-auto w-[65px] h-[65px] md:w-[55px] md:h-[55px] sm:w-[45px] sm:h-[45px]"
             external={true}
           />
 
@@ -127,28 +133,31 @@ export default function Home() {
             imageWidth={65}
             imageHeight={65}
             className="w-[190px] h-[128px] bg-white/65 rounded-2xl flex flex-col justify-center text-center transition-all duration-300 ease-in-out cursor-pointer hover:-translate-y-1 hover:shadow-xl md:w-[150px] md:h-[99px] sm:w-[calc(50%-0.5rem)] sm:min-w-[140px] sm:h-[99px]"
+            imageClassName="mx-auto w-[65px] h-[65px] md:w-[55px] md:h-[55px] sm:w-[45px] sm:h-[45px]"
             external={true}
           />
 
           <TileLink
-            href={process.env.NEXT_PUBLIC_INSTAGRAM_URL || '#'}
+            href={process.env.NEXT_PUBLIC_INSTAGRAM_URL || "#"}
             label="Instagram"
             imageSrc={instagram}
             imageAlt="Instagram logo"
             imageWidth={65}
             imageHeight={65}
             className="w-[190px] h-[128px] bg-white/65 rounded-2xl flex flex-col justify-center text-center transition-all duration-300 ease-in-out cursor-pointer hover:-translate-y-1 hover:shadow-xl md:w-[150px] md:h-[99px] sm:w-[calc(50%-0.5rem)] sm:min-w-[140px] sm:h-[99px]"
+            imageClassName="mx-auto w-[65px] h-[65px] md:w-[55px] md:h-[55px] sm:w-[45px] sm:h-[45px]"
             external={true}
           />
 
           <TileLink
-            href={process.env.NEXT_PUBLIC_FACEBOOK_URL || '#'}
+            href={process.env.NEXT_PUBLIC_FACEBOOK_URL || "#"}
             label="Facebook"
             imageSrc={facebook}
             imageAlt="Facebook logo"
             imageWidth={65}
             imageHeight={65}
             className="w-[190px] h-[128px] bg-white/65 rounded-2xl flex flex-col justify-center text-center transition-all duration-300 ease-in-out cursor-pointer hover:-translate-y-1 hover:shadow-xl md:w-[150px] md:h-[99px] sm:w-[calc(50%-0.5rem)] sm:min-w-[140px] sm:h-[99px]"
+            imageClassName="mx-auto w-[65px] h-[65px] md:w-[55px] md:h-[55px] sm:w-[45px] sm:h-[45px]"
             external={true}
           />
         </div>
