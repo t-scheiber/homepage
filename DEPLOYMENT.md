@@ -18,9 +18,10 @@ Coolify will automatically set:
 
 ### Domain Configuration
 
-- **Root Domain** (thomasscheiber.com): Point to this application
+- **Root Domain**: `thomasscheiber.com` (no subdomain)
 - Coolify will handle the reverse proxy automatically
 - Cloudflare should proxy through to your VPS
+- DNS: Point `thomasscheiber.com` A record to your VPS IP
 
 ### Important Notes
 
