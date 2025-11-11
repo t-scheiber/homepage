@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /files/pdf/
+
+Sitemap: https://thomasscheiber.com/sitemap.xml
+

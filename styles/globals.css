@@ -1,0 +1,140 @@
+/* Material Icons - keep for icon support */
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
+
+@import "tailwindcss";
+
+@layer base {
+  html {
+    @apply h-full w-full scroll-smooth;
+  }
+
+  body {
+    @apply flex h-screen w-full flex-col items-center justify-start overflow-hidden text-white antialiased;
+    font-family: var(--font-inter, "Inter", sans-serif);
+    font-weight: 400;
+    background-image: url("/files/abstract-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  /* Preload critical background image */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/files/abstract-background.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    opacity: 0;
+  }
+
+  a:link,
+  a:visited,
+  a:active {
+    @apply text-white no-underline text-xl transition-[opacity,transform] duration-200 ease-in-out;
+  }
+
+  a:hover {
+    @apply opacity-90;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline outline-2 outline-white outline-offset-4 rounded;
+  }
+
+  p {
+    @apply m-0;
+  }
+
+  img {
+    @apply mx-auto my-0 block object-contain;
+    aspect-ratio: attr(width) / attr(height);
+  }
+
+  /* Tablet and smaller laptops */
+  @media (max-width: 1200px) {
+    body {
+      @apply py-10;
+    }
+    h1 {
+      @apply inline-flex m-0;
+    }
+  }
+
+  /* Mobile devices */
+  @media (max-width: 800px) {
+    body {
+      @apply py-8;
+      background-attachment: scroll;
+    }
+    h1 {
+      @apply m-1 flex justify-center text-[1.75rem];
+    }
+    a:link,
+    a:visited,
+    a:active {
+      @apply text-lg;
+    }
+    p {
+      @apply text-base;
+    }
+  }
+
+  /* Small mobile devices */
+  @media (max-width: 480px) {
+    h1 {
+      @apply text-2xl;
+    }
+    a:link,
+    a:visited,
+    a:active {
+      @apply text-base;
+    }
+  }
+
+  /* Touch device optimizations */
+  @media (hover: none) and (pointer: coarse) {
+    a,
+    button {
+      @apply min-h-[44px] min-w-[44px];
+    }
+
+    a:hover {
+      @apply opacity-100;
+    }
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar styling */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(100, 100, 100, 0.2);
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(60, 60, 60, 0.7);
+    border-radius: 10px;
+    border: 2px solid rgba(100, 100, 100, 0.2);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(40, 40, 40, 0.9);
+  }
+
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(60, 60, 60, 0.7) rgba(100, 100, 100, 0.2);
+  }
+}
