@@ -97,12 +97,12 @@ function CertificatesList() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View ${title} certificate from ${organization}`}
-            className={`bg-white/20 backdrop-blur-md m-0 py-4 px-6 justify-center items-center relative flex transition-all duration-200 sm:py-3 sm:px-4 sm:text-base sm:flex-col sm:items-start sm:text-left hover:bg-white/30 hover:backdrop-blur-none !text-white !text-lg font-normal drop-shadow-lg ${index !== certificates.length - 1 ? "border-b border-white" : ""}`}
+            className={`bg-white/20 backdrop-blur-md m-0 py-4 px-6 justify-center items-center relative flex transition-all duration-200 sm:py-3 sm:px-4 sm:text-base hover:bg-white/30 hover:backdrop-blur-none !text-white !text-lg font-normal drop-shadow-lg ${index !== certificates.length - 1 ? "border-b border-white" : ""}`}
           >
-            <span className="mr-4 sm:mb-2 bg-white/90 rounded-lg p-2 flex items-center justify-center">
+            <span className="flex mr-4 sm:mr-3 bg-white/90 rounded-lg p-2 flex-shrink-0">
               <Image alt={alt} src={src} width={40} height={40} className="w-10 h-10 sm:w-9 sm:h-9" />
             </span>
-            <span className="flex items-center">{title}</span>
+            <span>{title}</span>
           </a>
         </li>
       ))}

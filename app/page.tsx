@@ -44,7 +44,7 @@ export default function Home() {
     <main className="mx-auto flex h-full w-full flex-col items-center justify-center px-[1.5vw] py-[4vh] sm:px-[1.5vw] sm:py-[4vh] relative">
       <div className="flex flex-col items-center w-full max-w-[min(95vw,1050px)] 4k:max-w-[min(95vw,1600px)]">
         <header className="flex flex-col items-center text-center text-white mb-[3vh] sm:mb-[3vh] absolute top-[4vh] sm:top-[4vh]">
-          <h1 className="text-[1.4vw] font-normal tracking-normal leading-tight sm:text-[2.75vw]">
+          <h1 className="text-[2.6vw] font-thin tracking-normal leading-tight sm:text-[3.25vw]">
             Thomas Scheiber
           </h1>
         </header>
