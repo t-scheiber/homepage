@@ -46,7 +46,7 @@ export default function Home() {
             aria-label="View CV"
           >
             <Image
-              className="h-[8vh] w-[8vh] rounded-full object-cover shadow-lg flex-shrink-0 aspect-square sm:h-[10vh] sm:w-[10vh]"
+              className="h-[8vh] w-[8vh] rounded-full object-cover shadow-lg shrink-0 aspect-square sm:h-[10vh] sm:w-[10vh]"
               src={portrait}
               alt="Thomas Scheiber portrait photo"
               width={145}
