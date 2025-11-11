@@ -13,6 +13,7 @@ interface TileLinkProps {
   download?: string;
   className?: string;
   imageClassName?: string;
+  textMargin?: string;
 }
 
 export default function TileLink({
@@ -27,6 +28,7 @@ export default function TileLink({
   download,
   className,
   imageClassName,
+  textMargin = "mt-[0.5vh]",
 }: TileLinkProps) {
   // Default tile styles
   const defaultClassName =
@@ -49,7 +51,7 @@ export default function TileLink({
         height={imageHeight}
         priority={priority}
       />
-      <p className="mt-[0.5vh] text-[1.25vw] font-light tracking-wide leading-normal sm:mt-[0.5vh] sm:text-[2.25vw]">
+      <p className={`${textMargin} text-[0.75vw] font-light tracking-wide leading-normal sm:${textMargin} sm:text-[1.35vw]`}>
         {label}
       </p>
     </>

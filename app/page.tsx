@@ -25,7 +25,7 @@ export default function Home() {
     <main className="mx-auto flex h-full w-full flex-col items-center justify-center px-[1.5vw] py-[4vh] sm:px-[1.5vw] sm:py-[4vh] relative">
       <div className="flex flex-col items-center w-full max-w-[min(95vw,1050px)] 4k:max-w-[min(95vw,1600px)]">
         <header className="flex flex-col items-center text-center text-white mb-[3vh] sm:mb-[3vh] absolute top-[4vh] sm:top-[4vh]">
-          <h1 className="text-[2.5vw] font-normal tracking-normal leading-tight sm:text-[4.5vw]">
+          <h1 className="text-[1.4vw] font-normal tracking-normal leading-tight sm:text-[2.75vw]">
             Thomas Scheiber
           </h1>
         </header>
@@ -53,7 +53,7 @@ export default function Home() {
               height={145}
               priority
             />
-            <p className="text-[1.5vw] font-light tracking-wide leading-normal sm:text-[2.75vw]">
+            <p className="text-[0.9vw] font-light tracking-wide leading-normal sm:text-[1.6vw]">
               CV
             </p>
           </button>
@@ -67,7 +67,8 @@ export default function Home() {
             imageHeight={160}
             priority
             className="col-span-1 w-full lg:col-span-2"
-            imageClassName="w-[15vw] max-w-full lg:w-[10vw]"
+            imageClassName="w-[14vw] max-w-full lg:w-[9.5vw]"
+            textMargin="mt-[0.05vh]"
           />
 
           {/* Row 2: Certifications (left, spans 2 cols) | WordPress (right, spans 2 cols) */}
@@ -80,6 +81,7 @@ export default function Home() {
             imageHeight={125}
             className="col-span-1 w-full lg:col-span-2"
             imageClassName="h-[10vh] w-[10vh] lg:h-[8vh] lg:w-[8vh]"
+            textMargin="mt-[0.05vh]"
           />
 
           <TileLink
@@ -127,6 +129,7 @@ export default function Home() {
             imageHeight={65}
             className="col-span-1 w-full"
             imageClassName="h-[4vh] w-[4vh] lg:h-[3.5vh] lg:w-[3.5vh]"
+            textMargin="mt-[0.05vh]"
             external={true}
           />
 
@@ -139,6 +142,7 @@ export default function Home() {
             imageHeight={65}
             className="col-span-1 w-full"
             imageClassName="h-[4vh] w-[4vh] lg:h-[3.5vh] lg:w-[3.5vh]"
+            textMargin="mt-[0.05vh]"
             external={true}
           />
 
@@ -152,6 +156,7 @@ export default function Home() {
             imageHeight={65}
             className="col-span-1 w-full"
             imageClassName="h-[4vh] w-[4vh] lg:h-[3.5vh] lg:w-[3.5vh]"
+            textMargin="mt-[0.05vh]"
             external={true}
           />
 
@@ -164,6 +169,7 @@ export default function Home() {
             imageHeight={65}
             className="col-span-1 w-full"
             imageClassName="h-[4vh] w-[4vh] lg:h-[3.5vh] lg:w-[3.5vh]"
+            textMargin="mt-[0.05vh]"
             external={true}
           />
         </section>
