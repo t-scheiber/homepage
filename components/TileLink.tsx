@@ -30,14 +30,14 @@ export default function TileLink({
 }: TileLinkProps) {
   // Default tile styles
   const defaultClassName =
-    "group relative flex w-full h-full cursor-pointer flex-col items-center justify-center gap-[0.5vh] rounded-2xl bg-white/60 p-[1vh] text-center text-white shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-md transition-all duration-300 ease-in-out hover:bg-white/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:p-[clamp(0.75rem,1.5vh,1.25rem)] sm:gap-[clamp(0.25rem,0.75vh,0.5rem)]";
+    "group relative flex w-full h-full cursor-pointer flex-col items-center justify-center gap-[0.5vh] rounded-2xl bg-white/60 p-[1vh] text-center text-white shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-md transition-all duration-300 ease-in-out hover:bg-white/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:p-[1vh] sm:gap-[0.5vh]";
 
   const finalClassName = className
     ? `${defaultClassName} ${className}`
     : defaultClassName;
   const finalImageClassName = imageClassName
     ? `mx-auto object-contain ${imageClassName}`
-    : "mx-auto h-[clamp(2.5rem,6vh,5rem)] w-[clamp(2.5rem,6vh,5rem)] object-contain";
+    : "mx-auto h-[6vh] w-[6vh] object-contain";
 
   const content = (
     <>
@@ -49,7 +49,7 @@ export default function TileLink({
         height={imageHeight}
         priority={priority}
       />
-      <p className="mt-[0.5vh] text-[1.25vw] font-light tracking-wide leading-normal sm:mt-[clamp(0.125rem,0.5vh,0.5rem)] sm:text-[clamp(1.25rem,2.25vw,1.625rem)]">
+      <p className="mt-[0.5vh] text-[1.25vw] font-light tracking-wide leading-normal sm:mt-[0.5vh] sm:text-[2.25vw]">
         {label}
       </p>
     </>

@@ -19,18 +19,18 @@ export default function Home() {
   const [isPDFViewerOpen, setIsPDFViewerOpen] = useState(false);
 
   const tileButtonClass =
-    "group relative flex w-full h-full cursor-pointer flex-col items-center justify-center gap-[0.5vh] rounded-2xl border-none bg-white/60 p-[1vh] text-center text-white shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-md transition-all duration-300 ease-in-out hover:bg-white/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:p-[clamp(0.75rem,1.5vh,1.25rem)] sm:gap-[clamp(0.25rem,0.75vh,0.5rem)]";
+    "group relative flex w-full h-full cursor-pointer flex-col items-center justify-center gap-[0.5vh] rounded-2xl border-none bg-white/60 p-[1vh] text-center text-white shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-md transition-all duration-300 ease-in-out hover:bg-white/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:p-[1vh] sm:gap-[0.5vh]";
 
   return (
-    <main className="mx-auto flex h-full w-full flex-col items-center justify-center px-[1.5vw] py-[4vh] sm:px-6 sm:py-[clamp(1.5rem,4vh,3rem)] relative">
+    <main className="mx-auto flex h-full w-full flex-col items-center justify-center px-[1.5vw] py-[4vh] sm:px-[1.5vw] sm:py-[4vh] relative">
       <div className="flex flex-col items-center w-full max-w-[min(95vw,1050px)] 4k:max-w-[min(95vw,1600px)]">
-        <header className="flex flex-col items-center text-center text-white mb-[3vh] sm:mb-[clamp(1.5rem,3vh,2rem)] absolute top-[4vh] sm:top-[clamp(1.5rem,4vh,3rem)]">
-          <h1 className="text-[2.5vw] font-normal tracking-normal leading-tight sm:text-[clamp(2.25rem,4.5vw,3.5rem)]">
+        <header className="flex flex-col items-center text-center text-white mb-[3vh] sm:mb-[3vh] absolute top-[4vh] sm:top-[4vh]">
+          <h1 className="text-[2.5vw] font-normal tracking-normal leading-tight sm:text-[4.5vw]">
             Thomas Scheiber
           </h1>
         </header>
 
-        <section className="grid w-full grid-cols-1 gap-[clamp(0.875rem,1.75vw,1.5rem)] lg:grid-cols-4 lg:grid-rows-[repeat(2,minmax(0,1fr))_repeat(2,minmax(0,0.5fr))] lg:gap-[0.9vw] lg:max-h-[65vh]">
+        <section className="grid w-full grid-cols-1 gap-[1.75vw] lg:grid-cols-4 lg:grid-rows-[repeat(2,minmax(0,1fr))_repeat(2,minmax(0,0.5fr))] lg:gap-[0.9vw] lg:max-h-[65vh]">
           <PDFViewer
             pdfUrl="/files/pdf/ScheiberThomasCV.pdf"
             fileName="ScheiberThomasCV.pdf"
@@ -46,14 +46,14 @@ export default function Home() {
             aria-label="View CV"
           >
             <Image
-              className="h-[8vh] w-[8vh] rounded-full object-cover shadow-lg flex-shrink-0 aspect-square sm:h-[clamp(4rem,10vh,8rem)] sm:w-[clamp(4rem,10vh,8rem)]"
+              className="h-[8vh] w-[8vh] rounded-full object-cover shadow-lg flex-shrink-0 aspect-square sm:h-[10vh] sm:w-[10vh]"
               src={portrait}
               alt="Thomas Scheiber portrait photo"
               width={145}
               height={145}
               priority
             />
-            <p className="text-[1.5vw] font-light tracking-wide leading-normal sm:text-[clamp(1.375rem,2.75vw,1.875rem)]">
+            <p className="text-[1.5vw] font-light tracking-wide leading-normal sm:text-[2.75vw]">
               CV
             </p>
           </button>
@@ -67,7 +67,7 @@ export default function Home() {
             imageHeight={160}
             priority
             className="col-span-1 w-full lg:col-span-2"
-            imageClassName="w-[clamp(6rem,15vw,12rem)] max-w-full lg:w-[10vw]"
+            imageClassName="w-[15vw] max-w-full lg:w-[10vw]"
           />
 
           {/* Row 2: Certifications (left, spans 2 cols) | WordPress (right, spans 2 cols) */}
@@ -79,7 +79,7 @@ export default function Home() {
             imageWidth={125}
             imageHeight={125}
             className="col-span-1 w-full lg:col-span-2"
-            imageClassName="h-[clamp(4rem,10vh,9rem)] w-[clamp(4rem,10vh,9rem)] lg:h-[8vh] lg:w-[8vh]"
+            imageClassName="h-[10vh] w-[10vh] lg:h-[8vh] lg:w-[8vh]"
           />
 
           <TileLink
@@ -90,7 +90,7 @@ export default function Home() {
             imageWidth={125}
             imageHeight={125}
             className="col-span-1 w-full lg:col-span-2"
-            imageClassName="h-[clamp(4rem,10vh,9rem)] w-[clamp(4rem,10vh,9rem)] lg:h-[8vh] lg:w-[8vh]"
+            imageClassName="h-[10vh] w-[10vh] lg:h-[8vh] lg:w-[8vh]"
           />
 
           {/* Row 3-4: LinkedIn (col 1, spans 2 rows) | GitHub (col 2, spans 2 rows) | E-Mail (col 3, row 3) | Phone (col 4, row 3) */}
@@ -102,7 +102,7 @@ export default function Home() {
             imageWidth={95}
             imageHeight={95}
             className="col-span-1 w-full lg:row-span-2"
-            imageClassName="h-[clamp(2.5rem,6vh,6rem)] w-[clamp(2.5rem,6vh,6rem)] lg:h-[5vh] lg:w-[5vh]"
+            imageClassName="h-[6vh] w-[6vh] lg:h-[5vh] lg:w-[5vh]"
             external={true}
           />
 
@@ -114,7 +114,7 @@ export default function Home() {
             imageWidth={95}
             imageHeight={95}
             className="col-span-1 w-full lg:row-span-2"
-            imageClassName="h-[clamp(2.5rem,6vh,6rem)] w-[clamp(2.5rem,6vh,6rem)] lg:h-[5vh] lg:w-[5vh]"
+            imageClassName="h-[6vh] w-[6vh] lg:h-[5vh] lg:w-[5vh]"
             external={true}
           />
 
@@ -126,7 +126,7 @@ export default function Home() {
             imageWidth={65}
             imageHeight={65}
             className="col-span-1 w-full"
-            imageClassName="h-[clamp(2rem,4vh,4rem)] w-[clamp(2rem,4vh,4rem)] lg:h-[3.5vh] lg:w-[3.5vh]"
+            imageClassName="h-[4vh] w-[4vh] lg:h-[3.5vh] lg:w-[3.5vh]"
             external={true}
           />
 
@@ -138,7 +138,7 @@ export default function Home() {
             imageWidth={65}
             imageHeight={65}
             className="col-span-1 w-full"
-            imageClassName="h-[clamp(2rem,4vh,4rem)] w-[clamp(2rem,4vh,4rem)] lg:h-[3.5vh] lg:w-[3.5vh]"
+            imageClassName="h-[4vh] w-[4vh] lg:h-[3.5vh] lg:w-[3.5vh]"
             external={true}
           />
 
@@ -151,7 +151,7 @@ export default function Home() {
             imageWidth={65}
             imageHeight={65}
             className="col-span-1 w-full"
-            imageClassName="h-[clamp(2rem,4vh,4rem)] w-[clamp(2rem,4vh,4rem)] lg:h-[3.5vh] lg:w-[3.5vh]"
+            imageClassName="h-[4vh] w-[4vh] lg:h-[3.5vh] lg:w-[3.5vh]"
             external={true}
           />
 
@@ -163,7 +163,7 @@ export default function Home() {
             imageWidth={65}
             imageHeight={65}
             className="col-span-1 w-full"
-            imageClassName="h-[clamp(2rem,4vh,4rem)] w-[clamp(2rem,4vh,4rem)] lg:h-[3.5vh] lg:w-[3.5vh]"
+            imageClassName="h-[4vh] w-[4vh] lg:h-[3.5vh] lg:w-[3.5vh]"
             external={true}
           />
         </section>
