@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useMemo } from "react";
 import TileLink from "@/components/TileLink";
 import PDFViewer from "@/components/PDFViewer";
 import Image from "next/image";
@@ -14,12 +14,31 @@ import facebook from "@/public/files/facebook.svg";
 import instagram from "@/public/files/instagram.svg";
 import envelope from "@/public/files/envelope-solid.svg";
 import phone from "@/public/files/phone-solid.svg";
+import { SOCIAL_LINKS, TILE_BUTTON_CLASS, TEXT_MARGIN } from "@/lib/constants";
+
+const CV_PDF_URL = "/files/pdf/ScheiberThomasCV.pdf";
+const CV_FILE_NAME = "ScheiberThomasCV.pdf";
 
 export default function Home() {
   const [isPDFViewerOpen, setIsPDFViewerOpen] = useState(false);
 
-  const tileButtonClass =
-    "group relative flex w-full h-full cursor-pointer flex-col items-center justify-center gap-[0.5vh] rounded-2xl border-none bg-white/60 p-[1vh] text-center text-white shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-md transition-all duration-300 ease-in-out hover:bg-white/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:p-[1vh] sm:gap-[0.5vh]";
+  const handleOpenPDF = useCallback(() => {
+    setIsPDFViewerOpen(true);
+  }, []);
+
+  const handleClosePDF = useCallback(() => {
+    setIsPDFViewerOpen(false);
+  }, []);
+
+  const emailHref = useMemo(
+    () => (SOCIAL_LINKS.email ? `mailto:${SOCIAL_LINKS.email}` : "#"),
+    []
+  );
+
+  const phoneHref = useMemo(
+    () => (SOCIAL_LINKS.phone ? `tel:${SOCIAL_LINKS.phone}` : "#"),
+    []
+  );
 
   return (
     <main className="mx-auto flex h-full w-full flex-col items-center justify-center px-[1.5vw] py-[4vh] sm:px-[1.5vw] sm:py-[4vh] relative">
@@ -32,17 +51,17 @@ export default function Home() {
 
         <section className="grid w-full grid-cols-1 gap-[1.75vw] lg:grid-cols-4 lg:grid-rows-[repeat(2,minmax(0,1fr))_repeat(2,minmax(0,0.5fr))] lg:gap-[0.9vw] lg:max-h-[65vh]">
           <PDFViewer
-            pdfUrl="/files/pdf/ScheiberThomasCV.pdf"
-            fileName="ScheiberThomasCV.pdf"
+            pdfUrl={CV_PDF_URL}
+            fileName={CV_FILE_NAME}
             isOpen={isPDFViewerOpen}
-            onClose={() => setIsPDFViewerOpen(false)}
+            onClose={handleClosePDF}
           />
 
           {/* Row 1: CV (left, spans 2 cols) | Coding Projects (right, spans 2 cols) */}
           <button
             type="button"
-            onClick={() => setIsPDFViewerOpen(true)}
-            className={`${tileButtonClass} col-span-1 w-full lg:col-span-2`}
+            onClick={handleOpenPDF}
+            className={`${TILE_BUTTON_CLASS} col-span-1 w-full lg:col-span-2`}
             aria-label="View CV"
           >
             <Image
@@ -68,7 +87,7 @@ export default function Home() {
             priority
             className="col-span-1 w-full lg:col-span-2"
             imageClassName="w-[14vw] max-w-full lg:w-[9.5vw]"
-            textMargin="mt-[0.05vh]"
+            textMargin={TEXT_MARGIN.reduced}
           />
 
           {/* Row 2: Certifications (left, spans 2 cols) | WordPress (right, spans 2 cols) */}
@@ -81,7 +100,7 @@ export default function Home() {
             imageHeight={125}
             className="col-span-1 w-full lg:col-span-2"
             imageClassName="h-[10vh] w-[10vh] lg:h-[8vh] lg:w-[8vh]"
-            textMargin="mt-[0.05vh]"
+            textMargin={TEXT_MARGIN.reduced}
           />
 
           <TileLink
@@ -97,7 +116,7 @@ export default function Home() {
 
           {/* Row 3-4: LinkedIn (col 1, spans 2 rows) | GitHub (col 2, spans 2 rows) | E-Mail (col 3, row 3) | Phone (col 4, row 3) */}
           <TileLink
-            href={process.env.NEXT_PUBLIC_LINKEDIN_URL || "#"}
+            href={SOCIAL_LINKS.linkedin}
             label="LinkedIn"
             imageSrc={linkedin}
             imageAlt="LinkedIn logo"
@@ -109,7 +128,7 @@ export default function Home() {
           />
 
           <TileLink
-            href={process.env.NEXT_PUBLIC_GITHUB_URL || "#"}
+            href={SOCIAL_LINKS.github}
             label="Github"
             imageSrc={github}
             imageAlt="GitHub logo"
@@ -121,7 +140,7 @@ export default function Home() {
           />
 
           <TileLink
-            href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+            href={emailHref}
             label="E-Mail"
             imageSrc={envelope}
             imageAlt="Email icon"
@@ -129,12 +148,12 @@ export default function Home() {
             imageHeight={65}
             className="col-span-1 w-full"
             imageClassName="h-[4vh] w-[4vh] lg:h-[3.5vh] lg:w-[3.5vh]"
-            textMargin="mt-[0.05vh]"
+            textMargin={TEXT_MARGIN.reduced}
             external={true}
           />
 
           <TileLink
-            href={`tel:${process.env.NEXT_PUBLIC_PHONE}`}
+            href={phoneHref}
             label="Phone"
             imageSrc={phone}
             imageAlt="Phone icon"
@@ -142,13 +161,13 @@ export default function Home() {
             imageHeight={65}
             className="col-span-1 w-full"
             imageClassName="h-[4vh] w-[4vh] lg:h-[3.5vh] lg:w-[3.5vh]"
-            textMargin="mt-[0.05vh]"
+            textMargin={TEXT_MARGIN.reduced}
             external={true}
           />
 
           {/* Row 4: Instagram (col 3) | Facebook (col 4) - half height */}
           <TileLink
-            href={process.env.NEXT_PUBLIC_INSTAGRAM_URL || "#"}
+            href={SOCIAL_LINKS.instagram}
             label="Instagram"
             imageSrc={instagram}
             imageAlt="Instagram logo"
@@ -156,12 +175,12 @@ export default function Home() {
             imageHeight={65}
             className="col-span-1 w-full"
             imageClassName="h-[4vh] w-[4vh] lg:h-[3.5vh] lg:w-[3.5vh]"
-            textMargin="mt-[0.05vh]"
+            textMargin={TEXT_MARGIN.reduced}
             external={true}
           />
 
           <TileLink
-            href={process.env.NEXT_PUBLIC_FACEBOOK_URL || "#"}
+            href={SOCIAL_LINKS.facebook}
             label="Facebook"
             imageSrc={facebook}
             imageAlt="Facebook logo"
@@ -169,7 +188,7 @@ export default function Home() {
             imageHeight={65}
             className="col-span-1 w-full"
             imageClassName="h-[4vh] w-[4vh] lg:h-[3.5vh] lg:w-[3.5vh]"
-            textMargin="mt-[0.05vh]"
+            textMargin={TEXT_MARGIN.reduced}
             external={true}
           />
         </section>

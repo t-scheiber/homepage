@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 
@@ -16,7 +17,7 @@ interface TileLinkProps {
   textMargin?: string;
 }
 
-export default function TileLink({
+function TileLink({
   href,
   label,
   imageSrc,
@@ -51,7 +52,7 @@ export default function TileLink({
         height={imageHeight}
         priority={priority}
       />
-      <p className={`${textMargin} text-[0.75vw] font-light tracking-wide leading-normal sm:${textMargin} sm:text-[1.35vw]`}>
+      <p className={`${textMargin} text-[0.75vw] font-light tracking-wide leading-normal ${textMargin.replace('mt-', 'sm:mt-')} sm:text-[1.35vw]`}>
         {label}
       </p>
     </>
@@ -88,3 +89,5 @@ export default function TileLink({
     </Link>
   );
 }
+
+export default memo(TileLink);

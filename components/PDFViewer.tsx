@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 
 interface PDFViewerProps {
   pdfUrl: string;
@@ -11,6 +11,15 @@ interface PDFViewerProps {
 
 export default function PDFViewer({ pdfUrl, fileName = 'document.pdf', isOpen, onClose }: PDFViewerProps) {
   const isClient = typeof window !== "undefined";
+
+  const handleEscape = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        onClose();
+      }
+    },
+    [isOpen, onClose]
+  );
 
   useEffect(() => {
     // Prevent body scroll when modal is open
@@ -28,15 +37,9 @@ export default function PDFViewer({ pdfUrl, fileName = 'document.pdf', isOpen, o
 
   // Handle escape key
   useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isOpen) {
-        onClose();
-      }
-    };
-
     window.addEventListener('keydown', handleEscape);
     return () => window.removeEventListener('keydown', handleEscape);
-  }, [isOpen, onClose]);
+  }, [handleEscape]);
 
   if (!isOpen || !isClient) return null;
 
