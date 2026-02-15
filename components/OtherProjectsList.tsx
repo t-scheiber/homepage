@@ -67,11 +67,6 @@ const links: Link[] = [
     name: "EuropeTalks Cloud",
   },
   {
-    href: "https://www.mayr-dach.thomasscheiber.com/",
-    logoSrc: "/files/logos/mayr.png",
-    name: "Mayr Dach",
-  },
-  {
     href: "https://www.darat-thaimassage.at/",
     logoSrc: "/files/logos/darat.png",
     name: "Darat Thaimassage",
