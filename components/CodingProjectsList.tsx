@@ -11,6 +11,12 @@ interface Project {
 const CodingProjectsList: React.FC = () => {
   const projects: Project[] = [
     {
+      name: "Karl Mayr GmbH — Roofing & Facade Website",
+      url: "https://mayr-dach.com/",
+      githubRepo: "https://github.com/t-scheiber/mayr-dach",
+      favicon: "mayr-dach.ico",
+    },
+    {
       name: "EuropeTalks Homepage",
       url: "https://europetalks.eu/",
       githubRepo: "https://github.com/devEuropetalks/europetalksWebsite",
