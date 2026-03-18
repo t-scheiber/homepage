@@ -29,12 +29,6 @@ const CodingProjectsList: React.FC = () => {
       favicon: "rock-paper-scissors.svg",
     },
     {
-      name: "AI Video Generation",
-      url: "https://aivideogeneration.thomasscheiber.com/",
-      githubRepo: "https://github.com/t-scheiber/aivideogeneration",
-      favicon: "ai-video.svg",
-    },
-    {
       name: "Drone Document Wallet App",
       url: "https://drone.thomasscheiber.com/",
       githubRepo: "https://github.com/t-scheiber/droneapp",
