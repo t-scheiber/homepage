@@ -29,12 +29,6 @@ const CodingProjectsList: React.FC = () => {
       favicon: "rock-paper-scissors.svg",
     },
     {
-      name: "Finance App",
-      url: "https://finance.thomasscheiber.com/",
-      githubRepo: "https://github.com/t-scheiber/financeapp",
-      favicon: "finance.svg",
-    },
-    {
       name: "AI Video Generation",
       url: "https://aivideogeneration.thomasscheiber.com/",
       githubRepo: "https://github.com/t-scheiber/aivideogeneration",
