@@ -49,7 +49,8 @@ bun run lint
 
 This site uses Next.js server-side rendering and is optimized for deployment on Coolify with Nixpacks.
 
-### Build Process:
+### Build Process
+
 1. `bun install` - Install dependencies
 2. `bun run build` - Create production build
 3. `bun run start` - Start production server (or use process manager like PM2)
@@ -77,4 +78,3 @@ The app includes a health check endpoint at `/api/health` for monitoring and dep
 ## License
 
 See LICENSE file for details.
-
