@@ -55,19 +55,22 @@ const CodingProjectsList: React.FC = () => {
     {
       name: "Villa Claudia Documents App",
       url: "https://documents.villa-claudia.eu/",
-      githubRepo: "https://github.com/administrationAtVillaClaudia/villaclaudiaupload",
+      githubRepo:
+        "https://github.com/administrationAtVillaClaudia/villaclaudiaupload",
       favicon: "villa-claudia-docs.ico",
     },
     {
       name: "Little Lemon Restaurant - React Capstone",
       url: "https://little-lemon.thomasscheiber.com/",
-      githubRepo: "https://github.com/t-scheiber/LittleLemon_capstone-react-course-project",
+      githubRepo:
+        "https://github.com/t-scheiber/LittleLemon_capstone-react-course-project",
       favicon: "little-lemon.png",
     },
     {
       name: "React Advanced Course: Portfolio App",
       url: "https://advanced-react-course-portfolio.thomasscheiber.com/",
-      githubRepo: "https://github.com/t-scheiber/advanced-react-course-portfolio",
+      githubRepo:
+        "https://github.com/t-scheiber/advanced-react-course-portfolio",
       favicon: "react-portfolio.ico",
     },
     {
@@ -103,49 +106,57 @@ const CodingProjectsList: React.FC = () => {
     {
       name: "Abschlussprojekt Web Development",
       url: "https://fhtw-abschlussprojekt.thomasscheiber.com",
-      githubRepo: "https://github.com/t-scheiber/WebDevelopment/tree/master/Abschlussprojekt",
+      githubRepo:
+        "https://github.com/t-scheiber/WebDevelopment/tree/master/Abschlussprojekt",
       favicon: "fhtw-final.ico",
     },
     {
       name: "Studentendatenbank",
       url: "https://fhtw-uebung7.thomasscheiber.com/",
-      githubRepo: "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_7_scheiber",
+      githubRepo:
+        "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_7_scheiber",
       favicon: "fhtw-uebung7.svg",
     },
     {
       name: "Studentenliste und RSS/Atom Feed Reader",
       url: "https://fhtw-uebung6.thomasscheiber.com/",
-      githubRepo: "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_6_scheiber",
+      githubRepo:
+        "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_6_scheiber",
       favicon: "fhtw-uebung6.svg",
     },
     {
       name: "Smart Home Steuerung App",
       url: "https://fhtw-uebung5.thomasscheiber.com/",
-      githubRepo: "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_5_scheiber",
+      githubRepo:
+        "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_5_scheiber",
       favicon: "fhtw-uebung5.ico",
     },
     {
       name: "Patientenverwaltung App",
       url: "https://fhtw-uebung4.thomasscheiber.com/",
-      githubRepo: "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_4_scheiber",
+      githubRepo:
+        "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_4_scheiber",
       favicon: "fhtw-uebung4.svg",
     },
     {
       name: "Php Übungen App",
       url: "https://fhtw-uebung3.thomasscheiber.com/",
-      githubRepo: "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_3_scheiber",
+      githubRepo:
+        "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_3_scheiber",
       favicon: "fhtw-uebung3.png",
     },
     {
       name: "Smart Home Controller App",
       url: "https://fhtw-uebung2.thomasscheiber.com/",
-      githubRepo: "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_2_scheiber",
+      githubRepo:
+        "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_2_scheiber",
       favicon: "fhtw-uebung2.svg",
     },
     {
       name: "Übung aus Web Development",
       url: "https://fhtw-uebung1.thomasscheiber.com/",
-      githubRepo: "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_1_scheiber",
+      githubRepo:
+        "https://github.com/t-scheiber/WebDevelopment/tree/master/FHTW_uebung_1_scheiber",
       favicon: "fhtw-uebung1.svg",
     },
     {
@@ -174,8 +185,8 @@ const CodingProjectsList: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Visit ${project.name} project (opens in new tab)`}
-              className="flex items-center flex-1 text-white! text-lg! font-normal drop-shadow-lg"
-            >
+                className="flex items-center flex-1 text-white! text-lg! font-normal drop-shadow-lg"
+              >
                 <span className="flex mr-4 sm:mb-0 bg-white/90 rounded-lg p-2">
                   <Image
                     src={faviconSrc}
@@ -186,7 +197,7 @@ const CodingProjectsList: React.FC = () => {
                   />
                 </span>
                 {project.name}
-            </a>
+              </a>
               <a
                 href={project.githubRepo}
                 target="_blank"
@@ -194,7 +205,12 @@ const CodingProjectsList: React.FC = () => {
                 aria-label={`View ${project.name} on GitHub (opens in new tab)`}
                 className="ml-4 shrink-0 bg-white/90 rounded-lg p-2"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 sm:w-4 sm:h-4 text-gray-800" viewBox="0 0 24 24" fill="currentColor">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5 sm:w-4 sm:h-4 text-gray-800"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                 </svg>
               </a>
@@ -207,5 +223,3 @@ const CodingProjectsList: React.FC = () => {
 };
 
 export default memo(CodingProjectsList);
-
-
