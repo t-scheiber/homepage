@@ -3,5 +3,20 @@ import nextVitals from "eslint-config-next/core-web-vitals";
 
 export default defineConfig([
   ...nextVitals,
-  globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts", "node_modules/**"]),
+  {
+    settings: {
+      react: { version: "19" },
+    },
+  },
+  globalIgnores([
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+    "node_modules/**",
+    "**/*.config.{js,mjs,ts}",
+    ".github/**",
+    "scripts/**",
+    "public/**",
+  ]),
 ]);
