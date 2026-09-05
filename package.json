@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.2",
+    "@tsparticles/engine": "^4.3.2",
     "@tsparticles/react": "^4.3.1",
     "@tsparticles/slim": "^4.3.2",
     "next": "^16.2.12",
@@ -29,7 +30,7 @@
     "eslint": "^10.6.0",
     "eslint-config-next": "^16.2.10",
     "pdf-lib": "^1.17.1",
-    "pdfjs-dist": "^6.1.200",
+    "pdfjs-dist": "^6.3.289",
     "postcss": "^8.5.25",
     "prettier": "^3.9.4",
     "prettier-plugin-tailwindcss": "^0.8.0",
