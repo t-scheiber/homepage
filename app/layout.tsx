@@ -1,14 +1,14 @@
 import { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "@/styles/globals.css";
 import ParticlesComponent from "@/components/Particles";
 import StructuredData from "@/components/StructuredData";
 
 // Optimize font loading with next/font
-const inter = Inter({
-  subsets: ["latin"],
+const inter = localFont({
+  src: "./fonts/Inter-variable.ttf",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: "300 700",
   variable: "--font-inter",
 });
 
