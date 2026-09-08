@@ -78,3 +78,21 @@ The app includes a health check endpoint at `/api/health` for monitoring and dep
 ## License
 
 See LICENSE file for details.
+
+
+## Maintenance validation
+
+Use Node.js 22.23.2 (major 22) and Bun 1.4.2. Install with `bun install --frozen-lockfile`, then run:
+
+```sh
+bun run build
+bun run typecheck
+bun run lint
+bun run test
+```
+
+The seven tests cover CV viewing and closing, link behavior, certificate downloads, the health response, all four production pages, image optimization and exact byte preservation of all 73 public assets, including all 10 PDFs. The production smoke test starts Next on loopback only and requires the build to exist.
+
+Inter is bundled locally with its SIL Open Font License and publisher provenance under `app/fonts`, so production builds do not fetch fonts. The CV and certificate files remain unchanged; validation never runs the optional document or image optimization scripts.
+
+Deployment keeps the existing Next server contract: `bun run build`, then `bun run start`. The health route and image optimizer require a server. The obsolete `next export` command was removed; see the [Next.js migration documentation](https://nextjs.org/docs/pages/guides/upgrading/version-14). The Node 22 requirement is now explicit in `package.json`. Hosting settings still need to select that runtime before deployment; local validation does not prove the current live deployment uses it.

@@ -1,0 +1,440 @@
+[
+  {
+    "path": "public/_headers",
+    "bytes": 456,
+    "sha256": "7088b3be56c896befbe520604fbc63330ed6a57f55b5f7c02ff4e1161b00fd9f",
+    "gitBlob": "5932fe8a59a120469f4c1853057f8266ceb2804c"
+  },
+  {
+    "path": "public/files/Wordpress-Logo.svg",
+    "bytes": 1487,
+    "sha256": "a257aabd8ba665d49f94ed7ca3e425dfd7534a3f188ba430e84bed0a3155c7cd",
+    "gitBlob": "71825359738a644a880b2ea23b60693547562f70"
+  },
+  {
+    "path": "public/files/abstract-background.jpg",
+    "bytes": 93176,
+    "sha256": "61d5b1c92e06739ba7faca43b7b0a1a1138bb9ed1f2d5a16c8bb01ff9aeeb4df",
+    "gitBlob": "8c343cafbf1e2756c618d37127eed64638090ed8"
+  },
+  {
+    "path": "public/files/certificates.png",
+    "bytes": 95797,
+    "sha256": "9601c938a9e57b2f025438f73c848259c73b2c1bd6b05951bf4ad95df998bef9",
+    "gitBlob": "98af3dce30e59760c189219c1d19ea8b43597084"
+  },
+  {
+    "path": "public/files/coding.png",
+    "bytes": 60483,
+    "sha256": "bf81a1bb447671d091fe7b825462d474a506406dce259e7b59ac7ac64d08fdae",
+    "gitBlob": "2d0141ea2f604adecd0225b71d1e42741d73bba3"
+  },
+  {
+    "path": "public/files/envelope-solid.svg",
+    "bytes": 507,
+    "sha256": "eefd5982e22d648ce28e4122ae6977c356f50d2e3385b9793004eca1464ef6a4",
+    "gitBlob": "23928b6edeab06c60635f6388c25ed98cae90c5e"
+  },
+  {
+    "path": "public/files/facebook.svg",
+    "bytes": 1065,
+    "sha256": "f3e04abea48d82e4b51bc9414951f5680747871d08bb0a3624cd5381b44a9c06",
+    "gitBlob": "cd21f11334c46a312b26327d54e496574fbdf673"
+  },
+  {
+    "path": "public/files/favicons/android-chrome-192x192.png",
+    "bytes": 37217,
+    "sha256": "9705b11815567bdf16e64ae8c671e439179ea8229c4319887bebf713d392edc9",
+    "gitBlob": "8b5a7aeb54100f3144c9b94fe85255805ca1913c"
+  },
+  {
+    "path": "public/files/favicons/android-chrome-512x512.png",
+    "bytes": 265335,
+    "sha256": "5baf168eb8fea78cf869d6031d97ae3ebf58b5b0b2ecfd9b9bb41d974b2bd2b1",
+    "gitBlob": "4633f880885ba2033a0ebaccfd2ed808bf163a77"
+  },
+  {
+    "path": "public/files/favicons/apple-touch-icon.png",
+    "bytes": 33599,
+    "sha256": "2d9dabf9a863056f29230c87b91109dbaac1999cd561ea6594f66e74afa090fd",
+    "gitBlob": "ad8d2f9adaef8640f797d69900189aa825c4a054"
+  },
+  {
+    "path": "public/files/favicons/favicon-16x16.png",
+    "bytes": 611,
+    "sha256": "f26293233d3192f245a82aeaf60a6e5e32cb82ca19e478f596bc154d06ed450e",
+    "gitBlob": "3fdd0bcd1c566663e8758cbd603103de8e528d21"
+  },
+  {
+    "path": "public/files/favicons/favicon-32x32.png",
+    "bytes": 1723,
+    "sha256": "4c22288b4ea9d31bc3684e362339cae5af7467ed27a84d0f0036286d9c02a726",
+    "gitBlob": "aea966c9161d74fe102bacf023d260fcc9892fed"
+  },
+  {
+    "path": "public/files/favicons/favicon.ico",
+    "bytes": 15406,
+    "sha256": "39a6faaecced6ed956258c730bd987bd35238b290c0abf8ca2fb88e78e03f098",
+    "gitBlob": "f982a8138206b3603398639afa816315f62f9851"
+  },
+  {
+    "path": "public/files/favicons/projects/ai-video.svg",
+    "bytes": 2542,
+    "sha256": "82faf9c5086f20a3b97feb911c47e6c61d27b4a3f47dec458cb7ff0690c7bd04",
+    "gitBlob": "fbf4a97cc4c6563a9751470f76bf2f34457dced5"
+  },
+  {
+    "path": "public/files/favicons/projects/calculator.svg",
+    "bytes": 1869,
+    "sha256": "ef0ad7514fe48fdb0342ac0d93db2b03ef027ebe35982459280c0eaf39505ac9",
+    "gitBlob": "dc466a2e336c0ad1d8473ae1bac8007c438ad63a"
+  },
+  {
+    "path": "public/files/favicons/projects/coffee-guide.svg",
+    "bytes": 8956,
+    "sha256": "38b35f9a35cf8607fdd6830c04af1f344f34ea469978690b31fafc8583f9608c",
+    "gitBlob": "cce8822c780319461580b563d4a26581a9ddc933"
+  },
+  {
+    "path": "public/files/favicons/projects/drone-wallet.svg",
+    "bytes": 1197,
+    "sha256": "6903dc332d5b3eba2468a36b056785b3b7103e9326dff032651db72f4ed35031",
+    "gitBlob": "142076169a07a1866b0c1e2569656210603d6a95"
+  },
+  {
+    "path": "public/files/favicons/projects/europetalks.png",
+    "bytes": 724,
+    "sha256": "2171e71ac80198d026c4a18338b610e6eb335114bf04417c063221279463dcc5",
+    "gitBlob": "d5524e0e94d7ce1ded8ca5944b7c54444eea8de5"
+  },
+  {
+    "path": "public/files/favicons/projects/fhtw-final.ico",
+    "bytes": 22486,
+    "sha256": "e2905705920b2636309d785c2df3f155d6379b0aa9a44dc7831524505fa2defd",
+    "gitBlob": "fb156b22e7053f00e106d205b8607e7901e51e6e"
+  },
+  {
+    "path": "public/files/favicons/projects/fhtw-uebung1.svg",
+    "bytes": 1085,
+    "sha256": "505911e9c3a3c6f6b41aed216930f57c0ca87d96df3b47f8e2566d368a0646b7",
+    "gitBlob": "7658d6ce4c13753a42cbd8ef420065616c2cecd6"
+  },
+  {
+    "path": "public/files/favicons/projects/fhtw-uebung2.svg",
+    "bytes": 5478,
+    "sha256": "a1651a18f4b7bb419cfe0f512c3db082e2bf660d8c5c8f02fdd511c1bf99407f",
+    "gitBlob": "172630d00e8fc211abfdb59d7c4ded1969fc21e6"
+  },
+  {
+    "path": "public/files/favicons/projects/fhtw-uebung3.png",
+    "bytes": 1725,
+    "sha256": "2012331b928ca98e6caa7230196ad021a86604ef72c7d0a39f038b0acad78bc1",
+    "gitBlob": "b6c0d043673b8f98c3d19e69d6207b6b54b19e4e"
+  },
+  {
+    "path": "public/files/favicons/projects/fhtw-uebung4.svg",
+    "bytes": 2188,
+    "sha256": "e8f2bc64db4bd172e251a233b69a9f5519abe73df689bf398ef01f41b3daa186",
+    "gitBlob": "07516824941d17e3fab8f5edc48514c52343dc0a"
+  },
+  {
+    "path": "public/files/favicons/projects/fhtw-uebung5.ico",
+    "bytes": 22486,
+    "sha256": "e2905705920b2636309d785c2df3f155d6379b0aa9a44dc7831524505fa2defd",
+    "gitBlob": "fb156b22e7053f00e106d205b8607e7901e51e6e"
+  },
+  {
+    "path": "public/files/favicons/projects/fhtw-uebung6.svg",
+    "bytes": 502,
+    "sha256": "e82e13bd54fff4268b32fc69add15b78f1375a0fcea007279761c33dd72e1fd6",
+    "gitBlob": "7bf44897a57cbaea93efe218a7dccda826ddf564"
+  },
+  {
+    "path": "public/files/favicons/projects/fhtw-uebung7.svg",
+    "bytes": 4297,
+    "sha256": "fa4acf6318cfb93d966ee97bb8e6404da870077165773f469e7d87e1f75cbc61",
+    "gitBlob": "b67697a1890d1d1ee4325bd0a6bfd7986e248553"
+  },
+  {
+    "path": "public/files/favicons/projects/finance.svg",
+    "bytes": 3934,
+    "sha256": "6e0455d8db4564a99cc1ff44e84088b5f8f28f751bc3a5e3b7483ad8b452612a",
+    "gitBlob": "25e6b8a145780e71fb1590044fe508ac6779d045"
+  },
+  {
+    "path": "public/files/favicons/projects/little-lemon.png",
+    "bytes": 7062,
+    "sha256": "b99a108f336175253d7fd6523d35e24508b6a75b73272677b06f1c9b650a4b59",
+    "gitBlob": "6d63cdc460608e1c2efc3f7743c83eb204a741c9"
+  },
+  {
+    "path": "public/files/favicons/projects/mayr-dach.ico",
+    "bytes": 101870,
+    "sha256": "dfb4aaae974dae40dcba0d9dd915b7561599461fb47156256fed5ee863429802",
+    "gitBlob": "9a0ba547f78784a95f0e052723f3a483f2050598"
+  },
+  {
+    "path": "public/files/favicons/projects/player-management.svg",
+    "bytes": 1377,
+    "sha256": "30536e73394dbf3422b6e214084a6737ff28558804f0a86e91bd1be33c5eefca",
+    "gitBlob": "9ccaaf0bdecd02288ff23755b20b576035c97344"
+  },
+  {
+    "path": "public/files/favicons/projects/react-portfolio.ico",
+    "bytes": 3870,
+    "sha256": "3d10f7da6c603178340081668c4ac5b3ae9743ca9a262ab0fcd312fbb9f48bdd",
+    "gitBlob": "a11777cc471a4344702741ab1c8a588998b1311a"
+  },
+  {
+    "path": "public/files/favicons/projects/ribo-stein.png",
+    "bytes": 1775,
+    "sha256": "e43b138a680f12bbaf6934745c2735f4f179816708fffc238e1187aee8e61991",
+    "gitBlob": "671b0869cfd90d66cf113a3e9042fe7d331b63b9"
+  },
+  {
+    "path": "public/files/favicons/projects/rock-paper-scissors.svg",
+    "bytes": 7504,
+    "sha256": "6d586a742706d981ea7db01f434a34148f0bd1447de5b4f7f7a737e65eb5770c",
+    "gitBlob": "2465520589357dbd35f6b14f454b3af17912de25"
+  },
+  {
+    "path": "public/files/favicons/projects/todo-app.ico",
+    "bytes": 1064,
+    "sha256": "407e13a8f73c4e6dd2406583c08c509f9ae35149c059a70c8d0bd459176838c3",
+    "gitBlob": "11fa4882c720fe5cbbec0642022f91b053c6ad3d"
+  },
+  {
+    "path": "public/files/favicons/projects/villa-claudia-docs.ico",
+    "bytes": 15406,
+    "sha256": "2f609106f29b7e722c4041e39775a21e9bbe67268b13e05858fd016b98ce8512",
+    "gitBlob": "02843aed88c6c24cf2eeec5d4fe0fc9f40738aa2"
+  },
+  {
+    "path": "public/files/favicons/projects/weather-vanilla.ico",
+    "bytes": 1150,
+    "sha256": "4b81df9cfb2d18ce7dc07438473e85962ff25fb5ae3c35869e0bf3cb4d30f1ea",
+    "gitBlob": "2bf72283eae2629082ab020117c7217cf09c51e1"
+  },
+  {
+    "path": "public/files/favicons/projects/weather-vue.ico",
+    "bytes": 1150,
+    "sha256": "4b81df9cfb2d18ce7dc07438473e85962ff25fb5ae3c35869e0bf3cb4d30f1ea",
+    "gitBlob": "2bf72283eae2629082ab020117c7217cf09c51e1"
+  },
+  {
+    "path": "public/files/favicons/site.webmanifest",
+    "bytes": 263,
+    "sha256": "7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f67173529c181bf04",
+    "gitBlob": "45dc8a20658bd09ecb8ca1c88f94fe80cc4ca286"
+  },
+  {
+    "path": "public/files/github.svg",
+    "bytes": 968,
+    "sha256": "12794390cce7d0682ffc783c785e4282305684431b30b29ed75c224da24035b4",
+    "gitBlob": "a8d1174049ac507bdb474e6af87364ebe97a93f7"
+  },
+  {
+    "path": "public/files/instagram.svg",
+    "bytes": 4334,
+    "sha256": "8060ef38a7f4c25ea5e8bf5df005a4472de35f56836c64442341a9e590591e56",
+    "gitBlob": "77a0d8e86aeabca40614a384eb3fdac955622d5e"
+  },
+  {
+    "path": "public/files/linkedin.svg",
+    "bytes": 1139,
+    "sha256": "ac184ed71628b215faf48a26ce146c51210b5b16ffd772d5b0e22e460d76e203",
+    "gitBlob": "46087a0fa0d858b00c7510d9b50130a3f7e9dc1b"
+  },
+  {
+    "path": "public/files/logos/EF.png",
+    "bytes": 49606,
+    "sha256": "955c0e998184f616cab5c862298b3cb3661c0323b1e91ac9d4b0180e6b734f7a",
+    "gitBlob": "c21450852aa92a5bddb3b82076e459b61b696c0e"
+  },
+  {
+    "path": "public/files/logos/aws.png",
+    "bytes": 156059,
+    "sha256": "42914cc547c6c45ad5ec666507be9fa5e5de87f06a68c4ef19895e5c84fad917",
+    "gitBlob": "d4dd85ec2271b14dd58eea6e85d9652c4d1e726d"
+  },
+  {
+    "path": "public/files/logos/cambridge.png",
+    "bytes": 48982,
+    "sha256": "9df7319dfa6d72f89ed3408a3ca2559f593c29e2a58c7936e48c78e37d552922",
+    "gitBlob": "786f0be243f0a29d3204aaa32157512a1158bee0"
+  },
+  {
+    "path": "public/files/logos/darat.png",
+    "bytes": 47441,
+    "sha256": "9f416b2c4a3f31bbf61ff11f1437936603dadd02f0df8a6b1a98b6045654965b",
+    "gitBlob": "1891b0662060a9efbe333a8cd8d00e515e8d5098"
+  },
+  {
+    "path": "public/files/logos/ecdl.png",
+    "bytes": 49007,
+    "sha256": "ff88dcb183017ded8b08c6079f797f186b763d59764d00e75f2fae412758e312",
+    "gitBlob": "f62f1b69b7519b34aae0f82b6d60c29592944d0e"
+  },
+  {
+    "path": "public/files/logos/ecpat.png",
+    "bytes": 31540,
+    "sha256": "34d04b3531f40900542edceabdda7eb61bda00a551f9bfeb3e363259d45557c6",
+    "gitBlob": "1bfe872e9da2f2f2c4792cf569cf556ca000fb92"
+  },
+  {
+    "path": "public/files/logos/europetalks.png",
+    "bytes": 16300,
+    "sha256": "1f370bdd0c0d82ee7942bdad4820476be90d64103645e4edc43e9d38c98e9291",
+    "gitBlob": "7e67926235d4ea248bc41d4e4ba942a44e00c8ed"
+  },
+  {
+    "path": "public/files/logos/google.png",
+    "bytes": 16590,
+    "sha256": "e2087f585c3b213ba537a56c8bc8e6134c69d6fa1a5728d306df56d697b4e7ab",
+    "gitBlob": "a4a9918dad10832bc8aaa5574d71fe15f089c8cb"
+  },
+  {
+    "path": "public/files/logos/hda.png",
+    "bytes": 1860,
+    "sha256": "d9e53e65eaf02c0f645e7987485897d12bb892401d51e3a7557312927b9cb20a",
+    "gitBlob": "842558625a443a02231ddb0c8398eb617229d533"
+  },
+  {
+    "path": "public/files/logos/hdp.png",
+    "bytes": 16960,
+    "sha256": "dd1e6ac863377c237c9f968e782f37a272093846b1e16606b40298ed8378bf75",
+    "gitBlob": "53f3d68282b9210e23e0ff8db1881658b755ca09"
+  },
+  {
+    "path": "public/files/logos/ju4ju.png",
+    "bytes": 17606,
+    "sha256": "31beeb88f0ffde1b01b27707b5dd8a68a773bc7a0f66907ff93453182bbfdc98",
+    "gitBlob": "cd64104d95857a958aad213f631b113a2f38367a"
+  },
+  {
+    "path": "public/files/logos/mayr.png",
+    "bytes": 54226,
+    "sha256": "af872f4b7efaf972980c0c42b2359386a99e18e80c14e8d4b114bbf458f8dae0",
+    "gitBlob": "224a3fcbd7b3268c4062a48f748c18c44e8e27a0"
+  },
+  {
+    "path": "public/files/logos/meta.png",
+    "bytes": 431288,
+    "sha256": "350f76e36450136e849293c2117fe862f1cca8186aa6ad7ed4d16cd0acd61fa0",
+    "gitBlob": "29115d81b04ec5ca830789b331bb2dbbb912fd87"
+  },
+  {
+    "path": "public/files/logos/ribo.png",
+    "bytes": 52705,
+    "sha256": "fe57d770b5ec531e78c1cdcb757bded77fe7083ac6050ce64e3eaf823f37ea62",
+    "gitBlob": "48e7ae437fc21fe7363a301823788c8a123769ea"
+  },
+  {
+    "path": "public/files/logos/scuolaLdV.png",
+    "bytes": 36214,
+    "sha256": "9df7185ab105cf8d78142749a1031ba3f61e245e83eaad9648f4fc63ce7cb3c5",
+    "gitBlob": "977faafef12baeede3e7643ab890f0291e460408"
+  },
+  {
+    "path": "public/files/logos/villaclaudia.png",
+    "bytes": 20335,
+    "sha256": "40ed05ac16b157f1ba9478a234942cbd127acd24ace131b2db8fa4746659e80a",
+    "gitBlob": "cd1e7c2c0fe80d61ab6fac288bc389d2c95b34a9"
+  },
+  {
+    "path": "public/files/logos/villadijana.png",
+    "bytes": 163265,
+    "sha256": "4609201d1020776767a761e4636a15ded994ab4d7f5e061f29b819cd716bb85b",
+    "gitBlob": "cadfb544aa90306668c960539920a57ea8395a07"
+  },
+  {
+    "path": "public/files/pdf/AWS_Certificate.pdf",
+    "bytes": 364203,
+    "sha256": "e641ea17e71a180f62a34178d0cd91358444bc5387e5789ebef8b5aef02a8dd3",
+    "gitBlob": "3cb03d913bbed4384e847c5752326ea5e5eb7dbd"
+  },
+  {
+    "path": "public/files/pdf/ECDL.pdf",
+    "bytes": 264669,
+    "sha256": "5e6c1edf1cf10c8a43cf3268670a668a5b7f33c54e93e46e86bfe336183f0ace",
+    "gitBlob": "7b80905b04a1be7fbb56497c106cc0a586e907ad"
+  },
+  {
+    "path": "public/files/pdf/EF_Certificate.pdf",
+    "bytes": 230162,
+    "sha256": "11f8e2a1352e27c8705804ab65c78a4d6c4d91cae7a43c7e96d3601a839d39cd",
+    "gitBlob": "8518586c82e8eef621dc44dc05ee34935d8575ec"
+  },
+  {
+    "path": "public/files/pdf/FCE_Certificate.pdf",
+    "bytes": 478641,
+    "sha256": "09496faca566873933e20ead72daa76411fcd5a1e6c6baaf334eb8aa1e7e99b9",
+    "gitBlob": "93664fcddb62b492abe763073752133a622fe1c1"
+  },
+  {
+    "path": "public/files/pdf/IT-Automation-Python_Certificate.pdf",
+    "bytes": 348964,
+    "sha256": "612b3348483c703b2d3cdb300f9a3df6ac587cb9302f0d463625e05f6f6a4831",
+    "gitBlob": "96bc5711a4584bea44acc5f46a00021888c78e60"
+  },
+  {
+    "path": "public/files/pdf/IT-Support_Certificate.pdf",
+    "bytes": 347707,
+    "sha256": "f19aa6c095a545d577ec2f71ecce2981a6f88004ec6ef95c45f65487fd785990",
+    "gitBlob": "7c01226d765490c791bf63a93613bc630e738ca3"
+  },
+  {
+    "path": "public/files/pdf/Italian_Language_Certificate.pdf",
+    "bytes": 301321,
+    "sha256": "81510c7041fda4e969984c12fa3b7da0aeb5ebfb9bde20789dd48aa2672b16d3",
+    "gitBlob": "7510dac36d5dcaf23eab3215ae55177fc4325f9f"
+  },
+  {
+    "path": "public/files/pdf/Meta_Certificate.pdf",
+    "bytes": 375799,
+    "sha256": "f594351e4b372cd922a52ad993faa371f7c95dd71c261f4117b137744c822e1f",
+    "gitBlob": "ac588fbb0fa05d386c308679684cc18cb2971004"
+  },
+  {
+    "path": "public/files/pdf/ScheiberThomasCV.pdf",
+    "bytes": 2520423,
+    "sha256": "b068a01481ae4850ee05460335a8017f5c5a80e235b9d41aca47ed6c57f9d967",
+    "gitBlob": "70836c89e5295d243d155e0d77eb445301fbb719"
+  },
+  {
+    "path": "public/files/pdf/makeITsafe_Certificate.pdf",
+    "bytes": 265369,
+    "sha256": "ed489b195774952e29a8b98472db3dc8ad0b2b320ca06136c791a48cb986bef8",
+    "gitBlob": "1cd987da1c79bacc3554bfa155b899f11a7c090c"
+  },
+  {
+    "path": "public/files/phone-solid.svg",
+    "bytes": 525,
+    "sha256": "e237abd5c809b87d3617585ce8432f60e47efda1276da53dc351d1905220e6b2",
+    "gitBlob": "6a982b3a66bc6e47381aea630ce1fb04032b7d99"
+  },
+  {
+    "path": "public/files/portrait.jpg",
+    "bytes": 2387646,
+    "sha256": "68e7e4178ffcabbd85707b792428a4fac2685a63d6f9be6de92dcfe9679a1e6c",
+    "gitBlob": "24e83c8a339a6b8cdf983b88aea0a1525d998e28"
+  },
+  {
+    "path": "public/robots.txt",
+    "bytes": 95,
+    "sha256": "486ca5506141d278a8992acef557c3f23ce2fed72bceca2583a3a92a3c93e551",
+    "gitBlob": "5442c20b4aee54aa79664d107f21b77639e75428"
+  },
+  {
+    "path": "public/sitemap.xml",
+    "bytes": 659,
+    "sha256": "372fb0a651dd4c934b5168044f83f84383351306fd916726d18eb9824ada246f",
+    "gitBlob": "272256ef4d64dc9def2514bdf1697def29eb8421"
+  },
+  {
+    "path": "public/sw.js",
+    "bytes": 919,
+    "sha256": "cbc494229aba2b2fe5db2ff8da8242232360242c3f9d5a7ae9d084aa813466e7",
+    "gitBlob": "666f05f05de3de494cff79bca29e285eea5a323d"
+  }
+]
