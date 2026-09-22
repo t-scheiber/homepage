@@ -1,13 +1,14 @@
 import { memo } from "react";
 import { SOCIAL_LINKS } from "@/lib/constants";
+import masterCV from "@/lib/professional-profile.json";
 
 // JSON-LD Structured Data for SEO
 function StructuredData() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Thomas Scheiber',
-    description: 'Software development, internal tools, automation and IT administration.',
+    name: masterCV.profile.name,
+    description: masterCV.profile.headline,
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://thomasscheiber.com',
     sameAs: [
       SOCIAL_LINKS.linkedin,

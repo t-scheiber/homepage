@@ -35,7 +35,7 @@ async function compile(relative) {
       code=code.replace(fullImport,(_,name)=>`const ${name} = ${JSON.stringify({src:'/'+target.slice(7),width:40,height:40})};`);
       continue;
     }
-    if (target === 'package.json') {
+    if (target === 'package.json' || target === 'lib/professional-profile.json') {
       code = code.replace(match[0], `from ${JSON.stringify(pathToFileURL(path.join(root, target)).href)} with {type: 'json'}`);
       continue;
     }

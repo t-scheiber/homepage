@@ -32,9 +32,9 @@ export default function WorkProjectsPage() {
           <em>Practical automation.</em>
         </h1>
         <p className={styles.intro}>
-          I work on internal applications and automations that help people get
-          things done. Here are a few examples, with a closer look at what I
-          contributed.
+          I build internal applications and automate IT workflows. These examples
+          cover employee training, application deployment, equipment requests and
+          access management, with my contribution to each project.
         </p>
         <div className={styles.disclosure}>
           <span className={styles.disclosureIcon} aria-hidden="true">
