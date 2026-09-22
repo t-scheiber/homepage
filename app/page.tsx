@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useMemo } from "react";
 import TileLink from "@/components/TileLink";
+import Link from "next/link";
 import PDFViewer from "@/components/PDFViewer";
 import Image from "next/image";
 import portrait from "@/public/files/portrait.jpg";
@@ -48,6 +49,18 @@ export default function Home() {
             Thomas Scheiber
           </h1>
         </header>
+
+        <Link
+          href="/workprojects"
+          className="group flex w-full items-center justify-between gap-4 rounded-2xl border border-white/25 bg-slate-900/65 px-6 py-5 backdrop-blur-md transition-colors hover:bg-slate-900/85 sm:px-8"
+        >
+          <div>
+            <p className="text-xs tracking-widest text-emerald-200 uppercase">Selected professional work</p>
+            <p className="mt-2 text-xl font-medium text-white sm:text-2xl">Work projects</p>
+            <p className="mt-2 text-sm text-slate-300">Internal tools, training and automation. Explore the work behind the workflows.</p>
+          </div>
+          <span className="text-3xl text-emerald-200" aria-hidden="true">↗</span>
+        </Link>
 
         <section className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[minmax(170px,1fr)]">
           <PDFViewer
