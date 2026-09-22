@@ -106,7 +106,7 @@ export default function Home() {
           {/* Row 2: Certifications (left, spans 2 cols) | WordPress (right, spans 2 cols) */}
           <TileLink
             href="/certifications"
-            label="All Certifications"
+            label="Degrees & Certifications"
             imageSrc={certification}
             imageAlt="Professional certificates icon"
             imageWidth={125}
