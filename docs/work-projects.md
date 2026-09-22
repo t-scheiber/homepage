@@ -4,6 +4,8 @@ The `/workprojects` page presents six professional projects with short summaries
 
 ## Content and confidentiality
 
+The training platform uses Vue and TypeScript. Framework labels describe the original project, not this Next.js portfolio or the static demo generator.
+
 Edit `lib/work-projects.ts` to change the copy. Describe contributions without implying sole ownership or claiming measured impact that has not been established.
 
 All screenshots are original, simplified demo interfaces. They are not screenshots of company applications, and the page and images say so. The Git/deployment image is explicitly a conceptual overview, not a product UI.
