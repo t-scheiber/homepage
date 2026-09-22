@@ -8,7 +8,7 @@ export const workProjects = [
       "An optional online course that takes colleagues through Git and application deployment, with guided exercises, videos and knowledge checks.",
     contribution:
       "I worked on the learner experience and practical Git training, including course videos, voiceovers, visual practice aids and deployment guidance.",
-    skills: ["React", "TypeScript", "Learning design", "Video & audio"],
+    skills: ["Vue", "TypeScript", "Learning design", "Video & audio"],
     image: "/files/work-projects/training.png",
     alt: "Recreated learning platform with a fictional Git course, lesson outline and practice exercise.",
     caption:
