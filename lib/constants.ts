@@ -1,10 +1,12 @@
-// Social media and contact links
+import masterCV from "./professional-profile.json";
+
+// Shared professional identity is exported from the master CV.
 export const SOCIAL_LINKS = {
-  linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/thomas-scheiber/",
-  github: process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/t-scheiber",
+  linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || masterCV.profile.links.linkedin,
+  github: process.env.NEXT_PUBLIC_GITHUB_URL || masterCV.profile.links.github,
   instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/thomasscheiberphotography/",
   facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://www.facebook.com/thomasscheiberphotography/",
-  email: process.env.NEXT_PUBLIC_EMAIL || "mail@thomasscheiber.com",
+  email: process.env.NEXT_PUBLIC_EMAIL || masterCV.profile.email,
   phone: process.env.NEXT_PUBLIC_PHONE || "",
 } as const;
 

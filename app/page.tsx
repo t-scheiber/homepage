@@ -33,9 +33,9 @@ export default function Home() {
   return (
     <main id="main-content" className="home-page">
       <header className="home-intro">
-        <p className="section-eyebrow">Software, automation &amp; IT</p>
+        <p className="section-eyebrow">Software &amp; automation engineering</p>
         <h1>Thomas Scheiber</h1>
-        <p className="page-description">I build web applications, internal tools and automations that make everyday work easier.</p>
+        <p className="page-description">I build web applications, internal tools and automation, from employee workflows to cloud deployments.</p>
       </header>
       <PDFViewer pdfUrl="/files/pdf/ScheiberThomasCV.pdf" fileName="ScheiberThomasCV.pdf" isOpen={isPDFViewerOpen} onClose={handleClosePDF} />
       <div className="home-grid">

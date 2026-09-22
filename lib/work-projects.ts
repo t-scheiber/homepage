@@ -3,9 +3,9 @@ export const workProjects = [
     id: "training",
     number: "01",
     category: "Training & enablement",
-    title: "Helping people learn by doing.",
+    title: "Git training and a learning platform.",
     summary:
-      "An internal learning platform with interactive modules, quizzes and a structured course experience. Practical training takes learners through Git, development tools and deployment exercises.",
+      "An optional online course that takes colleagues through Git and application deployment, with guided exercises, videos and knowledge checks.",
     contribution:
       "I worked on the learner experience and practical Git training, including course videos, voiceovers, visual practice aids and deployment guidance.",
     skills: ["React", "TypeScript", "Learning design", "Video & audio"],
@@ -19,9 +19,9 @@ export const workProjects = [
     id: "platform",
     number: "02",
     category: "Developer platforms",
-    title: "From a Git commit to a running app.",
+    title: "An internal Git and deployment pilot.",
     summary:
-      "A self-hosted Git and deployment platform that gives teams a shared route for managing code, reviewing changes and deploying applications.",
+      "A Forgejo and Coolify pilot on existing company hardware. Colleagues can use it to manage code, review changes and deploy their own applications. It is not yet in broad use.",
     contribution:
       "My work includes team access, deployment workflows, automated review, webhook reliability, backups and recovery documentation across Forgejo and Coolify.",
     skills: ["Forgejo", "Coolify", "CI/CD", "Docker", "Identity integration"],
@@ -51,7 +51,7 @@ export const workProjects = [
     id: "meetings",
     number: "04",
     category: "Internal applications",
-    title: "Less admin around every meeting.",
+    title: "Meeting schedules, materials and recordings.",
     summary:
       "A meeting hub that connects schedules, agendas, presentation materials, reminders and recordings. Organisers can manage the meeting cycle in one place.",
     contribution:
@@ -83,7 +83,7 @@ export const workProjects = [
     id: "connections",
     number: "06",
     category: "Integration engineering",
-    title: "A simpler way to connect tools.",
+    title: "OAuth connections for internal tools.",
     summary:
       "An OAuth connection hub where employees sign in, connect a provider and manage the access used by their scripts and automations. Connections can be revoked and expiry reminders sent.",
     contribution:

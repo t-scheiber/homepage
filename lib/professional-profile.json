@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "source": "career-workspace/services/cv",
+  "sourceRevision": "43c61d8aa731846992908d81630b0bbaa1a41609",
+  "contentHash": "bb5408b8ef13e7b1fe34feeb385c0d6ecd09c26b223f82f9548b5cadd0ab4617",
+  "pdfSha256": "b7291128839c2427656aff87bcdad54248e4d7a98451b33384febd7e087ce29f",
+  "profile": {
+    "name": "Thomas Scheiber",
+    "email": "mail@thomasscheiber.com",
+    "location": "Vienna, Austria",
+    "links": {
+      "website": "https://thomasscheiber.com",
+      "github": "https://github.com/t-scheiber",
+      "linkedin": "https://www.linkedin.com/in/thomas-scheiber/"
+    },
+    "headline": "Software & Automation Engineering | Internal Tools, Cloud Applications & Developer Platforms",
+    "about": "I build software for internal operations: web applications, automation and tools that colleagues use to manage their work. At Refurbed, my work covers application development and deployment, identity integrations and endpoint automation.\n\nI work with Next.js, React, TypeScript, Python and PowerShell. Recent projects include a Git and deployment platform pilot, an optional online Git course and an advisory AI code reviewer. I deploy internal applications to Google Cloud Run through GitLab CI/CD. My background in IT administration helps me understand the support and operational problems these tools need to solve.\n\nI also build websites and applications as a freelance web developer. I hold a BSc in Engineering in Smart Homes and Assistive Technologies from FH Technikum Wien and have been studying Software Engineering at TU Wien since July 2026.",
+    "employment": [
+      {
+        "employer": "Refurbed Marketplace GmbH",
+        "title": "IT Administrator",
+        "start": "2024-07",
+        "end": null,
+        "location": "Vienna, Austria",
+        "cv_bullets": [
+          "Built Next.js/React internal applications and PowerShell/Python automation, with GitLab CI/CD deployments to Google Cloud Run.",
+          "Built an internal Forgejo and Coolify hosting pilot and an optional online Git course, with AI tools and documentation for colleagues.",
+          "Added PXE boot to device preparation alongside Microsoft Intune and Autopilot Device Preparation v2.",
+          "Managed endpoints, networking and user support in a two-person IT team."
+        ]
+      },
+      {
+        "employer": "Self-employed",
+        "title": "Freelance Web Developer",
+        "start": "2023-01",
+        "end": null,
+        "location": "Vienna, Austria",
+        "cv_bullets": [
+          "Build Next.js, React and TypeScript applications, with responsive interfaces and reusable components.",
+          "Handle SEO, Core Web Vitals and production CI/CD on Vercel and Coolify."
+        ]
+      },
+      {
+        "employer": "iC Consult GmbH",
+        "title": "Associate IAM Consultant",
+        "start": "2023-04",
+        "end": "2023-12",
+        "location": "Vienna, Austria",
+        "cv_bullets": [
+          "Worked on identity and access management development with One Identity Manager as part of customer project teams.",
+          "Developed connectors, workflows and automation with PowerShell, Visual Basic and .NET."
+        ]
+      },
+      {
+        "employer": "Mazars IT Services GmbH",
+        "title": "IT Consultant",
+        "start": "2022-03",
+        "end": "2023-03",
+        "location": "Vienna, Austria",
+        "cv_bullets": [
+          "Deployed and managed firewalls and supported network infrastructure.",
+          "Worked with Intune, Autopilot and Jamf Pro for device management.",
+          "Provided first- and second-level support and documented solutions."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "TU Wien",
+        "degree": "Master’s in Software Engineering",
+        "start": "2026-07",
+        "end": null,
+        "status": "ongoing"
+      },
+      {
+        "institution": "University of Applied Sciences Technikum Vienna",
+        "degree": "B.Sc. in Engineering, Smart Homes & Assistive Technologies",
+        "start": "2019-09",
+        "end": "2026-06",
+        "status": "completed"
+      }
+    ],
+    "certificates": [
+      {
+        "name": "Meta Front-End Developer Professional Certificate",
+        "issuer": "Meta",
+        "year": 2024,
+        "platform": "Coursera"
+      },
+      {
+        "name": "AWS Cloud Solutions Architect Professional Certificate",
+        "issuer": "Amazon Web Services",
+        "year": 2024,
+        "platform": "Coursera"
+      },
+      {
+        "name": "Google IT Automation with Python Professional Certificate",
+        "issuer": "Google",
+        "year": 2023,
+        "platform": "Coursera"
+      },
+      {
+        "name": "Google IT Support Professional Certificate",
+        "issuer": "Google",
+        "year": 2022,
+        "platform": "Coursera"
+      },
+      {
+        "name": "EF English Language Certificate C1",
+        "issuer": "EF Education First",
+        "year": 2017,
+        "platform": "EF"
+      }
+    ]
+  }
+}
