@@ -42,9 +42,6 @@ a.collection-row:hover, .collection-row:has(a:hover) { background: #ffffff06; op
 .home-grid > .home-tile:not(.compact):not(.home-contact) > :last-child { min-height: 82px; }
 .home-tile p, .home-tile .tile-description { display: block; margin-top: 8px; max-width: 360px; font-size: 13px; line-height: 1.65; color: var(--muted); }
 .home-tile .tile-arrow { position: absolute; right: 26px; top: 24px; color: var(--muted); font-size: 21px; }
-.home-tile.featured { background: linear-gradient(130deg, #193830, #152824); border-color: #bcf4d43b; }
-.home-tile.featured .tile-icon { background: #bcf4d415; color: var(--accent); }
-.home-tile.featured h2, .home-tile.featured .tile-arrow { color: var(--accent); }
 .tile-half { grid-column: span 2; }
 .home-tile.compact { min-height: 180px; gap: 20px; }
 .home-tile.compact h2 { font-size: 18px; }
