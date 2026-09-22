@@ -24,6 +24,6 @@ test('tile links preserve internal navigation, external isolation and direct dow
  await view.update({...common,href:'/files/pdf/fixture.pdf',download:'fixture.pdf'});link=view.container.querySelector('a');assert.equal(link.getAttribute('href'),'/files/pdf/fixture.pdf');assert.equal(link.getAttribute('download'),'fixture.pdf');
 });
 test('all existing certificate links point to preserved local PDFs',async t=>{
- const view=await render(t,CertificatesList),links=[...view.container.querySelectorAll('a')];assert.equal(links.length,9);
+ const view=await render(t,CertificatesList),links=[...view.container.querySelectorAll('a')];assert.equal(links.length,10);
  for(const link of links){const href=link.getAttribute('href');assert.match(href,/^\/files\/pdf\/[A-Za-z0-9_-]+\.pdf$/);assert.ok(fs.existsSync('public'+href));assert.equal(link.getAttribute('target'),'_blank');assert.match(link.getAttribute('rel'),/noopener/);}
 });

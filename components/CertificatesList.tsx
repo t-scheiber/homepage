@@ -12,14 +12,22 @@ import scuolaLdVLogo from "@/public/files/logos/scuolaLdV.png";
 
 interface Certificate {
   href: string;
-  src: StaticImageData;
+  src?: StaticImageData;
   alt: string;
   title: string;
   organization: string;
+  details?: string;
 }
 
 function CertificatesList() {
   const certificates: Certificate[] = [
+    {
+      href: "/files/pdf/BSc_Diploma.pdf",
+      alt: "Academic degree",
+      title: "Bachelor of Science in Engineering (BSc)",
+      organization: "FH Technikum Wien",
+      details: "Smart Homes and Assistive Technologies · FH Technikum Wien · 2026",
+    },
     {
       href: "/files/pdf/Meta_Certificate.pdf",
       src: metaLogo,
@@ -87,7 +95,7 @@ function CertificatesList() {
 
   return (
     <ul className="list-none w-full m-0 p-0 justify-center relative">
-      {certificates.map(({ href, src, alt, title, organization }, index) => (
+      {certificates.map(({ href, src, alt, title, organization, details }, index) => (
         <li
           key={href}
           className="list-none"
@@ -100,9 +108,19 @@ function CertificatesList() {
             className={`bg-white/20 backdrop-blur-md m-0 py-4 px-6 justify-center items-center relative flex transition-all duration-200 sm:py-3 sm:px-4 sm:text-base hover:bg-white/30 hover:backdrop-blur-none text-white! text-lg! font-normal drop-shadow-lg ${index !== certificates.length - 1 ? "border-b border-white" : ""}`}
           >
             <span className="flex mr-4 sm:mr-3 bg-white/90 rounded-lg p-2 shrink-0">
-              <Image alt={alt} src={src} width={40} height={40} className="w-10 h-10 sm:w-9 sm:h-9" />
+              {src ? (
+                <Image alt={alt} src={src} width={40} height={40} className="w-10 h-10 sm:w-9 sm:h-9" />
+              ) : (
+                <svg className="w-10 h-10 sm:w-9 sm:h-9 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                  <path d="m2 9 10-5 10 5-10 5L2 9Z" strokeLinejoin="round" />
+                  <path d="M6 11v6c4 3 8 3 12 0v-6M22 9v7" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              )}
             </span>
-            <span>{title}</span>
+            <span>
+              <span className="block">{title}</span>
+              {details && <span className="mt-1 block text-sm text-slate-200">{details}</span>}
+            </span>
           </a>
         </li>
       ))}
