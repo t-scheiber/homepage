@@ -21,16 +21,7 @@ export const metadata: Metadata = {
 
 export default function WorkProjectsPage() {
   return (
-    <main className={styles.page}>
-      <nav className={styles.nav} aria-label="Page navigation">
-        <Link href="/" className={styles.wordmark}>
-          Thomas Scheiber<span> / Work</span>
-        </Link>
-        <Link href="/">
-          Back to home <span aria-hidden="true">↗</span>
-        </Link>
-      </nav>
-
+    <main id="main-content" className={styles.page}>
       <header className={styles.hero}>
         <p className={styles.eyebrow}>
           <span aria-hidden="true" /> Selected professional work
@@ -127,9 +118,6 @@ export default function WorkProjectsPage() {
           Explore coding projects <span aria-hidden="true">↗</span>
         </Link>
       </footer>
-      <p className={styles.endnote}>
-        Thomas Scheiber <span>Selected work · Fictional demo data</span>
-      </p>
     </main>
   );
 }

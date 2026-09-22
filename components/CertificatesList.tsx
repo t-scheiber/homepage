@@ -34,6 +34,7 @@ function CertificatesList() {
       alt: "Meta certification logo",
       title: "Meta Front-End Developer",
       organization: "Meta",
+      details: "Professional certificate · Coursera",
     },
     {
       href: "/files/pdf/AWS_Certificate.pdf",
@@ -49,6 +50,7 @@ function CertificatesList() {
       alt: "Google certification logo",
       title: "Google IT Automation with Python",
       organization: "Google",
+      details: "Professional certificate · Coursera",
     },
     {
       href: "/files/pdf/IT-Support_Certificate.pdf",
@@ -56,6 +58,7 @@ function CertificatesList() {
       alt: "Google certification logo",
       title: "Google IT Support",
       organization: "Google",
+      details: "Professional certificate · Coursera",
     },
     {
       href: "/files/pdf/EF_Certificate.pdf",
@@ -96,7 +99,7 @@ function CertificatesList() {
 
   return (
     <ul className="list-none w-full m-0 p-0 justify-center relative">
-      {certificates.map(({ href, src, alt, title, organization, details }, index) => (
+      {certificates.map(({ href, src, alt, title, organization, details }) => (
         <li
           key={href}
           className="list-none"
@@ -106,7 +109,7 @@ function CertificatesList() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View ${title} certificate from ${organization}`}
-            className={`bg-white/20 backdrop-blur-md m-0 py-4 px-6 justify-center items-center relative flex transition-all duration-200 sm:py-3 sm:px-4 sm:text-base hover:bg-white/30 hover:backdrop-blur-none text-white! text-lg! font-normal drop-shadow-lg ${index !== certificates.length - 1 ? "border-b border-white" : ""}`}
+            className="collection-row"
           >
             <span className="flex mr-4 sm:mr-3 bg-white/90 rounded-lg p-2 shrink-0">
               {src ? (
@@ -120,7 +123,7 @@ function CertificatesList() {
             </span>
             <span>
               <span className="block">{title}</span>
-              {details && <span className="mt-1 block text-sm text-slate-200">{details}</span>}
+              <span className="credential-details">{details || organization}</span>
             </span>
           </a>
         </li>

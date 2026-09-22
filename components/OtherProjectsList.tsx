@@ -23,7 +23,7 @@ const LinkList: React.FC<LinkListProps> = ({ links }) => {
             target={link.href ? "_blank" : undefined}
             rel={link.href ? "noopener noreferrer" : undefined}
             aria-label={link.href ? `Visit ${link.name} website (opens in new tab)` : undefined}
-            className={`bg-white/20 backdrop-blur-md m-0 py-4 px-6 justify-center items-center relative flex transition-all duration-200 sm:py-3 sm:px-4 sm:text-base hover:bg-white/30 hover:backdrop-blur-none text-white! text-lg! font-normal drop-shadow-lg ${index !== links.length - 1 ? "border-b border-white" : ""}`}
+            className="collection-row"
           >
             <span className="flex mr-4 sm:mr-3 bg-white/90 rounded-lg p-2 shrink-0">
               <Image

@@ -161,14 +161,14 @@ const CodingProjectsList: React.FC = () => {
         return (
           <li key={index} className="list-none">
             <div
-              className={`bg-white/20 backdrop-blur-md m-0 py-4 px-6 justify-center items-center relative flex transition-all duration-200 sm:py-3 sm:px-4 sm:text-base hover:bg-white/30 hover:backdrop-blur-none text-white! text-lg! font-normal drop-shadow-lg ${index !== projects.length - 1 ? "border-b border-white" : ""}`}
+              className="collection-row"
             >
               <ProjectTitle
                 href={project.url}
                 target={project.url ? "_blank" : undefined}
                 rel={project.url ? "noopener noreferrer" : undefined}
                 aria-label={project.url ? `Visit ${project.name}${project.archived ? " archived website" : ""} (opens in new tab)` : undefined}
-                className="flex items-center flex-1 text-white! text-lg! font-normal drop-shadow-lg"
+                className="project-title"
               >
                 <span className="flex mr-4 sm:mb-0 bg-white/90 rounded-lg p-2">
                   {project.favicon ? <Image

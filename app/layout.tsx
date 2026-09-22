@@ -1,8 +1,11 @@
 import { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "@/styles/globals.css";
+import "@/styles/portfolio.css";
 import ParticlesComponent from "@/components/Particles";
 import StructuredData from "@/components/StructuredData";
+import SiteHeader from "@/components/SiteHeader";
+import Footer from "@/components/Footer";
 
 // Optimize font loading with next/font
 const inter = localFont({
@@ -115,7 +118,10 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body className={inter.className}>
+        <a href="#main-content" className="skip-link">Skip to content</a>
+        <SiteHeader />
         {children}
+        <Footer />
         <ParticlesComponent />
       </body>
     </html>
