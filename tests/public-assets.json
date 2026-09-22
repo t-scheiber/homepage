@@ -427,9 +427,9 @@
   },
   {
     "path": "public/sitemap.xml",
-    "bytes": 659,
-    "sha256": "372fb0a651dd4c934b5168044f83f84383351306fd916726d18eb9824ada246f",
-    "gitBlob": "272256ef4d64dc9def2514bdf1697def29eb8421"
+    "bytes": 796,
+    "sha256": "ce42b2f4227843e374e7079e40a96bdc631a52b86462cdf332820a393ddb0a1e",
+    "gitBlob": "5d9b5b07a79c0b65efaea242491b39abc4c8d54f"
   },
   {
     "path": "public/sw.js",
