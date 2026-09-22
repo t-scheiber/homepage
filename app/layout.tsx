@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | Thomas Scheiber",
   },
   description:
-    "Professional developer and IT enthusiast portfolio showcasing coding projects, certifications, and WordPress development work. Experienced in React, Next.js, TypeScript, and modern web technologies.",
+    "Software development, internal tools, automation and training by Thomas Scheiber. Explore work projects, personal applications, degrees and certifications.",
   keywords: [
     "Web Developer",
     "IT Specialist",
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://thomasscheiber.com",
-    title: "Thomas Scheiber - Web Developer Portfolio",
+    title: "Thomas Scheiber - Development & Automation",
     description:
-      "Professional web developer portfolio showcasing coding projects, certifications, and WordPress development work.",
+      "Software development, internal tools, automation and training by Thomas Scheiber. Explore work projects, personal applications, degrees and certifications.",
     siteName: "Thomas Scheiber Portfolio",
     images: [
       {
@@ -64,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Thomas Scheiber - Web Developer Portfolio",
+    title: "Thomas Scheiber - Development & Automation",
     description:
-      "Professional web developer portfolio showcasing coding projects and certifications.",
+      "Software development, internal tools, automation and training by Thomas Scheiber. Explore work projects, personal applications, degrees and certifications.",
     images: ["/files/portrait.jpg"],
   },
   icons: {
@@ -113,11 +113,6 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <head>
         <StructuredData />
-        {/* Preconnect to external domains for faster loading */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://www.google.com" />
-        {/* DNS prefetch for favicon service */}
-        <link rel="dns-prefetch" href="https://www.google.com" />
       </head>
       <body className={inter.className}>
         {children}

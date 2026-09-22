@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { SOCIAL_LINKS } from "@/lib/constants";
 
 // JSON-LD Structured Data for SEO
 function StructuredData() {
@@ -6,16 +7,16 @@ function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Thomas Scheiber',
-    jobTitle: 'Web Developer',
+    description: 'Software development, internal tools, automation and IT administration.',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://thomasscheiber.com',
     sameAs: [
-      process.env.NEXT_PUBLIC_LINKEDIN_URL || 'https://www.linkedin.com/in/thomas-scheiber-857006151/',
-      process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/t-scheiber',
-      process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://www.instagram.com/thomasscheiberphotography',
-      process.env.NEXT_PUBLIC_FACEBOOK_URL || 'https://www.facebook.com/thomasscheiberphotography',
+      SOCIAL_LINKS.linkedin,
+      SOCIAL_LINKS.github,
+      SOCIAL_LINKS.instagram,
+      SOCIAL_LINKS.facebook,
     ],
-    email: process.env.NEXT_PUBLIC_EMAIL || 'contact@example.com',
-    telephone: process.env.NEXT_PUBLIC_PHONE || '+1234567890',
+    email: SOCIAL_LINKS.email,
+    ...(SOCIAL_LINKS.phone ? { telephone: SOCIAL_LINKS.phone } : {}),
     knowsAbout: [
       'Web Development',
       'React',
@@ -25,8 +26,19 @@ function StructuredData() {
       'WordPress',
       'Frontend Development',
       'Full Stack Development',
+      'Workflow Automation',
+      'IT Training',
+      'API Integrations',
     ],
     hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        name: 'Bachelor of Science in Engineering (BSc)',
+        description: 'Smart Homes and Assistive Technologies',
+        credentialCategory: 'Degree',
+        educationalLevel: 'Bachelor',
+        recognizedBy: { '@type': 'CollegeOrUniversity', name: 'FH Technikum Wien' },
+      },
       {
         '@type': 'EducationalOccupationalCredential',
         name: 'Meta Front-End Developer',
@@ -63,7 +75,7 @@ function StructuredData() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }}
     />
   );
 }

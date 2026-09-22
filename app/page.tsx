@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback } from "react";
 import TileLink from "@/components/TileLink";
 import Link from "next/link";
 import PDFViewer from "@/components/PDFViewer";
@@ -30,16 +30,6 @@ export default function Home() {
   const handleClosePDF = useCallback(() => {
     setIsPDFViewerOpen(false);
   }, []);
-
-  const emailHref = useMemo(
-    () => (SOCIAL_LINKS.email ? `mailto:${SOCIAL_LINKS.email}` : "#"),
-    []
-  );
-
-  const phoneHref = useMemo(
-    () => (SOCIAL_LINKS.phone ? `tel:${SOCIAL_LINKS.phone}` : "#"),
-    []
-  );
 
   return (
     <main className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-start px-4 py-10 sm:px-6 sm:py-12 lg:px-10">
@@ -118,7 +108,7 @@ export default function Home() {
 
           <TileLink
             href="/otherprojects"
-            label="Wordpress & other Projects"
+            label="WordPress & Other Projects"
             imageSrc={wordpress}
             imageAlt="WordPress logo"
             imageWidth={125}
@@ -142,7 +132,7 @@ export default function Home() {
 
           <TileLink
             href={SOCIAL_LINKS.github}
-            label="Github"
+            label="GitHub"
             imageSrc={github}
             imageAlt="GitHub logo"
             imageWidth={95}
@@ -153,20 +143,20 @@ export default function Home() {
           />
 
           <TileLink
-            href={emailHref}
+            href={`mailto:${SOCIAL_LINKS.email}`}
             label="E-Mail"
             imageSrc={envelope}
             imageAlt="Email icon"
             imageWidth={65}
             imageHeight={65}
-            className="col-span-1 w-full"
+            className={`col-span-1 w-full ${SOCIAL_LINKS.phone ? "" : "lg:col-span-2"}`}
             imageClassName="h-12 w-12 sm:h-14 sm:w-14"
             textMargin={TEXT_MARGIN.reduced}
             external={true}
           />
 
-          <TileLink
-            href={phoneHref}
+          {SOCIAL_LINKS.phone && <TileLink
+            href={`tel:${SOCIAL_LINKS.phone}`}
             label="Phone"
             imageSrc={phone}
             imageAlt="Phone icon"
@@ -176,7 +166,7 @@ export default function Home() {
             imageClassName="h-12 w-12 sm:h-14 sm:w-14"
             textMargin={TEXT_MARGIN.reduced}
             external={true}
-          />
+          />}
 
           {/* Row 4: Instagram (col 3) | Facebook (col 4) - half height */}
           <TileLink

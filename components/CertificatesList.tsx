@@ -26,7 +26,7 @@ function CertificatesList() {
       alt: "Academic degree",
       title: "Bachelor of Science in Engineering (BSc)",
       organization: "FH Technikum Wien",
-      details: "Smart Homes and Assistive Technologies · FH Technikum Wien · 2026",
+      details: "Smart Homes and Assistive Technologies · FH Technikum Wien",
     },
     {
       href: "/files/pdf/Meta_Certificate.pdf",
@@ -41,6 +41,7 @@ function CertificatesList() {
       alt: "AWS certification logo",
       title: "AWS Cloud Solutions Architect",
       organization: "Amazon Web Services",
+      details: "Professional certificate · Coursera",
     },
     {
       href: "/files/pdf/IT-Automation-Python_Certificate.pdf",
