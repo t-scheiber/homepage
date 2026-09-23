@@ -2,7 +2,16 @@
 
 import Particles, { ParticlesProvider } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import React, { useMemo } from "react";
+import React, { useMemo, useSyncExternalStore } from "react";
+
+const reducedMotionQuery = "(prefers-reduced-motion: reduce)";
+const subscribeToMotion = (notify: () => void) => {
+  const query = window.matchMedia(reducedMotionQuery);
+  query.addEventListener("change", notify);
+  return () => query.removeEventListener("change", notify);
+};
+const getReducedMotion = () => window.matchMedia(reducedMotionQuery).matches;
+const getServerReducedMotion = () => true;
 
 const initParticles = async (engine: Parameters<typeof loadSlim>[0]) => {
   await loadSlim(engine);
@@ -13,6 +22,7 @@ interface ParticlesComponentProps {
 }
 
 const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
+  const reducedMotion = useSyncExternalStore(subscribeToMotion, getReducedMotion, getServerReducedMotion);
   const isMobile = useMemo(() => {
     if (typeof navigator === "undefined") {
       return false;
@@ -73,6 +83,8 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
     }),
     [isMobile]
   );
+
+  if (reducedMotion) return null;
 
   return (
     <ParticlesProvider init={initParticles}>

@@ -397,9 +397,9 @@
   },
   {
     "path": "public/files/pdf/ScheiberThomasCV.pdf",
-    "bytes": 2520423,
-    "sha256": "b068a01481ae4850ee05460335a8017f5c5a80e235b9d41aca47ed6c57f9d967",
-    "gitBlob": "70836c89e5295d243d155e0d77eb445301fbb719"
+    "bytes": 1959282,
+    "sha256": "b7291128839c2427656aff87bcdad54248e4d7a98451b33384febd7e087ce29f",
+    "gitBlob": "3cf2e16251e4184d3b0df941784c9b965da90e62"
   },
   {
     "path": "public/files/pdf/makeITsafe_Certificate.pdf",
@@ -427,9 +427,9 @@
   },
   {
     "path": "public/sitemap.xml",
-    "bytes": 659,
-    "sha256": "372fb0a651dd4c934b5168044f83f84383351306fd916726d18eb9824ada246f",
-    "gitBlob": "272256ef4d64dc9def2514bdf1697def29eb8421"
+    "bytes": 796,
+    "sha256": "ce42b2f4227843e374e7079e40a96bdc631a52b86462cdf332820a393ddb0a1e",
+    "gitBlob": "5d9b5b07a79c0b65efaea242491b39abc4c8d54f"
   },
   {
     "path": "public/sw.js",
