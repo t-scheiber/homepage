@@ -1,11 +1,9 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
-import TileLink from "@/components/TileLink";
-import PDFViewer from "@/components/PDFViewer";
+import { useState, useCallback, type ReactNode } from "react";
+import Link from "next/link";
 import Image from "next/image";
-import portrait from "@/public/files/portrait.jpg";
-import coding from "@/public/files/coding.png";
+import PDFViewer from "@/components/PDFViewer";
 import certification from "@/public/files/certificates.png";
 import wordpress from "@/public/files/Wordpress-Logo.svg";
 import linkedin from "@/public/files/linkedin.svg";
@@ -13,186 +11,52 @@ import github from "@/public/files/github.svg";
 import facebook from "@/public/files/facebook.svg";
 import instagram from "@/public/files/instagram.svg";
 import envelope from "@/public/files/envelope-solid.svg";
-import phone from "@/public/files/phone-solid.svg";
-import { SOCIAL_LINKS, TILE_BUTTON_CLASS, TEXT_MARGIN } from "@/lib/constants";
+import { SOCIAL_LINKS } from "@/lib/constants";
 
-const CV_PDF_URL = "/files/pdf/ScheiberThomasCV.pdf";
-const CV_FILE_NAME = "ScheiberThomasCV.pdf";
+function Tile({ href, title, description, icon, className = "", external = false }: {
+  href: string; title: string; description?: string; icon: ReactNode; className?: string; external?: boolean;
+}) {
+  return (
+    <Link href={href} className={`home-tile ${className}`} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined} aria-label={external ? `${title} (opens in new tab)` : undefined}>
+      <span className="tile-icon" aria-hidden="true">{icon}</span>
+      <span className="tile-arrow" aria-hidden="true">↗</span>
+      <div><h2>{title}</h2>{description && <p>{description}</p>}</div>
+    </Link>
+  );
+}
 
 export default function Home() {
   const [isPDFViewerOpen, setIsPDFViewerOpen] = useState(false);
-
-  const handleOpenPDF = useCallback(() => {
-    setIsPDFViewerOpen(true);
-  }, []);
-
-  const handleClosePDF = useCallback(() => {
-    setIsPDFViewerOpen(false);
-  }, []);
-
-  const emailHref = useMemo(
-    () => (SOCIAL_LINKS.email ? `mailto:${SOCIAL_LINKS.email}` : "#"),
-    []
-  );
-
-  const phoneHref = useMemo(
-    () => (SOCIAL_LINKS.phone ? `tel:${SOCIAL_LINKS.phone}` : "#"),
-    []
-  );
+  const handleOpenPDF = useCallback(() => setIsPDFViewerOpen(true), []);
+  const handleClosePDF = useCallback(() => setIsPDFViewerOpen(false), []);
 
   return (
-    <main className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-start px-4 py-10 sm:px-6 sm:py-12 lg:px-10">
-      <div className="flex w-full flex-col items-center gap-6 lg:gap-8">
-        <header className="w-full text-center text-white">
-          <h1 className="text-[clamp(2.25rem,6vw,3.5rem)] font-thin tracking-normal leading-tight">
-            Thomas Scheiber
-          </h1>
-        </header>
-
-        <section className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[minmax(170px,1fr)]">
-          <PDFViewer
-            pdfUrl={CV_PDF_URL}
-            fileName={CV_FILE_NAME}
-            isOpen={isPDFViewerOpen}
-            onClose={handleClosePDF}
-          />
-
-          {/* Row 1: CV (left, spans 2 cols) | Coding Projects (right, spans 2 cols) */}
-          <button
-            type="button"
-            onClick={handleOpenPDF}
-            className={`${TILE_BUTTON_CLASS} col-span-1 w-full lg:col-span-2`}
-            aria-label="View CV"
-          >
-            <Image
-              className="h-24 w-24 shrink-0 rounded-full object-cover shadow-lg sm:h-28 sm:w-28"
-              src={portrait}
-              alt="Thomas Scheiber portrait photo"
-              width={145}
-              height={145}
-              priority
-            />
-            <p className="mt-4 text-lg font-medium tracking-wide text-slate-900 sm:text-xl">
-              CV
-            </p>
-          </button>
-
-          <TileLink
-            href="/codingprojects"
-            label="Coding Projects"
-            imageSrc={coding}
-            imageAlt="Programming code illustration"
-            imageWidth={240}
-            imageHeight={160}
-            priority
-            className="col-span-1 w-full lg:col-span-2"
-            imageClassName="h-28 w-auto max-w-[11rem] sm:h-32"
-            textMargin={TEXT_MARGIN.reduced}
-          />
-
-          {/* Row 2: Certifications (left, spans 2 cols) | WordPress (right, spans 2 cols) */}
-          <TileLink
-            href="/certifications"
-            label="All Certifications"
-            imageSrc={certification}
-            imageAlt="Professional certificates icon"
-            imageWidth={125}
-            imageHeight={125}
-            className="col-span-1 w-full lg:col-span-2"
-            imageClassName="h-20 w-20 sm:h-24 sm:w-24"
-            textMargin={TEXT_MARGIN.reduced}
-          />
-
-          <TileLink
-            href="/otherprojects"
-            label="Wordpress & other Projects"
-            imageSrc={wordpress}
-            imageAlt="WordPress logo"
-            imageWidth={125}
-            imageHeight={125}
-            className="col-span-1 w-full lg:col-span-2"
-            imageClassName="h-20 w-20 sm:h-24 sm:w-24"
-          />
-
-          {/* Row 3-4: LinkedIn (col 1, spans 2 rows) | GitHub (col 2, spans 2 rows) | E-Mail (col 3, row 3) | Phone (col 4, row 3) */}
-          <TileLink
-            href={SOCIAL_LINKS.linkedin}
-            label="LinkedIn"
-            imageSrc={linkedin}
-            imageAlt="LinkedIn logo"
-            imageWidth={95}
-            imageHeight={95}
-            className="col-span-1 w-full lg:row-span-2"
-            imageClassName="h-14 w-14 sm:h-16 sm:w-16"
-            external={true}
-          />
-
-          <TileLink
-            href={SOCIAL_LINKS.github}
-            label="Github"
-            imageSrc={github}
-            imageAlt="GitHub logo"
-            imageWidth={95}
-            imageHeight={95}
-            className="col-span-1 w-full lg:row-span-2"
-            imageClassName="h-14 w-14 sm:h-16 sm:w-16"
-            external={true}
-          />
-
-          <TileLink
-            href={emailHref}
-            label="E-Mail"
-            imageSrc={envelope}
-            imageAlt="Email icon"
-            imageWidth={65}
-            imageHeight={65}
-            className="col-span-1 w-full"
-            imageClassName="h-12 w-12 sm:h-14 sm:w-14"
-            textMargin={TEXT_MARGIN.reduced}
-            external={true}
-          />
-
-          <TileLink
-            href={phoneHref}
-            label="Phone"
-            imageSrc={phone}
-            imageAlt="Phone icon"
-            imageWidth={65}
-            imageHeight={65}
-            className="col-span-1 w-full"
-            imageClassName="h-12 w-12 sm:h-14 sm:w-14"
-            textMargin={TEXT_MARGIN.reduced}
-            external={true}
-          />
-
-          {/* Row 4: Instagram (col 3) | Facebook (col 4) - half height */}
-          <TileLink
-            href={SOCIAL_LINKS.instagram}
-            label="Instagram"
-            imageSrc={instagram}
-            imageAlt="Instagram logo"
-            imageWidth={65}
-            imageHeight={65}
-            className="col-span-1 w-full"
-            imageClassName="h-12 w-12 sm:h-14 sm:w-14"
-            textMargin={TEXT_MARGIN.reduced}
-            external={true}
-          />
-
-          <TileLink
-            href={SOCIAL_LINKS.facebook}
-            label="Facebook"
-            imageSrc={facebook}
-            imageAlt="Facebook logo"
-            imageWidth={65}
-            imageHeight={65}
-            className="col-span-1 w-full"
-            imageClassName="h-12 w-12 sm:h-14 sm:w-14"
-            textMargin={TEXT_MARGIN.reduced}
-            external={true}
-          />
-        </section>
+    <main id="main-content" className="home-page">
+      <header className="home-intro">
+        <p className="section-eyebrow">Software &amp; automation engineering</p>
+        <h1>Thomas Scheiber</h1>
+        <p className="page-description">I build web applications, internal tools and automation, from employee workflows to cloud deployments.</p>
+      </header>
+      <PDFViewer pdfUrl="/files/pdf/ScheiberThomasCV.pdf" fileName="ScheiberThomasCV.pdf" isOpen={isPDFViewerOpen} onClose={handleClosePDF} />
+      <div className="home-grid">
+        <button type="button" onClick={handleOpenPDF} className="home-tile tile-half" aria-label="View CV">
+          <span className="tile-icon" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#263b48" strokeWidth="1.5"><path d="M14 3H5v18h14V8l-5-5Z" strokeLinejoin="round"/><path d="M14 3v5h5M8 12h8M8 16h6"/></svg></span>
+          <span className="tile-arrow" aria-hidden="true">↗</span>
+          <span><span className="tile-title">CV</span><span className="tile-description">My experience, education and technical background.</span></span>
+        </button>
+        <Tile href="/workprojects" title="Work projects" description="Internal tools, training and integrations. A closer look at my professional work." className="tile-half" icon={<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#263b48" strokeWidth="1.5"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6h5a3 3 0 0 1 3 3v5M6 10v5a3 3 0 0 0 3 3h5"/></svg>} />
+        <Tile href="/codingprojects" title="Coding projects" description="Personal applications, useful tools and experiments. Explore the code behind them." className="tile-half" icon={<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#263b48" strokeWidth="1.5"><path d="m8 5-7 7 7 7m8-14 7 7-7 7M14 3l-4 18"/></svg>} />
+        <Tile href="/otherprojects" title="WordPress & websites" description="Websites for businesses, communities and organisations." className="tile-half" icon={<Image src={wordpress} alt="" width={32} height={32}/>} />
+        <Tile href="/certifications" title="Degrees & certifications" description="Engineering, IT and language qualifications." className="tile-half compact" icon={<Image src={certification} alt="" width={32} height={32}/>} />
+        <Tile href={SOCIAL_LINKS.linkedin} title="LinkedIn" className="compact" external icon={<Image src={linkedin} alt="" width={32} height={32}/>} />
+        <Tile href={SOCIAL_LINKS.github} title="GitHub" className="compact" external icon={<Image src={github} alt="" width={32} height={32}/>} />
+        <Tile href={`mailto:${SOCIAL_LINKS.email}`} title="Email" description={SOCIAL_LINKS.email} className="tile-half home-contact" icon={<Image src={envelope} alt="" width={32} height={32}/>} />
+        <div className="social-pair tile-half">
+          <Tile href={SOCIAL_LINKS.instagram} title="Instagram" external icon={<Image src={instagram} alt="" width={28} height={28}/>} />
+          <Tile href={SOCIAL_LINKS.facebook} title="Facebook" external icon={<Image src={facebook} alt="" width={28} height={28}/>} />
+        </div>
       </div>
+      {SOCIAL_LINKS.phone && <a className="home-phone" href={`tel:${SOCIAL_LINKS.phone}`}>Call {SOCIAL_LINKS.phone}</a>}
     </main>
   );
 }
