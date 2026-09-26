@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "source": "career-workspace/services/cv",
-  "sourceRevision": "43c61d8aa731846992908d81630b0bbaa1a41609",
-  "contentHash": "bb5408b8ef13e7b1fe34feeb385c0d6ecd09c26b223f82f9548b5cadd0ab4617",
-  "pdfSha256": "b7291128839c2427656aff87bcdad54248e4d7a98451b33384febd7e087ce29f",
+  "sourceRevision": "13a76a323c1ac9ef708b0a162eac370ba262fc23",
+  "contentHash": "9b70e64076570bcf48f16916bc2e32e32333ee7ede21951e243fe09d095f87bd",
+  "pdfSha256": "57e4080cac39de33c2679479835ab99e4eef03e0ea40d75bda196ea7257df3d3",
   "profile": {
     "name": "Thomas Scheiber",
     "email": "mail@thomasscheiber.com",
@@ -14,7 +14,7 @@
       "linkedin": "https://www.linkedin.com/in/thomas-scheiber/"
     },
     "headline": "Software & Automation Engineering | Internal Tools, Cloud Applications & Developer Platforms",
-    "about": "I build software for internal operations: web applications, automation and tools that colleagues use to manage their work. At Refurbed, my work covers application development and deployment, identity integrations and endpoint automation.\n\nI work with Next.js, React, TypeScript, Python and PowerShell. Recent projects include a Git and deployment platform pilot, an optional online Git course and an advisory AI code reviewer. I deploy internal applications to Google Cloud Run through GitLab CI/CD. My background in IT administration helps me understand the support and operational problems these tools need to solve.\n\nI also build websites and applications as a freelance web developer. I hold a BSc in Engineering in Smart Homes and Assistive Technologies from FH Technikum Wien and have been studying Software Engineering at TU Wien since July 2026.",
+    "about": "I build software for internal operations: web applications, automation and tools that colleagues use to manage their work. At Refurbed, my work covers application development and deployment, identity integrations and endpoint automation.\n\nI work with Next.js, React, TypeScript, Python and PowerShell. Recent projects include a Git and deployment platform pilot, an optional online Git course and an advisory AI code reviewer. I deploy internal applications to Google Cloud Run through GitLab CI/CD. My background in IT administration helps me understand the support and operational problems these tools need to solve.\n\nI also build websites and applications as a freelance web developer. I hold a B.Sc. in Engineering in Smart Homes and Assistive Technologies from FH Technikum Wien and am studying for a master's in Software Engineering at TU Wien.",
     "employment": [
       {
         "employer": "Refurbed Marketplace GmbH",
@@ -36,8 +36,10 @@
         "end": null,
         "location": "Vienna, Austria",
         "cv_bullets": [
-          "Build Next.js, React and TypeScript applications, with responsive interfaces and reusable components.",
-          "Handle SEO, Core Web Vitals and production CI/CD on Vercel and Coolify."
+          "Built the Mayr Dach website for Karl Mayr GmbH, and a document upload app for Villa Claudia guests to send travel documents before their stay, with Next.js, React and TypeScript.",
+          "Built the EuropeTalks website in Next.js, with a Nextcloud instance on the same Clerk login. Admin, member and guest roles apply on both.",
+          "Handle SEO, Core Web Vitals and production CI/CD on Vercel and Coolify.",
+          "Built WordPress sites for HD Architekten, HD Projekt Baumanagement, Villa Claudia, Villa Dijana and Darat Thaimassage."
         ]
       },
       {
@@ -47,8 +49,8 @@
         "end": "2023-12",
         "location": "Vienna, Austria",
         "cv_bullets": [
-          "Worked on identity and access management development with One Identity Manager as part of customer project teams.",
-          "Developed connectors, workflows and automation with PowerShell, Visual Basic and .NET."
+          "Worked on identity and access management for UNIQA and AVL with One Identity Manager, PowerShell, Visual Basic and .NET.",
+          "Built PowerShell connectors on the UNIQA project."
         ]
       },
       {
@@ -67,16 +69,16 @@
     "education": [
       {
         "institution": "TU Wien",
-        "degree": "Master’s in Software Engineering",
-        "start": "2026-07",
+        "degree": "Master's in Software Engineering",
+        "start": null,
         "end": null,
         "status": "ongoing"
       },
       {
         "institution": "University of Applied Sciences Technikum Vienna",
-        "degree": "B.Sc. in Engineering, Smart Homes & Assistive Technologies",
+        "degree": "B.Sc. in Engineering, Smart Homes & Assistive Technologies, passed with merit",
         "start": "2019-09",
-        "end": "2026-06",
+        "end": "2022-03",
         "status": "completed"
       }
     ],
