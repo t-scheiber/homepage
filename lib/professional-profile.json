@@ -1,9 +1,10 @@
 {
   "schemaVersion": 1,
   "source": "career-workspace/services/cv",
-  "sourceRevision": "13a76a323c1ac9ef708b0a162eac370ba262fc23",
-  "contentHash": "9b70e64076570bcf48f16916bc2e32e32333ee7ede21951e243fe09d095f87bd",
-  "pdfSha256": "57e4080cac39de33c2679479835ab99e4eef03e0ea40d75bda196ea7257df3d3",
+  "sourceRevision": "b04ebe488ec489b2a706d63a26e49bba55ae96df",
+  "contentHash": "7459750817a59570c1eb1cc2fadaa7766c28f889f32d18e455af62cae24db2fd",
+  "sourceDirty": true,
+  "pdfSha256": "104e5bc30ccd50f5f24658a007c0bdbbde8a044bcb925e4552e82767d407926a",
   "profile": {
     "name": "Thomas Scheiber",
     "email": "mail@thomasscheiber.com",
@@ -13,7 +14,7 @@
       "github": "https://github.com/t-scheiber",
       "linkedin": "https://www.linkedin.com/in/thomas-scheiber/"
     },
-    "headline": "Software & Automation Engineering | Internal Tools, Cloud Applications & Developer Platforms",
+    "headline": "Software Development & Automation | Internal Applications, APIs & Cloud Deployment",
     "about": "I build software for internal operations: web applications, automation and tools that colleagues use to manage their work. At Refurbed, my work covers application development and deployment, identity integrations and endpoint automation.\n\nI work with Next.js, React, TypeScript, Python and PowerShell. Recent projects include a Git and deployment platform pilot, an optional online Git course and an advisory AI code reviewer. I deploy internal applications to Google Cloud Run through GitLab CI/CD. My background in IT administration helps me understand the support and operational problems these tools need to solve.\n\nI also build websites and applications as a freelance web developer. I hold a B.Sc. in Engineering in Smart Homes and Assistive Technologies from FH Technikum Wien and am studying for a master's in Software Engineering at TU Wien.",
     "employment": [
       {
@@ -23,9 +24,9 @@
         "end": null,
         "location": "Vienna, Austria",
         "cv_bullets": [
-          "Built Next.js/React internal applications and PowerShell/Python automation, with GitLab CI/CD deployments to Google Cloud Run.",
-          "Built an internal Forgejo and Coolify hosting pilot and an optional online Git course, with AI tools and documentation for colleagues.",
-          "Added PXE boot to device preparation alongside Microsoft Intune and Autopilot Device Preparation v2.",
+          "Developed and deployed internal applications with GitLab CI/CD and Google Cloud Run, including Entra ID sign-in, Microsoft Graph integrations and Cloud SQL databases.",
+          "Deployed a Forgejo and Coolify pilot on existing company hardware for colleagues to host and deploy applications, with access controls, AI review and recovery documentation.",
+          "Replaced USB-drive imaging with Microsoft Intune and Autopilot Device Preparation v2, adding PowerShell setup automation and PXE boot.",
           "Managed endpoints, networking and user support in a two-person IT team."
         ]
       },
@@ -36,10 +37,8 @@
         "end": null,
         "location": "Vienna, Austria",
         "cv_bullets": [
-          "Built the Mayr Dach website for Karl Mayr GmbH, and a document upload app for Villa Claudia guests to send travel documents before their stay, with Next.js, React and TypeScript.",
-          "Built the EuropeTalks website in Next.js, with a Nextcloud instance on the same Clerk login. Admin, member and guest roles apply on both.",
-          "Handle SEO, Core Web Vitals and production CI/CD on Vercel and Coolify.",
-          "Built WordPress sites for HD Architekten, HD Projekt Baumanagement, Villa Claudia, Villa Dijana and Darat Thaimassage."
+          "Built Next.js, React and TypeScript websites for Mayr Dach and EuropeTalks, and a guest document-upload application for Villa Claudia.",
+          "Maintain production deployments on Vercel and Coolify, SEO and Core Web Vitals. Built five WordPress websites."
         ]
       },
       {
@@ -49,8 +48,8 @@
         "end": "2023-12",
         "location": "Vienna, Austria",
         "cv_bullets": [
-          "Worked on identity and access management for UNIQA and AVL with One Identity Manager, PowerShell, Visual Basic and .NET.",
-          "Built PowerShell connectors on the UNIQA project."
+          "Developed identity and access management solutions for UNIQA and AVL using One Identity Manager, PowerShell, Visual Basic and .NET.",
+          "Implemented PowerShell connectors for UNIQA as part of a Scrum team of employees and external consultants."
         ]
       },
       {
@@ -60,9 +59,8 @@
         "end": "2023-03",
         "location": "Vienna, Austria",
         "cv_bullets": [
-          "Deployed and managed firewalls and supported network infrastructure.",
-          "Worked with Intune, Autopilot and Jamf Pro for device management.",
-          "Provided first- and second-level support and documented solutions."
+          "Led Microsoft Intune and Autopilot deployment for the company's devices and deployed Jamf Pro to manage every company iPhone for ISO certification.",
+          "Managed firewalls and network infrastructure, provided first- and second-level support, and documented solutions."
         ]
       }
     ],
@@ -75,7 +73,7 @@
         "status": "ongoing"
       },
       {
-        "institution": "University of Applied Sciences Technikum Vienna",
+        "institution": "University of Applied Sciences Technikum Wien",
         "degree": "B.Sc. in Engineering, Smart Homes & Assistive Technologies, passed with merit",
         "start": "2019-09",
         "end": "2022-03",
