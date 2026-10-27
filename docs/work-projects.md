@@ -1,23 +1,30 @@
 # Work projects
 
-The `/workprojects` page presents six professional projects with short summaries, individual contributions and fictional demo screenshots. The homepage links to it and the sitemap includes it.
+The `/workprojects` page presents eight interactive workflow demos and eight further project summaries. Visitors choose a demo, explore a success or failure path, and read the contribution and engineering decision alongside it. The homepage and sitemap link to the page.
 
 ## Content and confidentiality
 
-The training platform uses Vue and TypeScript. Framework labels describe the original project, not this Next.js portfolio or the static demo generator.
+Edit `lib/work-projects.ts` for public copy. Contributions are grounded in project documentation and authored changes reviewed in GitLab. Repository presence alone does not establish ownership, adoption or impact. Do not imply sole ownership or add unverified impact claims. The Git/deployment platform remains a pilot.
 
-Edit `lib/work-projects.ts` to change the copy. Describe contributions without implying sole ownership or claiming measured impact that has not been established.
+Framework labels describe the original projects. For example, training uses Vue and TypeScript, although its portfolio reconstruction runs in React.
 
-All screenshots are original, simplified demo interfaces. They are not screenshots of company applications, and the page and images say so. The Git/deployment image is explicitly a conceptual overview, not a product UI.
+All demo interfaces are original, simplified reconstructions. They use fictional names, sample states, generic resources and reserved example email addresses. Do not include employer branding, internal domains, repository paths, staff information, real counts, customer details, credentials, private code or architecture diagrams. Research notes and company materials stay outside this repository.
 
-Only fictional names, sample statuses, generic resources and reserved example email addresses belong in the demos. Do not add company branding, internal domains, repository paths, staff information, real counts, customer details, credentials, private source code or architecture diagrams. Research notes and original company materials must remain outside this repository.
+## Interactive demos
 
-## Regenerating the images
+`components/WorkShowcase.tsx` selects a demo through a shareable URL fragment. It offers desktop workflow buttons, a native mobile selector and a reset control. Each component in `components/work-demos/` keeps its own local state. Switching or resetting a demo clears that state. No demo calls a work API, AI provider, calendar, shipping carrier or identity service.
 
-Run `node scripts/create-work-project-demos.mjs <local-output-directory>` to write six standalone HTML demos outside the site. Serve that directory on loopback and capture each page at a 1280 × 900 CSS-pixel desktop viewport. Save PNG screenshots in `public/files/work-projects/` using the matching HTML filename stem. Check the complete image, including its footer, before replacing an asset.
+- Equipment: invalid address, corrected address, label confirmation and uncertain-response reconciliation without a second label.
+- Support: active or reopened source, deterministic sample reply, editable draft and human review gate. Nothing is sent.
+- Lifecycle: return, departure and future-start scenarios, partial failure and recovery.
+- Scheduling: time-dependent room availability and a blocked conflicting booking.
+- Guest access: separate submitted, approved and rejected states.
+- Connections: connect, sample sync, revoke and clear prior results.
+- Training: original Git questions, explanatory feedback and retry.
+- Deployment: failing checks, repair, independent approval and simulated release.
 
-The generator contains only fictional content, has no dependencies, makes no network requests and does not connect to any work system. It does not modify or redact original company screenshots. The page provides larger image links and descriptive alternative text.
+Further projects use native disclosure elements for contribution details. Existing source imagery in `public/files/work-projects/` remains available, including the equipment preview on the homepage. `scripts/create-work-project-demos.mjs` is the legacy static preview generator, not the implementation of these interactive demos.
 
 ## Validation
 
-Run the repository lint, type check, production build and test commands. The production smoke test includes `/workprojects` and follows its local asset references. Also check the homepage link, all six section links and image links, and mobile layouts at 390px and 768px.
+Run lint, type check, production build and tests using the repository's Node 22 runtime. Component tests cover meaningful state transitions and approval gates. Inspect desktop and mobile layouts in light and dark themes, including 320px width. Check URL selection, reset, keyboard focus and native disclosures. Keep fictional data and local-only behavior intact when adding new scenarios.

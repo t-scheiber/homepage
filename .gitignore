@@ -8,6 +8,8 @@
 
 # testing
 /coverage
+/tests/.compiled/
+/tests/.compiled-health/
 
 # next.js
 /.next/
