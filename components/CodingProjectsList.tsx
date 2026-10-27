@@ -161,7 +161,7 @@ const CodingProjectsList: React.FC = () => {
         return (
           <li key={index} className="list-none">
             <div
-              className="collection-row"
+              className="collection-row coding-project-row"
             >
               <ProjectTitle
                 href={project.url}
@@ -181,7 +181,7 @@ const CodingProjectsList: React.FC = () => {
                 </span>
                 <span>
                   <span className="block">{project.name}</span>
-                  {project.archived && <span className="mt-1 block text-sm text-slate-200">Archived website</span>}
+                  {project.archived && <span className="mt-1 block text-sm text-[var(--muted)]">Archived website</span>}
                 </span>
               </ProjectTitle>
               {project.githubRepo && <a

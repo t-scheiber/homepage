@@ -14,8 +14,8 @@ export default function Loading() {
         style={{
           width: '50px',
           height: '50px',
-          border: '5px solid rgba(255, 255, 255, 0.3)',
-          borderTop: '5px solid white',
+          border: '5px solid var(--line)',
+          borderTop: '5px solid var(--accent)',
           borderRadius: '50%',
           animation: 'spin 1s linear infinite',
         }}

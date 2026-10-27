@@ -18,5 +18,7 @@ export default defineConfig([
     ".github/**",
     "scripts/**",
     "public/**",
+    "tests/.compiled/**",
+    "tests/.compiled-health/**",
   ]),
 ]);

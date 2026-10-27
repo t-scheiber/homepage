@@ -1,0 +1,89 @@
+:root {
+  color-scheme: dark;
+  --page-bg: #14232e;
+  --page-wash: #10202ac7;
+  --page-image: url("/files/backgrounds/slate-facets.webp");
+  --text: #edf3f8;
+  --muted: #c0cfd8;
+  --surface: #182832f5;
+  --line: #c4e0dc30;
+  --control-border: #b6cac56b;
+  --hover: #c4e0dc0c;
+  --accent: #bcecd0;
+  --accent-fill: #bcecd0;
+  --accent-hover: #d4f9e4;
+  --on-accent: #13271e;
+  --scrollbar: #7c9999;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --page-bg: #edf2ed;
+  --page-wash: #f4f7f3b8;
+  --page-image: url("/files/backgrounds/mineral-facets.webp");
+  --text: #1b302e;
+  --muted: #435e58;
+  --surface: #f8fbf7f5;
+  --line: #35564e30;
+  --control-border: #40655b8a;
+  --hover: #365f5910;
+  --accent: #245e4a;
+  --accent-fill: #245e4a;
+  --accent-hover: #194b3b;
+  --on-accent: #f6fcf8;
+  --scrollbar: #718b84;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.theme-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+}
+
+.theme-control > svg {
+  position: absolute;
+  left: 10px;
+  pointer-events: none;
+}
+
+.theme-control select {
+  min-height: 44px;
+  width: 116px;
+  padding: 8px 8px 8px 34px;
+  border: 1px solid var(--control-border);
+  border-radius: 8px;
+  background: var(--page-bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.theme-control select:hover {
+  border-color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .header-actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-actions {
+    gap: 0;
+  }
+  .header-actions .header-contact {
+    display: none;
+  }
+  .theme-control select {
+    width: 108px;
+  }
+}
