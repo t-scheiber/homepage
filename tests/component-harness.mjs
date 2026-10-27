@@ -25,6 +25,8 @@ async function compile(relative) {
   code = code.replace(/import\s+(\w+)\s+from\s+["']next\/image["'];?/, (_, local) =>
     `import NextImageModule from 'next/image.js'; const ${local} = NextImageModule.default ?? NextImageModule;`);
   code = code.replace(/from (["'])next\/link\1/g, 'from "next/link.js"');
+  code = code.replace(/import\("pdfjs-dist\/legacy\/build\/pdf\.mjs"\)/g,
+    `import(${JSON.stringify(pathToFileURL(path.join(root, "tests/pdf-engine-fixture.mjs")).href)})`);
   const imports = [...code.matchAll(/from\s+(["'])(@\/[^"']+|\.\.?\/[^"']+)\1/g)];
   for (const match of imports) {
     const target = match[2].startsWith('@/') ? match[2].slice(2) : path.posix.normalize(path.posix.join(path.posix.dirname(relative), match[2]));
@@ -65,7 +67,18 @@ export async function render(t, Component, props = {}) {
   const dom = new JSDOM('<!doctype html><html><body><div id="root"></div></body></html>', {url: 'https://fixture.invalid/'});
   dom.window.HTMLElement.prototype.scrollIntoView = () => {};
   dom.window.HTMLElement.prototype.scrollTo = () => {};
-  const globals = {window: dom.window, self: dom.window, document: dom.window.document, navigator: dom.window.navigator,
+  let viewportWidth = 390;
+  const resizeObservers = new Set();
+  Object.defineProperty(dom.window.HTMLElement.prototype, 'clientWidth', {get() { return viewportWidth; }, configurable: true});
+  class ResizeObserver {
+    constructor(callback) { this.callback = callback; }
+    observe() { resizeObservers.add(this); }
+    disconnect() { resizeObservers.delete(this); }
+  }
+  dom.window.scrollTo = options => {
+    Object.defineProperty(dom.window, 'scrollY', {value: options.top, configurable: true});
+  };
+  const globals = {ResizeObserver,window: dom.window, self: dom.window, document: dom.window.document, navigator: dom.window.navigator,
     HTMLElement: dom.window.HTMLElement, IS_REACT_ACT_ENVIRONMENT: true};
   const previous = new Map(Object.keys(globals).map(key => [key, Object.getOwnPropertyDescriptor(globalThis, key)]));
   for (const [key, value] of Object.entries(globals)) Object.defineProperty(globalThis, key, {value, configurable: true, writable: true});
@@ -83,6 +96,7 @@ export async function render(t, Component, props = {}) {
   await act(async () => mounted.render(applicationView(Component, props)));
   return {
     document: dom.window.document, window: dom.window, container,
+    resize: width => act(async () => { viewportWidth = width; for (const observer of resizeObservers) observer.callback(); }),
     click: element => act(async () => element.dispatchEvent(new dom.window.MouseEvent('click', {bubbles: true}))),
     key: key => act(async () => dom.window.dispatchEvent(new dom.window.KeyboardEvent('keydown', {key}))),
     error: element => act(async () => element.dispatchEvent(new dom.window.Event('error'))),

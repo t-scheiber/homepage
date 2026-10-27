@@ -34,7 +34,7 @@ const LinkList: React.FC<LinkListProps> = ({ links }) => {
                 className="w-10 h-10 sm:w-9 sm:h-9"
               />
             </span>
-            <span>{link.name}{!link.href && <span className="mt-1 block text-sm text-slate-200">Past project · Public site unavailable</span>}</span>
+            <span>{link.name}{!link.href && <span className="mt-1 block text-sm text-[var(--muted)]">Past project · Public site unavailable</span>}</span>
           </Entry>
         </li>
       );})}
@@ -64,6 +64,7 @@ const links: Link[] = [
     name: "Villa Dijana",
   },
   {
+    href: "https://cloud.europetalks.eu/",
     logoSrc: "/files/logos/europetalks.png",
     name: "EuropeTalks Cloud",
   },

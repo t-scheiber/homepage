@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
 import Particles, { ParticlesProvider } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import React, { useMemo, useSyncExternalStore } from "react";
+import { useTheme } from "@/lib/theme";
 
 const reducedMotionQuery = "(prefers-reduced-motion: reduce)";
 const subscribeToMotion = (notify: () => void) => {
@@ -22,12 +23,19 @@ interface ParticlesComponentProps {
 }
 
 const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
-  const reducedMotion = useSyncExternalStore(subscribeToMotion, getReducedMotion, getServerReducedMotion);
+  const theme = useTheme();
+  const reducedMotion = useSyncExternalStore(
+    subscribeToMotion,
+    getReducedMotion,
+    getServerReducedMotion,
+  );
   const isMobile = useMemo(() => {
     if (typeof navigator === "undefined") {
       return false;
     }
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent,
+    );
   }, []);
 
   const options = useMemo(
@@ -58,6 +66,7 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
         },
       },
       particles: {
+        color: { value: theme === "light" ? "#365f59" : "#b8d6d4" },
         number: {
           value: 8,
           density: {
@@ -68,27 +77,29 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
         links: {
           enable: true,
           distance: 150,
+          color: theme === "light" ? "#365f59" : "#b8d6d4",
+          opacity: theme === "light" ? 0.18 : 0.14,
         },
         move: {
           enable: true,
           speed: { min: 0.1, max: 1 },
         },
         opacity: {
-          value: { min: 0.1, max: 0.5 },
+          value: { min: 0.15, max: theme === "light" ? 0.45 : 0.35 },
         },
         size: {
           value: { min: 1, max: 3 },
         },
       },
     }),
-    [isMobile]
+    [isMobile, theme],
   );
 
   if (reducedMotion) return null;
 
   return (
     <ParticlesProvider init={initParticles}>
-      <Particles id={props.id} options={options} />
+      <Particles key={theme} id={props.id} options={options} />
     </ParticlesProvider>
   );
 };

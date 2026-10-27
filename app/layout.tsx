@@ -2,10 +2,13 @@ import { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "@/styles/globals.css";
 import "@/styles/portfolio.css";
+import "@/styles/themes.css";
+import "@/styles/pdf-viewer.css";
 import ParticlesComponent from "@/components/Particles";
 import StructuredData from "@/components/StructuredData";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
+import { themeInitScript } from "@/lib/theme-init";
 
 // Optimize font loading with next/font
 const inter = localFont({
@@ -19,11 +22,12 @@ const inter = localFont({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
   maximumScale: 5,
   userScalable: true,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+    { media: "(prefers-color-scheme: light)", color: "#edf2ed" },
+    { media: "(prefers-color-scheme: dark)", color: "#14232e" },
   ],
 };
 
@@ -113,12 +117,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html
+      lang="en"
+      className={inter.variable}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <head>
         <StructuredData />
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className={inter.className}>
-        <a href="#main-content" className="skip-link">Skip to content</a>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         <SiteHeader />
         {children}
         <Footer />
