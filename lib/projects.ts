@@ -15,6 +15,8 @@ export interface CodingProject {
   stack: string[];
   links: ProjectLink[];
   favicon?: string;
+  image?: string;
+  decision?: string;
 }
 
 const gh = (repo: string) => `https://github.com/t-scheiber/${repo}`;
@@ -35,6 +37,9 @@ export const selectedProjects: CodingProject[] = [
       { label: "Code", href: gh("europetalksWebsite") },
     ],
     favicon: "europetalks.png",
+    image: "/files/projects/europetalks.webp",
+    decision:
+      "One Clerk login covers the website and the member cloud, so admin, member and guest roles mean the same thing in both.",
   },
   {
     id: "villa-claudia-documents",
@@ -50,6 +55,9 @@ export const selectedProjects: CodingProject[] = [
       { label: "Code", href: gh("villaclaudiaupload") },
     ],
     favicon: "villa-claudia-docs.ico",
+    image: "/files/projects/villa-claudia-documents.webp",
+    decision:
+      "No advance ID copy is required by default. Staff inspect the original at arrival, and the app handles copies only as a temporary exception.",
   },
   {
     id: "ai-video",
@@ -76,6 +84,7 @@ export const selectedProjects: CodingProject[] = [
       { label: "Code", href: gh("mayr-dach") },
     ],
     favicon: "mayr-dach.ico",
+    image: "/files/projects/mayr-dach.webp",
   },
 ];
 
@@ -93,7 +102,8 @@ export const personalProjects: CodingProject[] = [
     id: "rock-paper-scissors",
     name: "Rock paper scissors",
     what: "Play by mouse, keyboard or webcam hand gestures, in English or German.",
-    detail: "Gesture recognition runs in the browser with TensorFlow.js.",
+    detail:
+      "Began as my bachelor project at FH Technikum Wien. Gesture recognition runs in the browser with TensorFlow.js.",
     year: "2022, refreshed 2025",
     context: "Personal · live",
     stack: ["Next.js", "TensorFlow.js", "next-intl"],
@@ -234,11 +244,13 @@ export interface Website {
   what: string;
   part?: string;
   platform: string;
+  image?: string;
 }
 
 export const websites: Website[] = [
   {
     name: "HD Architekten",
+    image: "/files/projects/hd-architekten.webp",
     href: "https://hd-architekten.at/",
     logoSrc: "/files/logos/hda.png",
     what: "Architecture practice",
@@ -247,6 +259,7 @@ export const websites: Website[] = [
   },
   {
     name: "HD Projekt Baumanagement",
+    image: "/files/projects/hd-projekt.webp",
     href: "https://hd-projekt.at/",
     logoSrc: "/files/logos/hdp.png",
     what: "Site supervision and project management office",
@@ -255,6 +268,7 @@ export const websites: Website[] = [
   },
   {
     name: "Villa Claudia",
+    image: "/files/projects/villa-claudia.webp",
     href: "https://villa-claudia.eu/",
     logoSrc: "/files/logos/villaclaudia.png",
     what: "Holiday rental with online booking",
@@ -271,6 +285,7 @@ export const websites: Website[] = [
   },
   {
     name: "Darat Thaimassage",
+    image: "/files/projects/darat.webp",
     href: "https://darat-thaimassage.at/",
     logoSrc: "/files/logos/darat.png",
     what: "Thai massage practice",
@@ -279,6 +294,7 @@ export const websites: Website[] = [
   },
   {
     name: "EuropeTalks Cloud",
+    image: "/files/projects/europetalks-cloud.webp",
     href: "https://cloud.europetalks.eu/",
     logoSrc: "/files/logos/europetalks.png",
     what: "File sharing and collaboration for EuropeTalks members",
@@ -287,6 +303,7 @@ export const websites: Website[] = [
   },
   {
     name: "Jugendliche für Jugendliche",
+    image: "/files/projects/ju4ju.webp",
     href: "https://jugendlichefuerjugendliche.wordpress.com/",
     logoSrc: "/files/logos/ju4ju.png",
     what: "Youth association in Saalfelden am Steinernen Meer",

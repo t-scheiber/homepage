@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     description:
       "The EuropeTalks member platform, a guest documents app, an AI video tool and smaller apps, with code and live links.",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Coding projects | Thomas Scheiber",
+    description:
+      "The EuropeTalks member platform, a guest documents app, an AI video tool and smaller apps, with code and live links.",
+  },
 };
 
 export default function CodingProjectsPage() {

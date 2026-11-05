@@ -1,6 +1,6 @@
 ---
 name: Thomas Scheiber portfolio
-description: Inter typography, faceted backgrounds and theme-aware green accents.
+description: Inter typography with monospace status labels, faceted backgrounds and theme-aware green accents.
 colors:
   slate-page-bg: "#14232e"
   slate-page-wash: "#10202ac7"
@@ -127,9 +127,11 @@ Work-page status colors are local variables in `styles/work-projects.css`. Warni
 
 ## Typography
 
-Inter supplies display, body and control text. The body has a regular weight. Headings vary between medium and semibold, with tighter letter spacing as their size increases.
+Inter supplies display, body and control text. A monospace face marks status and metadata, described below. The body has a regular weight. Headings vary between medium and semibold, with tighter letter spacing as their size increases.
 
 The frontmatter records the homepage display, collection headline, section title, description and action-label roles. These are observed roles, not a mathematically generated type scale. The description becomes 15px below the 600px breakpoint. The homepage display becomes `clamp(34px, 9vw, 48px)` at that breakpoint.
+
+JetBrains Mono (a 400 to 600 weight Latin subset, loaded as `--font-mono`) marks status and metadata only: eyebrows, dates, demo context lines, toolbar labels, decision-record terms, credential group titles and stack lists. Headings and body copy stay in Inter. Mono labels use 12 to 13px with little or no tracking.
 
 The work page has its own heading proportions. Its main heading uses `clamp(2.6rem, 4.5vw, 4.25rem)`, weight 600 and a 1.06 line height. Demo titles use 17px, weight 600 and a 1.4 line height. Supporting demo copy ranges from 11px to 14px. Inputs increase to 16px on narrow screens. These are work-page notes, not replacement global type roles.
 

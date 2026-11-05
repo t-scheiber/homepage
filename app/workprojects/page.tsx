@@ -17,7 +17,11 @@ export const metadata: Metadata = {
     description,
     url: "/workprojects",
   },
-  twitter: { title: "Work projects | Thomas Scheiber", description },
+  twitter: {
+    card: "summary_large_image",
+    title: "Work projects | Thomas Scheiber",
+    description,
+  },
 };
 export default function WorkProjectsPage() {
   return (
@@ -45,8 +49,8 @@ export default function WorkProjectsPage() {
         <header>
           <h2 id="more-work-title">More behind the scenes.</h2>
           <p>
-            Other applications and integrations I have worked on. Open a project
-            to see my contribution.
+            Other applications and integrations I worked on at Refurbed between
+            2024 and 2026. Open a project to see my contribution.
           </p>
         </header>
         <div className="work-project-index">

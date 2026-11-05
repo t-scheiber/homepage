@@ -13,11 +13,17 @@ export const metadata: Metadata = {
     description:
       "WordPress sites for small businesses and holiday rentals, plus the EuropeTalks member cloud.",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Websites | Thomas Scheiber",
+    description:
+      "WordPress sites for small businesses and holiday rentals, plus the EuropeTalks member cloud.",
+  },
 };
 
 export default function OtherProjectsPage() {
   return (
-    <PortfolioPage title="Websites" eyebrow="Client & community work" description="Five WordPress sites I built for small businesses and holiday rentals, the EuropeTalks member cloud, and a community site. Every entry opens the live site.">
+    <PortfolioPage panel={false} title="Websites" eyebrow="Client & community work" description="Five WordPress sites I built for small businesses and holiday rentals, the EuropeTalks member cloud, and a community site. Every entry opens the live site.">
       <OtherProjectsList />
     </PortfolioPage>
   );

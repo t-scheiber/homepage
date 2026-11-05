@@ -57,7 +57,7 @@
 
 .theme-control select {
   min-height: 44px;
-  width: 116px;
+  width: 124px;
   padding: 8px 8px 8px 34px;
   border: 1px solid var(--control-border);
   border-radius: 8px;
@@ -102,6 +102,6 @@
     white-space: nowrap;
   }
   .theme-control select {
-    width: 108px;
+    width: 112px;
   }
 }

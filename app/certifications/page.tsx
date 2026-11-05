@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     description:
       "B.Sc. from FH Technikum Wien, master's in progress at TU Wien, and Meta, AWS and Google professional certificates.",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Degrees & certifications | Thomas Scheiber",
+    description:
+      "B.Sc. from FH Technikum Wien, master's in progress at TU Wien, and Meta, AWS and Google professional certificates.",
+  },
 };
 
 export default function CertificationsPage() {

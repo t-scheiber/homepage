@@ -18,6 +18,14 @@ const inter = localFont({
   variable: "--font-inter",
 });
 
+// Monospace for status and meta labels only (see DESIGN.md).
+const mono = localFont({
+  src: "./fonts/JetBrainsMono-latin.woff2",
+  display: "swap",
+  weight: "400 600",
+  variable: "--font-mono",
+});
+
 // Viewport configuration for optimal mobile display
 export const viewport: Viewport = {
   width: "device-width",
@@ -99,7 +107,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={inter.variable}
+      className={`${inter.variable} ${mono.variable}`}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >

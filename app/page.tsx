@@ -27,7 +27,7 @@ const projectLinks = [
     href: "/certifications",
     title: "Degrees & certifications",
     description:
-      "B.Sc. from FH Technikum Wien with merit, an MSc in progress at TU Wien, and Meta, AWS and Google certificates.",
+      "B.Sc. from FH Technikum Wien with merit, an MSc in progress at TU Wien, and Coursera professional certificates from Meta, AWS and Google.",
   },
 ];
 

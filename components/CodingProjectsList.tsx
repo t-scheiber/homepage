@@ -56,6 +56,16 @@ function ProjectIcon({ project }: { project: CodingProject }) {
 function ProjectCard({ project }: { project: CodingProject }) {
   return (
     <article className="project-card" aria-labelledby={`${project.id}-title`}>
+      {project.image && (
+        <Image
+          className="project-shot"
+          src={project.image}
+          alt={`Screenshot of the ${project.name} home page`}
+          width={720}
+          height={360}
+          sizes="(max-width: 900px) calc(100vw - 80px), 560px"
+        />
+      )}
       <header>
         <ProjectIcon project={project} />
         <div>
@@ -67,6 +77,12 @@ function ProjectCard({ project }: { project: CodingProject }) {
       </header>
       <p className="project-what">{project.what}</p>
       {project.detail && <p className="project-detail">{project.detail}</p>}
+      {project.decision && (
+        <p className="project-decision">
+          <span>Decision</span>
+          {project.decision}
+        </p>
+      )}
       <p className="project-stack">{project.stack.join(" · ")}</p>
       <ProjectLinks project={project} />
     </article>

@@ -4,18 +4,30 @@ import { websites } from "@/lib/projects";
 
 export default function OtherProjectsList() {
   return (
-    <ul className="website-list">
+    <ul className="website-grid">
       {websites.map((site) => (
         <li key={site.href}>
           <a
             href={site.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="collection-row website-row"
+            className="website-card"
             aria-label={`${site.name}: ${site.what} (opens in new tab)`}
           >
-            <span className="website-logo">
-              <Image alt="" src={site.logoSrc} width={40} height={40} />
+            <span className="website-shot">
+              {site.image ? (
+                <Image
+                  src={site.image}
+                  alt=""
+                  width={720}
+                  height={360}
+                  sizes="(max-width: 700px) calc(100vw - 40px), 380px"
+                />
+              ) : (
+                <span className="website-shot-logo">
+                  <Image alt="" src={site.logoSrc} width={64} height={64} />
+                </span>
+              )}
             </span>
             <span className="website-copy">
               <span className="website-name">{site.name}</span>
@@ -24,10 +36,10 @@ export default function OtherProjectsList() {
                 {site.part ? `${site.part} · ` : ""}
                 {site.platform}
               </span>
-            </span>
-            <span className="website-host" aria-hidden="true">
-              {new URL(site.href).hostname.replace(/^www\./, "")}
-              <ArrowIcon external />
+              <span className="website-host">
+                {new URL(site.href).hostname.replace(/^www\./, "")}
+                <ArrowIcon external />
+              </span>
             </span>
           </a>
         </li>
