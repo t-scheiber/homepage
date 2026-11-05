@@ -4,20 +4,26 @@ import CodingProjectsList from "@/components/CodingProjectsList";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/codingprojects" },
-  title: "Coding Projects",
+  title: "Coding projects",
   description:
-    "Explore my coding projects including AI video generation, finance apps, React applications, Next.js websites, weather apps, calculators, and full-stack web development projects.",
+    "Thomas Scheiber's freelance and personal builds: the EuropeTalks member platform, a holiday-rental guest documents app, an AI video tool and smaller apps, with code and live links.",
   openGraph: {
     url: "/codingprojects",
-    title: "Coding Projects | Thomas Scheiber",
+    title: "Coding projects | Thomas Scheiber",
     description:
-      "Portfolio of coding projects including AI video generation, finance apps, React, Next.js, TypeScript, and modern web technologies.",
+      "The EuropeTalks member platform, a guest documents app, an AI video tool and smaller apps, with code and live links.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Coding projects | Thomas Scheiber",
+    description:
+      "The EuropeTalks member platform, a guest documents app, an AI video tool and smaller apps, with code and live links.",
   },
 };
 
 export default function CodingProjectsPage() {
   return (
-    <PortfolioPage title="Coding projects" eyebrow="Personal projects & experiments" description="Web applications, practical tools and early experiments. Project names open available websites; the GitHub icons link to the source code.">
+    <PortfolioPage panel={false} title="Client platforms, and tools I built for myself." eyebrow="Coding projects · freelance & personal" description="Client platforms and sites, tools I built for myself, and the course work underneath. Each project links to its code, and to a live version where one exists.">
       <CodingProjectsList />
     </PortfolioPage>
   );

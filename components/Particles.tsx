@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
 import Particles, { ParticlesProvider } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import React, { useMemo, useSyncExternalStore } from "react";
+import { useTheme } from "@/lib/theme";
 
 const reducedMotionQuery = "(prefers-reduced-motion: reduce)";
 const subscribeToMotion = (notify: () => void) => {
@@ -22,22 +23,32 @@ interface ParticlesComponentProps {
 }
 
 const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
-  const reducedMotion = useSyncExternalStore(subscribeToMotion, getReducedMotion, getServerReducedMotion);
+  const theme = useTheme();
+  const reducedMotion = useSyncExternalStore(
+    subscribeToMotion,
+    getReducedMotion,
+    getServerReducedMotion,
+  );
   const isMobile = useMemo(() => {
     if (typeof navigator === "undefined") {
       return false;
     }
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent,
+    );
   }, []);
 
   const options = useMemo(
     () => ({
       autoPlay: true,
+      // The fixed layer in ParticlesLoader owns size and position, so a
+      // late-loading canvas never shifts the page.
       fullScreen: {
-        enable: true,
-        zIndex: -1,
+        enable: false,
       },
+      detectRetina: true,
       interactivity: {
+        detectsOn: "window" as const,
         events: {
           onClick: {
             enable: !isMobile,
@@ -50,7 +61,7 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
         },
         modes: {
           push: {
-            quantity: 10,
+            quantity: 2,
           },
           repulse: {
             distance: 120,
@@ -58,8 +69,9 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
         },
       },
       particles: {
+        color: { value: theme === "light" ? "#365f59" : "#b8d6d4" },
         number: {
-          value: 8,
+          value: 6,
           density: {
             enable: true,
             value_area: 400,
@@ -67,28 +79,30 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
         },
         links: {
           enable: true,
-          distance: 150,
+          distance: 130,
+          color: theme === "light" ? "#365f59" : "#b8d6d4",
+          opacity: theme === "light" ? 0.15 : 0.12,
         },
         move: {
           enable: true,
-          speed: { min: 0.1, max: 1 },
+          speed: { min: 0.1, max: 0.6 },
         },
         opacity: {
-          value: { min: 0.1, max: 0.5 },
+          value: { min: 0.15, max: theme === "light" ? 0.42 : 0.34 },
         },
         size: {
           value: { min: 1, max: 3 },
         },
       },
     }),
-    [isMobile]
+    [isMobile, theme],
   );
 
   if (reducedMotion) return null;
 
   return (
     <ParticlesProvider init={initParticles}>
-      <Particles id={props.id} options={options} />
+      <Particles key={theme} id={props.id} options={options} />
     </ParticlesProvider>
   );
 };

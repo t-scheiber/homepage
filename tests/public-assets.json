@@ -427,14 +427,74 @@
   },
   {
     "path": "public/sitemap.xml",
-    "bytes": 796,
-    "sha256": "ce42b2f4227843e374e7079e40a96bdc631a52b86462cdf332820a393ddb0a1e",
-    "gitBlob": "5d9b5b07a79c0b65efaea242491b39abc4c8d54f"
+    "bytes": 793,
+    "sha256": "a3d4d8a15b54573c2afac1b1ca6def17bd83cb4719996545a468ac3e6e83813c",
+    "gitBlob": "58821ce59dd9be8a347e7a07bfd0cce345d7ce2c"
   },
   {
     "path": "public/sw.js",
     "bytes": 919,
     "sha256": "cbc494229aba2b2fe5db2ff8da8242232360242c3f9d5a7ae9d084aa813466e7",
     "gitBlob": "666f05f05de3de494cff79bca29e285eea5a323d"
+  },
+  {
+    "path": "public/files/projects/darat.webp",
+    "bytes": 16848,
+    "sha256": "1e65a2fe49e8189570ec10ef31241a533f9f0abaa9cfbd796031516d0632c737",
+    "gitBlob": "01d33457ccff8bd3d6ee7c48c00292d81e753e78"
+  },
+  {
+    "path": "public/files/projects/europetalks-cloud.webp",
+    "bytes": 7110,
+    "sha256": "ce1f24deed5f890e1b8aab22204e57b7a0b65a9ed112396eb73e9e78387f410c",
+    "gitBlob": "0e1bcae0273889822be36eee65b7204941bdaab8"
+  },
+  {
+    "path": "public/files/projects/europetalks.webp",
+    "bytes": 21958,
+    "sha256": "1b8a9bf7e3c8cd9ef72a8caf965e9af72f715103ecfd1ed4dce3fb61d5b3ee3c",
+    "gitBlob": "f56305fcfc28f26aadd542f81cf91d13d135c229"
+  },
+  {
+    "path": "public/files/projects/hd-architekten.webp",
+    "bytes": 24036,
+    "sha256": "02eb94104a13fb90c38a7978c9a2053280f744ec505a3a3eb97d0bf7931bf3cd",
+    "gitBlob": "ff08d4a8225b18d432e861f5218b40dd0e3a31fb"
+  },
+  {
+    "path": "public/files/projects/hd-projekt.webp",
+    "bytes": 32512,
+    "sha256": "fb7abc9905aef112b0c97c6e8c3bf95cf37d287337f28c942e7105856fce4520",
+    "gitBlob": "f750935fbf1f88ef7da5b87e8c53179bc568959d"
+  },
+  {
+    "path": "public/files/projects/ju4ju.webp",
+    "bytes": 18062,
+    "sha256": "0c55f7753670ef92b7d6505f5d6eca8b5723c0213a8c59a7153734cec1d8ca74",
+    "gitBlob": "d293dec887d1c930353d73e52550d598efeef608"
+  },
+  {
+    "path": "public/files/projects/mayr-dach.webp",
+    "bytes": 32448,
+    "sha256": "9eb502ddb50c7d4714d3c36fac2f5d6c93aeb706120ebf90a366f1593bb3b2d2",
+    "gitBlob": "c6f0efb2641ee6545fe2fb3692f3b2e938b54ee0"
+  },
+  {
+    "path": "public/files/projects/villa-claudia-documents.webp",
+    "bytes": 10988,
+    "sha256": "2a7343e0cbabb123140739c45271eca61bdc7f5904cadc00989d4b193a385ae0",
+    "gitBlob": "dabef633ef55472cf7a7a39507552d49a87e8822"
+  },
+  {
+    "path": "public/files/projects/villa-claudia.webp",
+    "bytes": 15238,
+    "sha256": "9a0f6654336805fa44afe2e9f7a29a1a8dc24c35c413e37b2d746e0a6913bebc",
+    "gitBlob": "701fbb8a8490313bc1f2769dbfebe6fb0f9c18b8"
+  },
+  {
+    "path": "public/files/favicons/projects/mayr-dach-64.png",
+    "bytes": 3059,
+    "sha256": "1f5886a7eb80cb7105a639ccb1a0acaf2d816f8616d007c4eb0cb2b6de126dc6",
+    "gitBlob": "3cd4383f3965a117d943f296cbf03fc1f46248cd"
   }
 ]
