@@ -7,6 +7,7 @@ export default function LifecycleDemo() {
   const [scenario, setScenario] = useState("returning");
   const [failure, setFailure] = useState(true);
   const [ran, setRan] = useState(false);
+  const [retried, setRetried] = useState(false);
   const future = scenario === "future";
   const leaving = scenario === "leaving";
   const steps = future
@@ -56,6 +57,7 @@ export default function LifecycleDemo() {
             onChange={(event) => {
               setScenario(event.target.value);
               setRan(false);
+              setRetried(false);
             }}
           >
             <option value="returning">Returning from temporary leave</option>
@@ -71,11 +73,18 @@ export default function LifecycleDemo() {
             onChange={(event) => {
               setFailure(event.target.checked);
               setRan(false);
+              setRetried(false);
             }}
           />
           Simulate a directory outage
         </label>
-        <button className="demo-button" onClick={() => setRan(true)}>
+        <button
+          className="demo-button"
+          onClick={() => {
+            setRan(true);
+            setRetried(false);
+          }}
+        >
           Run sample workflow
         </button>
         {ran && (
@@ -115,6 +124,7 @@ export default function LifecycleDemo() {
               onClick={() => {
                 setFailure(false);
                 setRan(true);
+                setRetried(true);
               }}
             >
               Retry with service available
@@ -122,8 +132,9 @@ export default function LifecycleDemo() {
           </>
         ) : (
           <DemoStatus tone="success">
-            All sample steps confirmed. Retrying did not repeat the completed
-            equipment work.
+            {retried
+              ? "All sample steps confirmed. Retrying did not repeat the completed equipment work."
+              : "All sample steps confirmed on the first run."}
           </DemoStatus>
         )}
         <p className="demo-caption">

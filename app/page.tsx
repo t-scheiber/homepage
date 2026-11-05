@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import ArrowIcon from "@/components/ArrowIcon";
 import CvButton from "@/components/CvButton";
+import HomeTrace from "@/components/HomeTrace";
 import { SOCIAL_LINKS } from "@/lib/constants";
-import { websites } from "@/lib/projects";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -20,7 +20,8 @@ const projectLinks = [
   {
     href: "/otherprojects",
     title: "Websites",
-    description: `${websites.length} sites for an architecture practice, holiday rentals, a massage practice and community groups.`,
+    description:
+      "Seven sites for an architecture practice, holiday rentals, a massage practice and community groups.",
   },
   {
     href: "/certifications",
@@ -37,40 +38,28 @@ const socialLinks = [
   { title: "Facebook", href: SOCIAL_LINKS.facebook },
 ];
 
-const trace = [
-  {
-    input: 'Postal code "10"',
-    outcome: "Shipment blocked. No label was requested.",
-    tone: "warning",
-  },
-  {
-    input: "Address corrected",
-    outcome: "Sample label prepared. Further labels locked.",
-    tone: "success",
-  },
-  {
-    input: "Carrier response unknown",
-    outcome: "Reconcile first. No second label was created.",
-    tone: "warning",
-  },
-] as const;
-
 export default function Home() {
   return (
     <main id="main-content" className="home-page">
       <header className="home-intro">
         <div className="home-intro-copy">
           <h1>Thomas Scheiber</h1>
-          <p className="home-role">Software development &amp; automation · Vienna</p>
+          <p className="home-role">
+            Software development &amp; automation for internal operations ·
+            Vienna
+          </p>
           <p className="page-description home-lede">
-            At Refurbed I build the internal tools behind employee equipment,
-            identity and onboarding workflows, and ship them through GitLab CI/CD
-            to Google Cloud Run.
+            At Refurbed, a marketplace for refurbished products, I build the
+            internal tools behind employee equipment, identity and onboarding,
+            and ship them through GitLab CI/CD to Google Cloud Run.
           </p>
           <ul className="home-status" aria-label="Current status">
             <li>
               <span>Now</span>
-              <span>IT Administrator at Refurbed, in a two-person IT team</span>
+              <span>
+                IT Administrator by title, in a two-person IT team. Most of my
+                week goes into building internal tools.
+              </span>
             </li>
             <li>
               <span>Studying</span>
@@ -120,43 +109,29 @@ export default function Home() {
 
       <section className="home-work" aria-labelledby="home-work-title">
         <div className="home-section-heading">
-          <h2 id="home-work-title">Work you can try</h2>
-          <span>Professional work, personal projects and credentials</span>
+          <h2 id="home-work-title">Start here</h2>
+          <span>Work demos first, then projects, websites and credentials</span>
         </div>
         <div className="home-projects">
-          <Link href="/workprojects" className="home-featured-project">
+          <article
+            className="home-featured-project"
+            aria-labelledby="home-featured-title"
+          >
             <div className="home-featured-copy">
               <div>
-                <h3>Work projects at Refurbed</h3>
+                <h3 id="home-featured-title">
+                  <Link href="/workprojects">Work projects at Refurbed</Link>
+                </h3>
                 <p>
-                  Eight internal tools rebuilt as demos you can break: blocked shipments, partial directory failures and AI
-                  drafts that wait for a person.
+                  Eight internal tools rebuilt as demos you can break: blocked
+                  shipments, partial directory failures and AI drafts that wait
+                  for a person.
                 </p>
               </div>
               <ArrowIcon />
             </div>
-            <figure className="home-trace">
-              <p className="home-trace-title">
-                <span className="home-trace-dot" aria-hidden="true" />
-                Equipment handover demo
-              </p>
-              <ol>
-                {trace.map((step, index) => (
-                  <li key={step.input} className={`home-trace-${step.tone}`}>
-                    <span className="home-trace-step" aria-hidden="true">
-                      {index + 1}
-                    </span>
-                    <span className="home-trace-input">{step.input}</span>
-                    <span className="home-trace-outcome">{step.outcome}</span>
-                  </li>
-                ))}
-              </ol>
-              <figcaption>
-                Three states from the demo. Fictional data, runs in your
-                browser.
-              </figcaption>
-            </figure>
-          </Link>
+            <HomeTrace />
+          </article>
           <div className="home-project-links">
             {projectLinks.map(({ href, title, description }) => (
               <Link href={href} key={href} className="home-project-link">

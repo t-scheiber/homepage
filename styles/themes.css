@@ -80,10 +80,26 @@
 
 @media (max-width: 600px) {
   .header-actions {
-    gap: 0;
+    gap: 8px;
   }
   .header-actions .header-contact {
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    border: 1px solid var(--control-border);
+    border-radius: 8px;
+  }
+  .header-contact > svg:not(.header-contact-mail) {
     display: none;
+  }
+  .header-contact-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
   .theme-control select {
     width: 108px;

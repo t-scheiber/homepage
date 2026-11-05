@@ -4,14 +4,14 @@ import CertificatesList from "@/components/CertificatesList";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/certifications" },
-  title: "Degrees & Certifications",
+  title: "Degrees & certifications",
   description:
-    "View my BSc in Engineering in Smart Homes and Assistive Technologies from FH Technikum Wien, alongside professional IT and language certifications.",
+    "Thomas Scheiber's B.Sc. in Smart Homes and Assistive Technologies from FH Technikum Wien, his master's in progress at TU Wien, and professional IT and language certificates.",
   openGraph: {
     url: "/certifications",
-    title: "Degrees & Certifications | Thomas Scheiber",
+    title: "Degrees & certifications | Thomas Scheiber",
     description:
-      "BSc in Engineering from FH Technikum Wien and professional certifications in web development, cloud computing, and IT support.",
+      "B.Sc. from FH Technikum Wien, master's in progress at TU Wien, and Meta, AWS and Google professional certificates.",
   },
 };
 

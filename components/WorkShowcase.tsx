@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { workProjects, type DemoId } from "@/lib/work-projects";
 import EquipmentDemo from "./work-demos/EquipmentDemo";
 import SupportDemo from "./work-demos/SupportDemo";
@@ -45,6 +45,14 @@ export default function WorkShowcase() {
   );
   const [selection, setSelection] = useState<DemoId>("equipment");
   const [resetCount, setResetCount] = useState(0);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  // A shared link such as /workprojects#platform lands on the demo itself.
+  useEffect(() => {
+    if (!getSelection()) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    sectionRef.current?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+  }, []);
   // Section anchors must not discard the currently open demo or its draft.
   if (hashSelection && hashSelection !== selection) setSelection(hashSelection);
   const project = workProjects.find((candidate) => candidate.id === selection)!;
@@ -52,6 +60,8 @@ export default function WorkShowcase() {
   function select(id: string) {
     window.history.replaceState(null, "", `#${id}`);
     window.dispatchEvent(new window.Event("hashchange"));
+    // Move focus to the new demo so keyboard and screen-reader users follow it.
+    window.setTimeout(() => headingRef.current?.focus({ preventScroll: true }), 0);
   }
   return (
     <section
@@ -64,7 +74,6 @@ export default function WorkShowcase() {
           {workProjects.map((item) => (
             <button
               key={item.id}
-              id={item.id}
               aria-pressed={selection === item.id}
               onClick={() => select(item.id)}
             >
@@ -90,10 +99,16 @@ export default function WorkShowcase() {
           Each demo explores a decision, a failure or a recovery path.
         </p>
       </div>
-      <div className="work-selected" aria-labelledby="selected-project-title">
+      <div
+        ref={sectionRef}
+        className="work-selected"
+        aria-labelledby="selected-project-title"
+      >
         <header className="work-selected-header">
           <p className="work-selected-context">{project.context}</p>
-          <h2 id="selected-project-title">{project.title}</h2>
+          <h2 id="selected-project-title" ref={headingRef} tabIndex={-1}>
+            {project.title}
+          </h2>
           <p>{project.summary}</p>
         </header>
         <div className="work-demo-frame">
@@ -117,10 +132,20 @@ export default function WorkShowcase() {
             <h3>My contribution</h3>
             <p>{project.contribution}</p>
           </div>
-          <div>
-            <h3>The engineering decision</h3>
-            <p>{project.decision}</p>
-          </div>
+          <dl className="work-decision" aria-label="Decision record">
+            <div>
+              <dt>What could go wrong</dt>
+              <dd>{project.risk}</dd>
+            </div>
+            <div>
+              <dt>What I ruled out</dt>
+              <dd>{project.ruledOut}</dd>
+            </div>
+            <div>
+              <dt>What I chose</dt>
+              <dd>{project.decision}</dd>
+            </div>
+          </dl>
           {project.outcome && (
             <div className="work-case-outcome">
               <h3>What shipped</h3>

@@ -41,11 +41,14 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
   const options = useMemo(
     () => ({
       autoPlay: true,
+      // The fixed layer in ParticlesLoader owns size and position, so a
+      // late-loading canvas never shifts the page.
       fullScreen: {
-        enable: true,
-        zIndex: -1,
+        enable: false,
       },
+      detectRetina: true,
       interactivity: {
+        detectsOn: "window" as const,
         events: {
           onClick: {
             enable: !isMobile,
@@ -58,7 +61,7 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
         },
         modes: {
           push: {
-            quantity: 10,
+            quantity: 2,
           },
           repulse: {
             distance: 120,
@@ -68,7 +71,7 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
       particles: {
         color: { value: theme === "light" ? "#365f59" : "#b8d6d4" },
         number: {
-          value: 8,
+          value: 5,
           density: {
             enable: true,
             value_area: 400,
@@ -76,16 +79,16 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
         },
         links: {
           enable: true,
-          distance: 150,
+          distance: 130,
           color: theme === "light" ? "#365f59" : "#b8d6d4",
-          opacity: theme === "light" ? 0.18 : 0.14,
+          opacity: theme === "light" ? 0.1 : 0.08,
         },
         move: {
           enable: true,
-          speed: { min: 0.1, max: 1 },
+          speed: { min: 0.1, max: 0.6 },
         },
         opacity: {
-          value: { min: 0.15, max: theme === "light" ? 0.45 : 0.35 },
+          value: { min: 0.12, max: theme === "light" ? 0.32 : 0.26 },
         },
         size: {
           value: { min: 1, max: 3 },

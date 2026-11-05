@@ -11,17 +11,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thomasscheiber.com/codingprojects/</loc>
+    <loc>https://thomasscheiber.com/codingprojects</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thomasscheiber.com/certifications/</loc>
+    <loc>https://thomasscheiber.com/certifications</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thomasscheiber.com/otherprojects/</loc>
+    <loc>https://thomasscheiber.com/otherprojects</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
