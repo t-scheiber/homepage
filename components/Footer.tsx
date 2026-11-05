@@ -16,7 +16,9 @@ export default function Footer() {
         <p>Automation &amp; AI tooling · Vienna</p>
       </div>
       <nav aria-label="Social and contact links">
-        <a href={`mailto:${SOCIAL_LINKS.email}`}>Email</a>
+        <a href={`mailto:${SOCIAL_LINKS.email}`}>
+          Email <ArrowIcon external />
+        </a>
         <a
           href={SOCIAL_LINKS.linkedin}
           target="_blank"

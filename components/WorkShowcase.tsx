@@ -155,7 +155,7 @@ export default function WorkShowcase() {
             <h3>My contribution</h3>
             <p>{project.contribution}</p>
           </div>
-          <dl className="work-decision" aria-label="Decision record">
+          <dl className="work-decision">
             <div>
               <dt>What could go wrong</dt>
               <dd>{project.risk}</dd>

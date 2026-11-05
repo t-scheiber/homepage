@@ -1,5 +1,6 @@
 import { memo } from "react";
 import Image, { StaticImageData } from "next/image";
+import ArrowIcon from "@/components/ArrowIcon";
 // Import images
 import metaLogo from "@/public/files/logos/meta.png";
 import awsLogo from "@/public/files/logos/aws.png";
@@ -159,8 +160,8 @@ function CertificatesList() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`View ${title} certificate from ${organization}`}
-                    className="collection-row"
+                    aria-label={`View ${title} certificate from ${organization}, PDF opens in a new tab`}
+                    className="collection-row credential-link"
                   >
                     <span className="flex mr-4 sm:mr-3 bg-white/90 rounded-lg p-2 shrink-0">
                       {src ? (
@@ -192,11 +193,14 @@ function CertificatesList() {
                         </svg>
                       )}
                     </span>
-                    <span>
+                    <span className="credential-copy">
                       <span className="block">{title}</span>
                       <span className="credential-details">
                         {details || organization}
                       </span>
+                    </span>
+                    <span className="credential-document" aria-hidden="true">
+                      PDF <ArrowIcon external />
                     </span>
                   </a>
                 </li>
