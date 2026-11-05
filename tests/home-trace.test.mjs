@@ -41,3 +41,22 @@ test("home trace blocks an incomplete address and never buys a second label", as
   const link = view.container.querySelector('a[href="/workprojects#equipment"]');
   assert.ok(link, "the widget links to the full demo");
 });
+
+test("home trace keeps keyboard focus on the next action when a button disappears", async (t) => {
+  const view = await render(t, HomeTrace);
+  await submit(view);
+  const valid = button(view, "Use a valid sample");
+  valid.focus();
+  await view.click(valid);
+  await act(async () => new Promise((resolve) => setTimeout(resolve, 5)));
+  assert.equal(view.document.activeElement, button(view, "Check address"));
+  await submit(view);
+  const prepare = button(view, "Prepare sample label");
+  prepare.focus();
+  await view.click(prepare);
+  await act(async () => new Promise((resolve) => setTimeout(resolve, 5)));
+  assert.equal(
+    view.document.activeElement,
+    button(view, "Simulate an unclear carrier response"),
+  );
+});

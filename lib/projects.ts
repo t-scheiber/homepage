@@ -232,7 +232,7 @@ export const courseProjects: { group: string; items: ArchiveProject[] }[] = [
 export const archivedSites: ArchiveProject[] = [
   {
     name: "Ribo Stein company website",
-    note: "Archived copy from 2018",
+    note: "My first paid website, 2018 · archived copy",
     href: "https://web.archive.org/web/20180413033202/http://www.ribo-stein.at/",
   },
 ];

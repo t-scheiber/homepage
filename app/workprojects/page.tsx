@@ -76,7 +76,10 @@ export default function WorkProjectsPage() {
               <div className="work-index-detail">
                 <p>{project.description}</p>
                 <div>
-                  <h3>My contribution</h3>
+                  <h3>
+                    My contribution
+                    <span className="sr-only">: {project.title}</span>
+                  </h3>
                   <p>{project.contribution}</p>
                 </div>
                 <p className="work-index-skills">{project.skills}</p>
