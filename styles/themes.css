@@ -14,6 +14,7 @@
   --accent-hover: #d4f9e4;
   --on-accent: #13271e;
   --scrollbar: #7c9999;
+  --trace-warning: #f2d69f;
 }
 
 :root[data-theme="light"] {
@@ -32,6 +33,7 @@
   --accent-hover: #194b3b;
   --on-accent: #f6fcf8;
   --scrollbar: #718b84;
+  --trace-warning: #765018;
 }
 
 .header-actions {
@@ -62,7 +64,7 @@
   background: var(--page-bg);
   color: var(--text);
   font: inherit;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
 }
 

@@ -4,20 +4,20 @@ import OtherProjectsList from "@/components/OtherProjectsList";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/otherprojects" },
-  title: "WordPress & Client Projects",
+  title: "Websites",
   description:
-    "WordPress websites and client projects including architecture firms, vacation rentals, business websites, and community projects.",
+    "Websites Thomas Scheiber built for an architecture practice, a construction management office, holiday rentals and a massage practice, plus the EuropeTalks member cloud.",
   openGraph: {
     url: "/otherprojects",
-    title: "WordPress & Client Projects | Thomas Scheiber",
+    title: "Websites | Thomas Scheiber",
     description:
-      "Professional WordPress development and client website projects.",
+      "WordPress sites for small businesses and holiday rentals, plus the EuropeTalks member cloud.",
   },
 };
 
 export default function OtherProjectsPage() {
   return (
-    <PortfolioPage title="Websites & other projects" eyebrow="Client & community work" description="Websites for businesses, organisations and communities, from architecture and hospitality to local initiatives.">
+    <PortfolioPage title="Websites" eyebrow="Client & community work" description="Five WordPress sites I built for small businesses and holiday rentals, the EuropeTalks member cloud, and a community site. Every entry opens the live site.">
       <OtherProjectsList />
     </PortfolioPage>
   );

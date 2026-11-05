@@ -17,6 +17,8 @@ export interface WorkProject {
   contribution: string;
   decision: string;
   scenario: string;
+  context: string;
+  outcome?: string;
   skills: string[];
 }
 
@@ -29,11 +31,14 @@ export const workProjects: WorkProject[] = [
     summary:
       "Equipment requests connect employee details, device choices, shipping and returns. The interesting part is handling incomplete data and uncertain delivery responses.",
     contribution:
-      "My work includes the equipment forms, shipping actions, address validation, return tracking and clearer explanations when a request is blocked.",
+      "I built the onboarding and return workflows: equipment forms, shipping actions, address validation, return tracking and clearer explanations when a request is blocked.",
     decision:
       "A missing address should stop a shipment. An uncertain carrier response should trigger reconciliation, rather than another potentially billable label.",
     scenario:
       "Fix an incomplete address, prepare a sample label, then explore an uncertain carrier response.",
+    context: "Refurbed · internal application · updated Sep 2026",
+    outcome:
+      "Address checks now run in the employee form and again on the server. Persistent claims stop retries from repeating completed external actions, and an uncertain response is reconciled before another label is bought.",
     skills: ["Next.js", "TypeScript", "PostgreSQL", "API integrations"],
   },
   {
@@ -44,11 +49,12 @@ export const workProjects: WorkProject[] = [
     summary:
       "An osTicket extension helps staff draft replies using maintained knowledge and relevant fixes from resolved tickets. Staff remain responsible for the reply.",
     contribution:
-      "My work includes the AI reply interface, knowledge editing, learning from resolved tickets, source validation and visibility into skipped or failed extraction.",
+      "I worked on the AI reply interface, knowledge editing, learning from resolved tickets, source validation and visibility into skipped or failed extraction.",
     decision:
       "A learned fix is a prior example, not policy. If its source changes or reopens, it should stop informing new drafts. A suggested reply is never sent automatically.",
     scenario:
       "Compare an active source with a reopened one, then review and edit a sample reply.",
+    context: "Refurbed · osTicket extension",
     skills: ["PHP", "osTicket", "LLM integration", "Evidence validation"],
   },
   {
@@ -59,11 +65,12 @@ export const workProjects: WorkProject[] = [
     summary:
       "Employee events coordinate inventory records, equipment workflows and directory or mailbox actions across several systems.",
     contribution:
-      "My work includes onboarding and reactivation handling, equipment-return invitations, preserving preparation work and surfacing incomplete directory operations.",
+      "My part covered onboarding and reactivation, equipment-return invitations, keeping preparation work intact and surfacing incomplete directory operations.",
     decision:
       "An accepted request is not proof that every downstream action succeeded. Preserve independent progress and make partial failures visible for follow-up.",
     scenario:
       "Run a return-from-leave scenario with a simulated directory failure, then retry it.",
+    context: "Refurbed · internal automation",
     skills: ["Node.js", "Microsoft Graph", "HiBob", "Snipe-IT"],
   },
   {
@@ -74,11 +81,12 @@ export const workProjects: WorkProject[] = [
     summary:
       "A scheduling application brings directory lookup, Teams meetings, room availability and recurring invitations into one flow.",
     contribution:
-      "My work includes the scheduler and its integrations, plus reconciliation that adds new department members to future meetings.",
+      "I worked on the scheduler and its integrations, plus a reconciliation step that adds new department members to future meetings.",
     decision:
       "Room availability depends on the chosen time. Recurring invites also need to account for people who join after the series was created.",
     scenario:
       "Find a room for a sample meeting. Change the time to expose a booking conflict.",
+    context: "Refurbed · internal application",
     skills: ["Next.js", "TypeScript", "Microsoft Graph", "PostgreSQL"],
   },
   {
@@ -89,11 +97,12 @@ export const workProjects: WorkProject[] = [
     summary:
       "Employees can request access to shared resources for an external partner, with an approval step before access is granted.",
     contribution:
-      "My work includes resource discovery, folder-path resolution, reliable guest notification links and avoiding duplicate invitations.",
+      "My part covered resource discovery, folder-path resolution, reliable guest notification links and avoiding duplicate invitations.",
     decision:
       "Keep submitted, approved and rejected states distinct. A successful form submission should never imply that a guest already has access.",
     scenario:
       "Submit a fictional partner request, then compare the approval and rejection paths.",
+    context: "Refurbed · internal application",
     skills: ["Next.js", "Entra ID", "Microsoft Graph", "Power Automate"],
   },
   {
@@ -104,11 +113,12 @@ export const workProjects: WorkProject[] = [
     summary:
       "An OAuth connection hub lets employees connect providers for scripts and automations, manage connections and revoke access.",
     contribution:
-      "My work includes encrypted token storage, safe rendering of provider responses, token migration tests and service maintenance.",
+      "I worked on encrypted token storage, safe rendering of provider responses, token migration tests and ongoing service maintenance.",
     decision:
       "Connection state must be understandable without displaying credentials. Revoking a connection should clearly stop the work that depends on it.",
     scenario:
       "Connect a fictional workspace, run a sample sync and revoke the connection.",
+    context: "Refurbed · internal service",
     skills: ["OAuth 2.0", "TypeScript", "PostgreSQL", "Token handling"],
   },
   {
@@ -119,11 +129,14 @@ export const workProjects: WorkProject[] = [
     summary:
       "A configurable learning platform supports employee training with interactive modules, quizzes and practical Git and deployment exercises.",
     contribution:
-      "My work includes the Git learning path, practical exercises, course videos and voiceovers, visual practice aids, configuration validation and browser tests.",
+      "I created the Git learning path, practical exercises, course videos and voiceovers, visual practice aids, configuration validation and browser tests.",
     decision:
       "Teach the next useful action, explain why an answer is wrong, and check the actual learner path. Completing a slide is not the same as understanding a workflow.",
     scenario:
       "Work through a short original Git exercise with feedback on each answer.",
+    context: "Refurbed · internal learning platform",
+    outcome:
+      "Browser tests check the learner path through the exercises, and configuration validation checks each course setup.",
     skills: ["Vue", "TypeScript", "Learning design", "Playwright"],
   },
   {
@@ -134,11 +147,14 @@ export const workProjects: WorkProject[] = [
     summary:
       "A Forgejo and Coolify pilot provides a route from version control and review to application deployment on existing hardware. It is not yet in broad use.",
     contribution:
-      "My work includes team access, deployment workflows, automated review, webhook reliability, backups and recovery documentation.",
+      "I deployed the pilot on existing hardware and set up team access, deployment workflows, automated review, webhook reliability, backups and recovery documentation.",
     decision:
       "Make the gate visible: passing checks and a review are separate from deployment. The demo illustrates that distinction without reproducing internal infrastructure.",
     scenario:
       "Run failing checks, repair the sample, and approve a demo deployment.",
+    context: "Refurbed · internal pilot · updated Sep 2026",
+    outcome:
+      "The pilot includes an advisory pull-request reviewer that checks its structured findings against the reviewed diff. SQLite jobs survive restarts and prevent duplicate comments. I tested it with broken and corrected code, cross-file defects and embedded prompt injection, and checked restart recovery and replay.",
     skills: ["Forgejo", "Coolify", "CI/CD", "Docker"],
   },
 ];

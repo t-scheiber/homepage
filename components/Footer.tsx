@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div>
         <Link href="/">Thomas Scheiber</Link>
-        <p>Software, automation &amp; IT.</p>
+        <p>Software development &amp; automation · Vienna</p>
       </div>
       <nav aria-label="Social and contact links">
         <a href={`mailto:${SOCIAL_LINKS.email}`}>Email</a>
