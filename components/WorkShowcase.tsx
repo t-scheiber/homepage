@@ -115,7 +115,6 @@ export default function WorkShowcase() {
       <div
         ref={sectionRef}
         className="work-selected"
-        aria-labelledby="selected-project-title"
       >
         <header className="work-selected-header">
           <p className="work-selected-context">{project.context}</p>
