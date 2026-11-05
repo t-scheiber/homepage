@@ -67,7 +67,7 @@ export const workProjects: WorkProject[] = [
     context: "Refurbed · internal pilot · 2024–2026, updated Sep 2026",
     outcome:
       "The pilot includes an advisory pull-request reviewer that checks its structured findings against the reviewed diff. SQLite jobs survive restarts and prevent duplicate comments. I tested it with broken and corrected code, cross-file defects and embedded prompt injection, and checked restart recovery and replay.",
-    skills: ["Forgejo", "Coolify", "CI/CD", "Docker"],
+    skills: ["Forgejo", "Coolify", "Python", "OpenAI Responses API", "Docker"],
   },
   {
     id: "support",

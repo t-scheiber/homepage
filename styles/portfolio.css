@@ -1384,3 +1384,12 @@ a.collection-row:hover,
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Long hostnames (e.g. a wordpress.com subdomain) must wrap inside a card. */
+.website-grid > li,
+.website-copy {
+  min-width: 0;
+}
+.website-host {
+  overflow-wrap: anywhere;
+}
