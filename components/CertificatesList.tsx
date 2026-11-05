@@ -198,9 +198,9 @@ function CertificatesList() {
                       <span className="credential-details">
                         {details || organization}
                       </span>
-                    </span>
-                    <span className="credential-document" aria-hidden="true">
-                      PDF <ArrowIcon external />
+                      <span className="credential-document" aria-hidden="true">
+                        View PDF <ArrowIcon external />
+                      </span>
                     </span>
                   </a>
                 </li>
