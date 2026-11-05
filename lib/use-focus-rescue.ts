@@ -39,7 +39,12 @@ export function useFocusRescue(rootRef: RefObject<HTMLElement | null>) {
         }
         return root.querySelector<HTMLElement>(selector);
       };
-      const next = search(BUTTONS) ?? search(STATUS) ?? search(CONTROLS);
+      // A finished action should focus its nearby result before a distant
+      // toolbar action such as Reset. Still prefer a next action in that group.
+      const nearby = live
+        .map((node) => node.querySelector<HTMLElement>(BUTTONS) ?? node.querySelector<HTMLElement>(STATUS))
+        .find(Boolean);
+      const next = nearby ?? search(BUTTONS) ?? search(STATUS) ?? search(CONTROLS);
       last = null;
       next?.focus();
     };

@@ -151,6 +151,28 @@ try {
         "connections",
         "training",
       ];
+      if (width <= 900) {
+        const picker = page.getByRole("combobox", {
+          name: "Project",
+          exact: true,
+        });
+        await tabTo(picker);
+        for (const id of ids.slice(1)) {
+          await page.keyboard.press("ArrowDown");
+          await settle();
+          assert.ok(
+            await picker.evaluate((node) => node === document.activeElement),
+            "continuous arrow navigation retains picker focus",
+          );
+          assert.equal(await picker.inputValue(), id);
+        }
+        await page.keyboard.press("Home");
+        await settle();
+        assert.equal(await picker.inputValue(), "equipment");
+        assert.ok(
+          await picker.evaluate((node) => node === document.activeElement),
+        );
+      }
       for (const [index, id] of ids.entries()) {
         if (width > 900) {
           await key(page.locator(".work-selector-list button").nth(index));
@@ -159,17 +181,20 @@ try {
             name: "Project",
             exact: true,
           });
-          if (index === 0) {
-            // Exercise the mobile handoff rather than accepting initial focus.
-            await key(picker, "ArrowDown");
-            await key(picker, "ArrowUp");
-          } else await key(picker, "ArrowDown");
+          await key(picker, index === 0 ? "Home" : "ArrowDown");
+          assert.ok(
+            await picker.evaluate((node) => node === document.activeElement),
+            "picker focus stays while the demo updates",
+          );
         }
         await page.waitForFunction(
-          (expected) =>
+          ({ expected, desktop }) =>
             location.hash === "#" + expected &&
-            document.activeElement?.id === "selected-project-title",
-          id,
+            (desktop
+              ? document.activeElement?.id === "selected-project-title"
+              : document.activeElement ===
+                document.querySelector(".work-mobile-selector select")),
+          { expected: id, desktop: width > 900 },
         );
         const frame = page.locator(".work-demo-frame");
         if (id === "equipment") {
@@ -266,6 +291,15 @@ try {
           await key(button("Submit sample request"));
           await key(button("Simulate approval"));
           await status("No real permissions changed");
+          assert.ok(
+            await frame
+              .locator(".demo-status")
+              .evaluate((node) => node === document.activeElement),
+            "completed approval focuses the result",
+          );
+          await page.keyboard.press("Enter");
+          await settle();
+          await status("No real permissions changed");
         } else if (id === "connections") {
           assert.ok(await button("Run sample sync").isDisabled());
           await key(button("Connect sample workspace"));
@@ -343,7 +377,8 @@ try {
           theme,
           demo: id,
           keyboardOnly: true,
-          headingFocus: true,
+          headingFocus: width > 900,
+          pickerFocusPreserved: width <= 900,
           stateFlow: "PASS",
           reset: "PASS",
         });

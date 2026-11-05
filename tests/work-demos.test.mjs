@@ -237,4 +237,22 @@ test("a demo action that disables itself hands focus to the next action and anno
   assert.equal(view.document.activeElement, button(view, "Simulate approval"));
   const live = view.container.querySelector('.work-demo-frame [role="status"]');
   assert.match(live.textContent, /Pending approval/);
+  await click(view, "Simulate approval");
+  await act(async () => new Promise((resolve) => setTimeout(resolve, 5)));
+  assert.equal(view.document.activeElement, view.container.querySelector(".demo-status"), "completed approval focuses its result instead of Reset");
+  assert.match(live.textContent, /No real permissions changed/);
+});
+
+test("the native project picker keeps focus and announces the selected demo", async (t) => {
+  const view = await render(t, Showcase);
+  const picker = view.container.querySelector(".work-mobile-selector select");
+  picker.focus();
+  await select(view, ".work-mobile-selector select", "training");
+  await act(async () => new Promise((resolve) => setTimeout(resolve, 5)));
+  assert.equal(view.document.activeElement, picker);
+  assert.equal(view.window.location.hash, "#training");
+  assert.match(view.container.querySelector('.work-demo-frame [role="status"]').textContent, /Practical Git training/);
+  await view.click(view.container.querySelector(".work-selector-list button"));
+  await act(async () => new Promise((resolve) => setTimeout(resolve, 5)));
+  assert.equal(view.document.activeElement, view.container.querySelector("#selected-project-title"), "explicit demo button still focuses its heading");
 });
