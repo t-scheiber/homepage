@@ -1186,7 +1186,7 @@ a.collection-row:hover,
   flex: none;
   align-items: center;
   gap: 6px;
-  margin-left: 12px;
+  margin-top: 8px;
   color: var(--accent);
   font-size: 12px;
   font-weight: 600;
