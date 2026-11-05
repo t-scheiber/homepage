@@ -69,12 +69,13 @@ export default function WorkShowcase() {
   if (hashSelection && hashSelection !== selection) setSelection(hashSelection);
   const project = workProjects.find((candidate) => candidate.id === selection)!;
   const Demo = demos[selection];
-  function select(id: string) {
+  function select(id: string, focusHeading = true) {
     // One history entry per demo, so Back steps through the demos visited.
     if (window.location.hash !== `#${id}`) window.history.pushState(null, "", `#${id}`);
     window.dispatchEvent(new window.Event("hashchange"));
-    // Move focus to the new demo so keyboard and screen-reader users follow it.
-    window.setTimeout(() => headingRef.current?.focus({ preventScroll: true }), 0);
+    // Explicit buttons move to the demo. Native picker arrows keep their focus.
+    if (focusHeading)
+      window.setTimeout(() => headingRef.current?.focus({ preventScroll: true }), 0);
   }
   return (
     <section
@@ -83,7 +84,7 @@ export default function WorkShowcase() {
     >
       <div className="work-selector">
         <p className="work-selector-label">Choose a workflow</p>
-        <nav className="work-selector-list" aria-label="Demo projects">
+        <div className="work-selector-list" role="group" aria-label="Demo projects">
           {workProjects.map((item) => (
             <button
               key={item.id}
@@ -94,12 +95,12 @@ export default function WorkShowcase() {
               <small>{item.category}</small>
             </button>
           ))}
-        </nav>
+        </div>
         <label className="work-mobile-selector">
           Project
           <select
             value={selection}
-            onChange={(event) => select(event.target.value)}
+            onChange={(event) => select(event.target.value, false)}
           >
             {workProjects.map((item) => (
               <option key={item.id} value={item.id}>
@@ -143,7 +144,7 @@ export default function WorkShowcase() {
             <Demo key={`${selection}-${resetCount}`} />
           </DemoAnnouncer.Provider>
           <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
-            {announcement}
+            {project.shortTitle}. {announcement}
           </p>
           <div className="work-demo-footnote">
             Fictional data. Local interactions only. No work-system connections.
