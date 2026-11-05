@@ -333,7 +333,8 @@ a.collection-row:hover,
   line-height: 1.3;
   text-wrap: balance;
 }
-.home-projects p {
+.home-featured-copy p,
+.home-project-link p {
   margin-top: 10px;
   max-width: 45ch;
   font-size: 15px;
@@ -432,6 +433,11 @@ a.collection-row:hover,
 .home-trace-message {
   display: block;
   animation: home-trace-in 0.22s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-trace-message {
+    animation: none;
+  }
 }
 .home-trace-status:focus-visible,
 .demo-status:focus-visible {
@@ -1170,6 +1176,25 @@ a.collection-row:hover,
 }
 .credential-in-progress {
   cursor: default;
+}
+.credential-link .credential-copy {
+  flex: 1;
+  min-width: 0;
+}
+.credential-link .credential-document {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.credential-document svg {
+  width: 16px;
+  height: 16px;
 }
 
 /* 404 */

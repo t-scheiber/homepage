@@ -91,7 +91,9 @@ bun run lint
 bun run test
 ```
 
-The 23 tests cover CV viewing, keyboard focus and closing, link behavior, certificate downloads, the health response, production portfolio routes, image optimization, theme initialization, public asset preservation and the interactive work demos. Demo checks cover blocked actions, source eligibility, recovery, approval gates, revocation, quiz feedback, URL selection and reset. The production smoke test starts Next on loopback only and requires the build to exist.
+The 27 tests cover CV viewing, keyboard focus and closing, link behavior, certificate downloads, the health response, production portfolio routes, image optimization, theme initialization, public asset preservation and the interactive work demos. Demo checks cover blocked actions, source eligibility, recovery, approval gates, revocation, quiz feedback, URL selection and reset. The production smoke test starts Next on loopback only and requires the build to exist.
+
+CI also runs `scripts/verify-work-keyboard.mjs` with its isolated Playwright runtime. It uses Tab, arrow keys, Enter and Space to select and operate all eight work demos at phone and desktop widths in both themes. It checks continuous arrow navigation without losing picker focus, heading focus after explicit desktop choices, failure and recovery paths, approval gates, announcements and reset. Set `PLAYWRIGHT_MODULE` to the installed Playwright entry point to run it locally after a production build. Optional `HILL_EVIDENCE_DIR` writes state screenshots and a JSON report.
 
 Inter is bundled locally with its SIL Open Font License and publisher provenance under `app/fonts`, so production builds do not fetch fonts. The CV and certificate files remain unchanged; validation never runs the optional document or image optimization scripts.
 
