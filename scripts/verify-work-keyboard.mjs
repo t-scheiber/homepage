@@ -139,6 +139,13 @@ try {
           await page.locator(".work-demo-frame").screenshot({
             path: path.join(evidence, `keyboard-${name}-${width}-${theme}.png`),
           });
+        if (evidence)
+          await page.screenshot({
+            path: path.join(
+              evidence,
+              `keyboard-${name}-${width}-${theme}-viewport.png`,
+            ),
+          });
       }
       await page.goto(baseURL + "/workprojects", { waitUntil: "networkidle" });
       const ids = [
@@ -165,6 +172,19 @@ try {
             "continuous arrow navigation retains picker focus",
           );
           assert.equal(await picker.inputValue(), id);
+          if (id === "training") {
+            const live = await page
+              .locator(".work-demo-frame [role=status]")
+              .textContent();
+            assert.match(
+              live,
+              /Practical Git training\. Work through a short original Git exercise/,
+            );
+            assert.doesNotMatch(
+              live,
+              /Connect the workspace|Check the address/,
+            );
+          }
         }
         await page.keyboard.press("Home");
         await settle();
@@ -197,6 +217,14 @@ try {
           { expected: id, desktop: width > 900 },
         );
         const frame = page.locator(".work-demo-frame");
+        if (id === "training") {
+          const live = await frame.locator("[role=status]").textContent();
+          assert.match(
+            live,
+            /Practical Git training\. Work through a short original Git exercise/,
+          );
+          assert.doesNotMatch(live, /Connect the workspace|revoked/);
+        }
         if (id === "equipment") {
           await key(button("Check address"));
           await status("Shipment blocked");
@@ -386,6 +414,24 @@ try {
           `PASS ${width} ${theme} ${id}: keyboard selection, state flow, focus and reset`,
         );
       }
+      await page.goBack();
+      await page.waitForFunction(() => location.hash === "#connections");
+      await settle();
+      assert.match(
+        await page.locator(".work-demo-frame [role=status]").textContent(),
+        /OAuth connections\. Connect the workspace/,
+      );
+      await page.goForward();
+      await page.waitForFunction(() => location.hash === "#training");
+      await settle();
+      const historyStatus = await page
+        .locator(".work-demo-frame [role=status]")
+        .textContent();
+      assert.match(
+        historyStatus,
+        /Practical Git training\. Work through a short original Git exercise/,
+      );
+      assert.doesNotMatch(historyStatus, /Connect the workspace|revoked/);
       assert.deepEqual(errors, [], "no browser runtime errors");
     } finally {
       await context.close();
@@ -395,7 +441,11 @@ try {
     await writeFile(
       path.join(evidence, "keyboard-report.json"),
       JSON.stringify(
-        { recordedAt: new Date().toISOString(), results },
+        {
+          recordedAt: new Date().toISOString(),
+          historyAnnouncementsVerified: true,
+          results,
+        },
         null,
         2,
       ),
