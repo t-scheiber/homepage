@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function OtherProjectsPage() {
   return (
-    <PortfolioPage panel={false} title="Websites" eyebrow="Client & community work" description="Five WordPress sites I built for small businesses and holiday rentals, the EuropeTalks member cloud, and a community site. Every entry opens the live site.">
+    <PortfolioPage panel={false} title="Seven sites, all online." eyebrow="Websites · client & community work" description="Five WordPress sites I built for small businesses and holiday rentals, the EuropeTalks member cloud, and a community site. Every entry opens the live site. The EuropeTalks platform and Villa Claudia's guest documents app are on the coding page.">
       <OtherProjectsList />
     </PortfolioPage>
   );

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function CodingProjectsPage() {
   return (
-    <PortfolioPage panel={false} title="Coding projects" eyebrow="Freelance & personal builds" description="Client platforms and sites, tools I built for myself, and the course work underneath. Each project links to its code, and to a live version where one exists.">
+    <PortfolioPage panel={false} title="Client platforms, and tools I built for myself." eyebrow="Coding projects · freelance & personal" description="Client platforms and sites, tools I built for myself, and the course work underneath. Each project links to its code, and to a live version where one exists.">
       <CodingProjectsList />
     </PortfolioPage>
   );

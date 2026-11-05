@@ -31,6 +31,38 @@ const projectLinks = [
   },
 ];
 
+// Sources: the published CV, lib/work-projects.ts and the public repositories.
+const aiWork = [
+  {
+    title: "AI pull-request reviewer",
+    meta: "Refurbed · Git pilot · Python, OpenAI Responses API, SQLite",
+    text: "An advisory reviewer that checks its structured findings against the reviewed diff. SQLite jobs survive restarts and prevent duplicate comments.",
+    check: "Tested with broken and corrected code, cross-file defects, embedded prompt injection, restart recovery and replay.",
+    href: "/workprojects#platform",
+  },
+  {
+    title: "AI support drafts",
+    meta: "Refurbed · osTicket extension · PHP, LLM integration",
+    text: "Drafts replies from maintained knowledge and resolved tickets. A fix whose ticket reopens stops informing new drafts.",
+    check: "Source validation on every learned fix; staff review and send every reply.",
+    href: "/workprojects#support",
+  },
+  {
+    title: "AI video generation tool",
+    meta: "Personal tool · 2025 · Next.js, video model APIs",
+    text: "Generates hero-section videos through three provider APIs and ten models, and shows a cost estimate before each run.",
+    check: "Each model only offers the durations, ratios and resolutions it supports. Code on GitHub.",
+    href: "/codingprojects#ai-video-title",
+  },
+  {
+    title: "Gesture recognition in the browser",
+    meta: "Bachelor project · FH Technikum Wien · TensorFlow.js",
+    text: "Rock, paper, scissors played with webcam hand gestures, recognised in the browser. Mouse and keyboard work as fallbacks.",
+    check: "A live app in English and German, with the code on GitHub.",
+    href: "/codingprojects#rock-paper-scissors",
+  },
+];
+
 const socialGroups = [
   {
     label: "Work",
@@ -55,15 +87,18 @@ export default function Home() {
         <div className="home-intro-copy">
           <h1>Thomas Scheiber</h1>
           <p className="home-role">
-            Software development &amp; automation for internal operations ·
-            Vienna
+            Automation &amp; AI tooling for internal operations · Vienna
           </p>
           <p className="page-description home-lede">
-            I build Refurbed&apos;s internal tools for employee equipment,
-            identity and onboarding, and deploy them through GitLab CI/CD to
-            Google Cloud Run.
+            I build Refurbed&apos;s internal automation, from employee
+            onboarding to an AI pull-request reviewer, and deploy it through
+            GitLab CI/CD to Cloud Run.
           </p>
           <ul className="home-status" aria-label="Current status">
+            <li className="home-status-open">
+              <span>Open to</span>
+              <span>AI and automation engineering roles in Vienna or remote</span>
+            </li>
             <li>
               <span>Now</span>
               <span>
@@ -150,6 +185,30 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="home-ai" aria-labelledby="home-ai-title">
+        <div className="home-section-heading">
+          <h2 id="home-ai-title">AI in my work</h2>
+          <span>What each one does, and the evidence</span>
+        </div>
+        <ul className="home-ai-list">
+          {aiWork.map((item) => (
+            <li key={item.title}>
+              <p className="home-ai-meta">{item.meta}</p>
+              <h3>
+                <Link href={item.href}>
+                  {item.title} <ArrowIcon />
+                </Link>
+              </h3>
+              <p>{item.text}</p>
+              <p className="home-ai-check">
+                <span>evidence</span>
+                {item.check}
+              </p>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="home-contact" aria-labelledby="home-contact-title">

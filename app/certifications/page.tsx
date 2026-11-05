@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function CertificationsPage() {
   return (
-    <PortfolioPage title="Degrees & certifications" eyebrow="Education & continued learning" description="A B.Sc. from FH Technikum Wien, a master's in progress at TU Wien, professional IT certificates and language qualifications. Every finished entry opens the original document.">
+    <PortfolioPage title="A B.Sc. with merit, and a master's underway." eyebrow="Degrees & certifications" description="A B.Sc. from FH Technikum Wien, a master's in progress at TU Wien, professional IT certificates and language qualifications. Every finished entry opens the original document.">
       <CertificatesList />
     </PortfolioPage>
   );

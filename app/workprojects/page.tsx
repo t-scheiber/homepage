@@ -30,10 +30,10 @@ export default function WorkProjectsPage() {
         <h1>Workflows you can try.</h1>
         <div>
           <p>
-            Since July 2024 I have built internal tools at Refurbed, in a
-            two-person IT team. These eight demos rebuild tools I worked on with
-            fictional data, so you can trigger the failures they were designed
-            to handle.
+            Since July 2024 I have built internal automation at Refurbed, in a
+            two-person IT team, including an AI pull-request reviewer and AI
+            support drafts. These eight demos rebuild that work with fictional
+            data, so you can trigger the failures it was designed to handle.
           </p>
           <a href="#more-work">
             Browse more projects <ArrowIcon />

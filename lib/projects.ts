@@ -83,7 +83,7 @@ export const selectedProjects: CodingProject[] = [
       { label: "Demo site", href: "https://mayr-dach.thomasscheiber.com/" },
       { label: "Code", href: gh("mayr-dach") },
     ],
-    favicon: "mayr-dach.ico",
+    favicon: "mayr-dach-64.png",
     image: "/files/projects/mayr-dach.webp",
   },
 ];
