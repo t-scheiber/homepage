@@ -5,7 +5,7 @@ import { createHash } from "node:crypto";
 
 test("existing documents and public assets match the reviewed content manifest", () => {
   const assets = JSON.parse(fs.readFileSync("tests/public-assets.json"));
-  assert.equal(assets.length, 82);
+  assert.equal(assets.length, 83);
   assert.equal(
     assets.filter((asset) => asset.path.endsWith(".pdf")).length,
     10,

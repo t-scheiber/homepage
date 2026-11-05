@@ -2,12 +2,18 @@ import Link from "next/link";
 import { SOCIAL_LINKS } from "@/lib/constants";
 import ArrowIcon from "@/components/ArrowIcon";
 
+// Static pages are rebuilt on every deploy, so the build date is the update date.
+const updated = new Date().toLocaleDateString("en-GB", {
+  month: "long",
+  year: "numeric",
+});
+
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div>
         <Link href="/">Thomas Scheiber</Link>
-        <p>Software development &amp; automation · Vienna</p>
+        <p>Automation &amp; AI tooling · Vienna</p>
       </div>
       <nav aria-label="Social and contact links">
         <a href={`mailto:${SOCIAL_LINKS.email}`}>Email</a>
@@ -28,7 +34,9 @@ export default function Footer() {
           GitHub <ArrowIcon external />
         </a>
       </nav>
-      <small>© {new Date().getFullYear()} Thomas Scheiber</small>
+      <small>
+        © {new Date().getFullYear()} Thomas Scheiber · updated {updated}
+      </small>
     </footer>
   );
 }

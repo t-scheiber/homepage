@@ -40,12 +40,12 @@ export const viewport: Viewport = {
 };
 
 const description =
-  "Thomas Scheiber builds internal tools, identity integrations and automation at Refurbed in Vienna, and freelance websites. Try interactive reconstructions of his work.";
+  "Thomas Scheiber builds automation and AI tooling for internal operations at Refurbed in Vienna, including an AI pull-request reviewer. Try interactive reconstructions of his work.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://thomasscheiber.com"),
   title: {
-    default: "Thomas Scheiber, software development & automation",
+    default: "Thomas Scheiber, automation & AI tooling",
     template: "%s | Thomas Scheiber",
   },
   description,
@@ -55,13 +55,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://thomasscheiber.com",
-    title: "Thomas Scheiber, software development & automation",
+    title: "Thomas Scheiber, automation & AI tooling",
     description,
     siteName: "Thomas Scheiber",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Thomas Scheiber, software development & automation",
+    title: "Thomas Scheiber, automation & AI tooling",
     description,
   },
   icons: {

@@ -490,5 +490,11 @@
     "bytes": 15238,
     "sha256": "9a0f6654336805fa44afe2e9f7a29a1a8dc24c35c413e37b2d746e0a6913bebc",
     "gitBlob": "701fbb8a8490313bc1f2769dbfebe6fb0f9c18b8"
+  },
+  {
+    "path": "public/files/favicons/projects/mayr-dach-64.png",
+    "bytes": 3059,
+    "sha256": "1f5886a7eb80cb7105a639ccb1a0acaf2d816f8616d007c4eb0cb2b6de126dc6",
+    "gitBlob": "3cd4383f3965a117d943f296cbf03fc1f46248cd"
   }
 ]

@@ -446,6 +446,12 @@
   font-size: 14px;
   line-height: 1.8;
 }
+.demo-status-success,
+.demo-status-warning {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
 .demo-status-success {
   color: var(--accent);
   background: var(--demo-success-bg);
@@ -453,6 +459,7 @@
 .demo-status-warning {
   color: var(--demo-warning);
   background: var(--demo-warning-bg);
+  border-color: color-mix(in srgb, var(--demo-warning) 40%, transparent);
 }
 .demo-item {
   display: flex;
@@ -1062,12 +1069,13 @@ details[open] .work-index-plus {
     transform: translateY(4px);
   }
 }
+/* The pulse stays inside the box: a brief inner glow, then nothing. */
 @keyframes demo-warning-pulse {
   0% {
-    box-shadow: 0 0 0 0 color-mix(in srgb, var(--demo-warning) 45%, transparent);
+    box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--demo-warning) 55%, transparent);
   }
   100% {
-    box-shadow: 0 0 0 8px transparent;
+    box-shadow: inset 0 0 0 2px transparent;
   }
 }
 .demo-run-list li {

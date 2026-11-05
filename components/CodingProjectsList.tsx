@@ -108,7 +108,7 @@ export default function CodingProjectsList() {
         </h2>
         <ul className="project-rows">
           {personalProjects.map((project) => (
-            <li key={project.id} className="project-row">
+            <li key={project.id} id={project.id} className="project-row">
               <ProjectIcon project={project} />
               <div>
                 <h3>{project.name}</h3>

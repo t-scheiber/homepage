@@ -48,6 +48,28 @@ export const workProjects: WorkProject[] = [
     skills: ["Next.js", "TypeScript", "PostgreSQL", "API integrations"],
   },
   {
+    id: "platform",
+    category: "Developer platforms · AI review",
+    title: "The AI reviewer advises. The gate decides.",
+    shortTitle: "Git pilot & AI review",
+    summary:
+      "A Forgejo and Coolify pilot provides a route from version control and review to application deployment on existing hardware. Its review step includes an advisory AI pull-request reviewer. It is not yet in broad use.",
+    contribution:
+      "I deployed the pilot on existing hardware and set up team access, deployment workflows, automated review, webhook reliability, backups and recovery documentation.",
+    risk:
+      "Passing checks get mistaken for permission to deploy.",
+    ruledOut:
+      "Deploying as soon as the checks pass.",
+    decision:
+      "Checks, an independent review and the deployment are separate, visible gates. The demo shows the gates without reproducing internal infrastructure.",
+    scenario:
+      "Run failing checks, repair the sample, and approve a demo deployment.",
+    context: "Refurbed · internal pilot · 2024–2026, updated Sep 2026",
+    outcome:
+      "The pilot includes an advisory pull-request reviewer that checks its structured findings against the reviewed diff. SQLite jobs survive restarts and prevent duplicate comments. I tested it with broken and corrected code, cross-file defects and embedded prompt injection, and checked restart recovery and replay.",
+    skills: ["Forgejo", "Coolify", "CI/CD", "Docker"],
+  },
+  {
     id: "support",
     category: "AI-assisted support",
     title: "A useful draft still needs a source.",
@@ -65,6 +87,8 @@ export const workProjects: WorkProject[] = [
     scenario:
       "Compare an active source with a reopened one, then review and edit a sample reply.",
     context: "Refurbed · osTicket extension · 2024–2026",
+    outcome:
+      "Drafts draw only on maintained knowledge and eligible resolved tickets. Source validation drops a fix whose ticket changed or reopened, skipped or failed extraction is visible to staff, and nothing is sent without a person.",
     skills: ["PHP", "osTicket", "LLM integration", "Evidence validation"],
   },
   {
@@ -85,6 +109,8 @@ export const workProjects: WorkProject[] = [
     scenario:
       "Run a return-from-leave scenario with a simulated directory failure, then retry it.",
     context: "Refurbed · internal automation · 2024–2026",
+    outcome:
+      "Onboarding and reactivation runs keep earlier preparation work, queue equipment-return invitations and flag directory or mailbox steps that did not complete.",
     skills: ["Node.js", "Microsoft Graph", "HiBob", "Snipe-IT"],
   },
   {
@@ -105,6 +131,8 @@ export const workProjects: WorkProject[] = [
     scenario:
       "Find a room for a sample meeting. Change the time to expose a booking conflict.",
     context: "Refurbed · internal application · 2024–2026",
+    outcome:
+      "Directory lookup, Teams meetings, room availability and recurring invitations run in one flow, and a reconciliation step adds new department members to future meetings.",
     skills: ["Next.js", "TypeScript", "Microsoft Graph", "PostgreSQL"],
   },
   {
@@ -125,6 +153,8 @@ export const workProjects: WorkProject[] = [
     scenario:
       "Submit a fictional partner request, then compare the approval and rejection paths.",
     context: "Refurbed · internal application · 2024–2026",
+    outcome:
+      "Requests resolve the folder path, send each guest one working notification link and grant nothing until someone approves.",
     skills: ["Next.js", "Entra ID", "Microsoft Graph", "Power Automate"],
   },
   {
@@ -145,6 +175,8 @@ export const workProjects: WorkProject[] = [
     scenario:
       "Connect a fictional workspace, run a sample sync and revoke the connection.",
     context: "Refurbed · internal service · 2024–2026",
+    outcome:
+      "Tokens are stored encrypted, provider responses are rendered safely, and token migrations are covered by tests.",
     skills: ["OAuth 2.0", "TypeScript", "PostgreSQL", "Token handling"],
   },
   {
@@ -168,28 +200,6 @@ export const workProjects: WorkProject[] = [
     outcome:
       "Browser tests check the learner path through the exercises, and configuration validation checks each course setup.",
     skills: ["Vue", "TypeScript", "Learning design", "Playwright"],
-  },
-  {
-    id: "platform",
-    category: "Developer platforms",
-    title: "A deployment path people can inspect.",
-    shortTitle: "Git & deployment pilot",
-    summary:
-      "A Forgejo and Coolify pilot provides a route from version control and review to application deployment on existing hardware. It is not yet in broad use.",
-    contribution:
-      "I deployed the pilot on existing hardware and set up team access, deployment workflows, automated review, webhook reliability, backups and recovery documentation.",
-    risk:
-      "Passing checks get mistaken for permission to deploy.",
-    ruledOut:
-      "Deploying as soon as the checks pass.",
-    decision:
-      "Checks, an independent review and the deployment are separate, visible gates. The demo shows the gates without reproducing internal infrastructure.",
-    scenario:
-      "Run failing checks, repair the sample, and approve a demo deployment.",
-    context: "Refurbed · internal pilot · 2024–2026, updated Sep 2026",
-    outcome:
-      "The pilot includes an advisory pull-request reviewer that checks its structured findings against the reviewed diff. SQLite jobs survive restarts and prevent duplicate comments. I tested it with broken and corrected code, cross-file defects and embedded prompt injection, and checked restart recovery and replay.",
-    skills: ["Forgejo", "Coolify", "CI/CD", "Docker"],
   },
 ];
 
