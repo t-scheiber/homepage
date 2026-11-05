@@ -66,10 +66,15 @@ export default function WorkShowcase() {
     sectionRef.current?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
   }, []);
   // Section anchors must not discard the currently open demo or its draft.
-  if (hashSelection && hashSelection !== selection) setSelection(hashSelection);
+  if (hashSelection && hashSelection !== selection) {
+    setSelection(hashSelection);
+    // Clear before committing the next demo, including Back/Forward changes.
+    setAnnouncement("");
+  }
   const project = workProjects.find((candidate) => candidate.id === selection)!;
   const Demo = demos[selection];
   function select(id: string, focusHeading = true) {
+    if (id !== selection) setAnnouncement("");
     // One history entry per demo, so Back steps through the demos visited.
     if (window.location.hash !== `#${id}`) window.history.pushState(null, "", `#${id}`);
     window.dispatchEvent(new window.Event("hashchange"));
@@ -144,7 +149,7 @@ export default function WorkShowcase() {
             <Demo key={`${selection}-${resetCount}`} />
           </DemoAnnouncer.Provider>
           <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
-            {project.shortTitle}. {announcement}
+            {project.shortTitle}. {announcement || project.scenario}
           </p>
           <div className="work-demo-footnote">
             Fictional data. Local interactions only. No work-system connections.
