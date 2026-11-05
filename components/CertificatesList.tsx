@@ -26,7 +26,8 @@ function CertificatesList() {
       alt: "Academic degree",
       title: "Bachelor of Science in Engineering (BSc)",
       organization: "FH Technikum Wien",
-      details: "FH Technikum Wien · Smart Homes and Assistive Technologies · with merit · 2022",
+      details:
+        "FH Technikum Wien · Smart Homes and Assistive Technologies · with merit · 2022",
     },
     {
       href: "/files/pdf/Meta_Certificate.pdf",
@@ -40,7 +41,8 @@ function CertificatesList() {
       href: "/files/pdf/AWS_Certificate.pdf",
       src: awsLogo,
       alt: "AWS certification logo",
-      title: "AWS Cloud Solutions Architect Professional Certificate",
+      title:
+        "AWS Cloud Solutions Architect (Coursera professional certificate)",
       organization: "Amazon Web Services",
       details: "Coursera professional certificate · 2024",
     },
@@ -98,52 +100,113 @@ function CertificatesList() {
     },
   ];
 
+  const groups = [
+    { title: "Degrees", items: certificates.slice(0, 1), inProgress: true },
+    { title: "Professional certificates", items: certificates.slice(1, 5) },
+    {
+      title: "Languages and earlier certificates",
+      items: certificates.slice(5),
+    },
+  ];
+
   return (
-    <ul className="list-none w-full m-0 p-0 justify-center relative">
-      <li className="list-none">
-        <div className="collection-row credential-in-progress">
-          <span className="flex mr-4 sm:mr-3 bg-white/90 rounded-lg p-2 shrink-0">
-            <svg className="w-10 h-10 sm:w-9 sm:h-9 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-              <path d="m2 9 10-5 10 5-10 5L2 9Z" strokeLinejoin="round" />
-              <path d="M6 11v6c4 3 8 3 12 0v-6M22 9v7" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </span>
-          <span>
-            <span className="block">Master&apos;s in Software Engineering</span>
-            <span className="credential-details">TU Wien · in progress</span>
-          </span>
-        </div>
-      </li>
-      {certificates.map(({ href, src, alt, title, organization, details }) => (
-        <li
-          key={href}
-          className="list-none"
+    <>
+      {groups.map((group) => (
+        <section
+          key={group.title}
+          className="credential-group"
+          aria-label={group.title}
         >
-          <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`View ${title} certificate from ${organization}`}
-            className="collection-row"
-          >
-            <span className="flex mr-4 sm:mr-3 bg-white/90 rounded-lg p-2 shrink-0">
-              {src ? (
-                <Image alt={alt} src={src} width={40} height={40} className="w-10 h-10 sm:w-9 sm:h-9" />
-              ) : (
-                <svg className="w-10 h-10 sm:w-9 sm:h-9 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-                  <path d="m2 9 10-5 10 5-10 5L2 9Z" strokeLinejoin="round" />
-                  <path d="M6 11v6c4 3 8 3 12 0v-6M22 9v7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              )}
-            </span>
-            <span>
-              <span className="block">{title}</span>
-              <span className="credential-details">{details || organization}</span>
-            </span>
-          </a>
-        </li>
+          <h2 className="credential-group-title">{group.title}</h2>
+          <ul className="list-none w-full m-0 p-0 justify-center relative">
+            {group.inProgress && (
+              <li className="list-none">
+                <div className="collection-row credential-in-progress">
+                  <span className="flex mr-4 sm:mr-3 bg-white/90 rounded-lg p-2 shrink-0">
+                    <svg
+                      className="w-10 h-10 sm:w-9 sm:h-9 text-slate-700"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="m2 9 10-5 10 5-10 5L2 9Z"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M6 11v6c4 3 8 3 12 0v-6M22 9v7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <span>
+                    <span className="block">
+                      Master&apos;s in Software Engineering
+                    </span>
+                    <span className="credential-details">
+                      TU Wien · in progress
+                    </span>
+                  </span>
+                </div>
+              </li>
+            )}
+            {group.items.map(
+              ({ href, src, alt, title, organization, details }) => (
+                <li key={href} className="list-none">
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${title} certificate from ${organization}`}
+                    className="collection-row"
+                  >
+                    <span className="flex mr-4 sm:mr-3 bg-white/90 rounded-lg p-2 shrink-0">
+                      {src ? (
+                        <Image
+                          alt={alt}
+                          src={src}
+                          width={40}
+                          height={40}
+                          className="w-10 h-10 sm:w-9 sm:h-9"
+                        />
+                      ) : (
+                        <svg
+                          className="w-10 h-10 sm:w-9 sm:h-9 text-slate-700"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="m2 9 10-5 10 5-10 5L2 9Z"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M6 11v6c4 3 8 3 12 0v-6M22 9v7"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      )}
+                    </span>
+                    <span>
+                      <span className="block">{title}</span>
+                      <span className="credential-details">
+                        {details || organization}
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              ),
+            )}
+          </ul>
+        </section>
       ))}
-    </ul>
+    </>
   );
 }
 

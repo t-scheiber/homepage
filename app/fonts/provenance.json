@@ -26,6 +26,25 @@
       "layoutFeatures": "kern,liga,calt,ccmp,locl,mark,mkmk,tnum,case",
       "bytes": 65900,
       "sha256": "1c0d24159ff26551fa2f5eae16275a8fc16829f9ced54108e57f3ff70820e1b8"
+    },
+    {
+      "path": "app/fonts/JetBrainsMono-latin.woff2",
+      "publisher": "google/fonts",
+      "commit": "6e4b84c976cadb3c49a40fd9a1c203e4f7fcf2da",
+      "upstreamPath": "ofl/jetbrainsmono/JetBrainsMono[wght].ttf",
+      "upstreamBlob": "aa310be8b717fe3774f9444dd89d5f4101cc6d10",
+      "license": "SIL Open Font License 1.1",
+      "tool": "fonttools 4.68.0 varLib.instancer wght=400:600, then subset",
+      "unicodes": "U+0020-007E,U+00A0-00FF,U+2010-2027,U+2030-203A,U+20AC,U+2190-2199",
+      "bytes": 27760,
+      "sha256": "97567c79e75250c9ed9f9d4c3d2eda469d929d53e237d2e7fd6969c22b4a6123"
+    },
+    {
+      "path": "app/fonts/OFL-JetBrainsMono.txt",
+      "upstreamPath": "ofl/jetbrainsmono/OFL.txt",
+      "upstreamBlob": "821a3dac22aff15a1f1c9689a1d79c45bb58ca39",
+      "bytes": 4399,
+      "sha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d"
     }
   ]
 }

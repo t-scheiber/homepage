@@ -1,0 +1,1 @@
+Workflows you can try. by Thomas Scheiber: Eight internal tools rebuilt as demos with fictional data: blocked shipments, partial failures, approval gates.

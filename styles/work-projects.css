@@ -875,7 +875,7 @@ details[open] .work-index-plus {
     gap: 28px;
   }
   .work-intro p {
-    font-size: 15px;
+    font-size: 16px;
   }
   .work-project-index summary {
     grid-template-columns: 160px minmax(0, 1fr) 24px;
@@ -919,7 +919,7 @@ details[open] .work-index-plus {
     font-size: 26px;
   }
   .work-selected-header p {
-    font-size: 15px;
+    font-size: 16px;
   }
   .work-mobile-selector {
     display: block;
@@ -943,7 +943,7 @@ details[open] .work-index-plus {
   }
   .work-demo-prompt {
     padding: 16px;
-    font-size: 14px;
+    font-size: 16px;
   }
   .demo-split {
     grid-template-columns: minmax(0, 1fr);
@@ -1025,4 +1025,63 @@ details[open] .work-index-plus {
   flex-wrap: wrap;
   gap: 8px 28px;
   flex-shrink: 0;
+}
+
+.work-selected-context,
+.work-demo-toolbar > span,
+.work-demo-footnote,
+.work-selector-label,
+.work-selector-list small,
+.work-index-category,
+.work-stack,
+.demo-caption,
+.work-decision dt {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-feature-settings: "calt" 0;
+  letter-spacing: -0.01em;
+}
+.work-selected-context {
+  font-weight: 500;
+}
+.work-decision dt {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Demo state changes: new statuses and run steps arrive with a short,
+   purposeful movement so a failure is noticed. Reduced motion removes it. */
+.demo-status {
+  animation: demo-status-in 0.24s ease-out;
+}
+.demo-status-warning {
+  animation: demo-status-in 0.24s ease-out, demo-warning-pulse 0.9s ease-out 0.24s;
+}
+@keyframes demo-status-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+@keyframes demo-warning-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--demo-warning) 45%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+}
+.demo-run-list li {
+  animation: demo-status-in 0.24s ease-out backwards;
+}
+.demo-run-list li:nth-child(2) { animation-delay: 0.07s; }
+.demo-run-list li:nth-child(3) { animation-delay: 0.14s; }
+.demo-run-list li:nth-child(4) { animation-delay: 0.21s; }
+.demo-run-list li:nth-child(5) { animation-delay: 0.28s; }
+@media (prefers-reduced-motion: reduce) {
+  .demo-status,
+  .demo-status-warning,
+  .demo-run-list li,
+  .home-trace-status {
+    animation: none;
+  }
 }

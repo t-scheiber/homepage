@@ -58,7 +58,8 @@ export default function WorkShowcase() {
   const project = workProjects.find((candidate) => candidate.id === selection)!;
   const Demo = demos[selection];
   function select(id: string) {
-    window.history.replaceState(null, "", `#${id}`);
+    // One history entry per demo, so Back steps through the demos visited.
+    if (window.location.hash !== `#${id}`) window.history.pushState(null, "", `#${id}`);
     window.dispatchEvent(new window.Event("hashchange"));
     // Move focus to the new demo so keyboard and screen-reader users follow it.
     window.setTimeout(() => headingRef.current?.focus({ preventScroll: true }), 0);
