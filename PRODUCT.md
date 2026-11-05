@@ -16,7 +16,7 @@ Thomas Scheiber's personal portfolio presents his professional contributions, pe
 - Keep the CV, credentials, project destinations and contact links working.
 - Work demonstrations use fictional data and run entirely in the visitor's browser. They never call work systems, send messages, grant access or create shipments.
 - Summaries distinguish Thomas's contributions from the product's overall capabilities. Repository activity is evidence of contribution, not proof of sole ownership, adoption or business impact.
-- Research materials stay outside this repository. Public content must omit company branding, internal URLs, staff data, credentials and private source code.
+- Research materials stay outside this repository. Public content must omit company branding (logos and visual identity), internal URLs, staff data, credentials and private source code. Naming the employer in plain text, as the published CV does, is allowed.
 
 ## Work-section direction
 

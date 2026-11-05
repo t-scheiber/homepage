@@ -17,7 +17,7 @@ export default function SiteHeader() {
   const pathname = usePathname();
   return (
     <header className="site-header">
-      <Link href="/" className="site-brand" aria-label="Thomas Scheiber, home">
+      <Link href="/" className="site-brand">
         <span className="site-monogram" aria-hidden="true">
           ts.
         </span>

@@ -3,10 +3,11 @@ import Link from "next/link";
 import WorkShowcase from "@/components/WorkShowcase";
 import ArrowIcon from "@/components/ArrowIcon";
 import { furtherProjects } from "@/lib/work-projects";
+import { SOCIAL_LINKS } from "@/lib/constants";
 import "@/styles/work-projects.css";
 
 const description =
-  "Professional work by Thomas Scheiber: try interactive reconstructions of internal tools, explore their engineering decisions and read about the contributions behind them.";
+  "Eight internal tools Thomas Scheiber worked on at Refurbed, rebuilt as interactive demos with fictional data: blocked shipments, partial failures and approval gates.";
 export const metadata: Metadata = {
   title: "Work projects",
   description,
@@ -25,9 +26,10 @@ export default function WorkProjectsPage() {
         <h1>Workflows you can try.</h1>
         <div>
           <p>
-            I build internal tools that connect people, equipment and software.
-            Explore a few of the decisions behind that work through interactive
-            demos.
+            Since July 2024 I have built internal tools at Refurbed, in a
+            two-person IT team. These eight demos rebuild tools I worked on with
+            fictional data, so you can trigger the failures they were designed
+            to handle.
           </p>
           <a href="#more-work">
             Browse more projects <ArrowIcon />
@@ -85,9 +87,14 @@ export default function WorkProjectsPage() {
           explain the workflows without exposing employer systems, code or
           information.
         </p>
-        <Link href="/codingprojects">
-          Explore personal projects <ArrowIcon />
-        </Link>
+        <div className="work-page-next">
+          <a href={`mailto:${SOCIAL_LINKS.email}`}>
+            Ask me about this work <ArrowIcon external />
+          </a>
+          <Link href="/codingprojects">
+            Personal projects <ArrowIcon />
+          </Link>
+        </div>
       </footer>
     </main>
   );

@@ -23,15 +23,15 @@ export default function ThemeSelect() {
         <path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor" stroke="none" />
       </svg>
       <select
-        aria-label="Color theme"
+        aria-label="Color theme: System, Mineral (light) or Slate (dark)"
         value={preference}
         onChange={(event) =>
           setThemePreference(event.target.value as ThemePreference)
         }
       >
         <option value="system">System</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
+        <option value="light">Mineral</option>
+        <option value="dark">Slate</option>
       </select>
     </div>
   );

@@ -92,6 +92,7 @@ export default function WorkShowcase() {
       </div>
       <div className="work-selected" aria-labelledby="selected-project-title">
         <header className="work-selected-header">
+          <p className="work-selected-context">{project.context}</p>
           <h2 id="selected-project-title">{project.title}</h2>
           <p>{project.summary}</p>
         </header>
@@ -120,6 +121,12 @@ export default function WorkShowcase() {
             <h3>The engineering decision</h3>
             <p>{project.decision}</p>
           </div>
+          {project.outcome && (
+            <div className="work-case-outcome">
+              <h3>What shipped</h3>
+              <p>{project.outcome}</p>
+            </div>
+          )}
         </div>
         <ul className="work-stack" aria-label="Technologies and skills">
           {project.skills.map((skill) => (

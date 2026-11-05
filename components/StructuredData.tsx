@@ -9,6 +9,10 @@ function StructuredData() {
     '@type': 'Person',
     name: masterCV.profile.name,
     description: masterCV.profile.headline,
+    jobTitle: masterCV.profile.employment[0].title,
+    worksFor: { '@type': 'Organization', name: masterCV.profile.employment[0].employer },
+    homeLocation: { '@type': 'Place', name: masterCV.profile.location },
+    alumniOf: { '@type': 'CollegeOrUniversity', name: 'FH Technikum Wien' },
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://thomasscheiber.com',
     sameAs: [
       SOCIAL_LINKS.linkedin,

@@ -1,36 +1,39 @@
-import Link from 'next/link';
+import type { Metadata } from "next";
+import Link from "next/link";
+import ArrowIcon from "@/components/ArrowIcon";
+
+export const metadata: Metadata = {
+  title: "Page not found",
+  robots: { index: false },
+};
 
 export default function NotFound() {
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '50vh',
-      padding: '2rem',
-      textAlign: 'center',
-    }}>
-      <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>404</h1>
-      <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>
-        Page Not Found
-      </h2>
-      <p style={{ marginBottom: '2rem', opacity: 0.8 }}>
-        The page you&apos;re looking for doesn&apos;t exist.
-      </p>
-      <Link
-        href="/"
-        style={{
-          padding: '0.75rem 1.5rem',
-          backgroundColor: 'var(--accent-fill)',
-            color: 'var(--on-accent)',
-          borderRadius: '0.5rem',
-          textDecoration: 'none',
-          fontSize: '1rem',
-        }}
-      >
-        Return Home
-      </Link>
-    </div>
+    <main id="main-content" className="collection-page not-found-page">
+      <header className="collection-header">
+        <p className="section-eyebrow">404</p>
+        <h1>This page doesn&apos;t exist.</h1>
+        <p className="page-description">
+          The link may be old, or the address has a typo. These pages do exist:
+        </p>
+      </header>
+      <ul className="not-found-links">
+        <li>
+          <Link href="/workprojects">
+            Work demos <ArrowIcon />
+          </Link>
+        </li>
+        <li>
+          <Link href="/codingprojects">
+            Coding projects <ArrowIcon />
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            Home <ArrowIcon />
+          </Link>
+        </li>
+      </ul>
+    </main>
   );
 }
