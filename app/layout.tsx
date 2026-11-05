@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 import "@/styles/portfolio.css";
 import "@/styles/themes.css";
 import "@/styles/pdf-viewer.css";
-import ParticlesComponent from "@/components/Particles";
+import ParticlesLoader from "@/components/ParticlesLoader";
 import StructuredData from "@/components/StructuredData";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
@@ -114,7 +114,7 @@ export default function RootLayout({
         <SiteHeader />
         {children}
         <Footer />
-        <ParticlesComponent />
+        <ParticlesLoader />
       </body>
     </html>
   );

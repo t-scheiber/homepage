@@ -27,7 +27,7 @@ export default function SupportDemo() {
           detail="Fictional ticket IT-204 · Audio in a meeting"
         />
         <blockquote className="demo-message">
-          “My headset is connected, but I cannot hear anyone in the meeting.”
+          &quot;My headset is connected, but I cannot hear anyone in the meeting.&quot;
           <footer>Alex Morgan · Example request</footer>
         </blockquote>
         <button className="demo-button" onClick={generate}>
@@ -53,7 +53,11 @@ export default function SupportDemo() {
               <input
                 type="checkbox"
                 checked={reviewed}
-                onChange={(event) => setReviewed(event.target.checked)}
+                onChange={(event) => {
+                  setReviewed(event.target.checked);
+                  // Withdrawing the review also withdraws the acceptance.
+                  if (!event.target.checked) setAccepted(false);
+                }}
               />
               I have reviewed this sample reply
             </label>
@@ -94,7 +98,7 @@ export default function SupportDemo() {
         <div className="demo-evidence">
           <strong>Prior case IT-108</strong>
           <p>
-            “Selected the headset as the meeting output. Audio worked again.”
+            &quot;Selected the headset as the meeting output. Audio worked again.&quot;
           </p>
           <span>Fictional staff resolution</span>
         </div>

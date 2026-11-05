@@ -69,6 +69,9 @@ test("support drafts require review and exclude reopened sources from new drafts
   await view.click(view.container.querySelector('input[type="checkbox"]'));
   await click(view, "Accept reviewed draft");
   assert.match(status(view), /Nothing has been sent/);
+  await view.click(view.container.querySelector('input[type="checkbox"]'));
+  assert.doesNotMatch(status(view), /accepted/, "withdrawing review withdraws acceptance");
+  assert.equal(button(view, "Accept reviewed draft").disabled, true);
   await select(view, "#support-source", "reopened");
   assert.equal(view.container.querySelector("textarea"), null);
   await click(view, "Generate sample draft");
@@ -88,7 +91,12 @@ test("lifecycle reports partial failure and preserves future-starter preparation
   await click(view, "Run sample workflow");
   assert.match(status(view), /Partially completed/);
   await click(view, "Retry with service available");
-  assert.match(status(view), /All sample steps confirmed/);
+  assert.match(status(view), /All sample steps confirmed\. Retrying/);
+  // The retry left the outage unticked, so this run succeeds without a retry.
+  await select(view, "#lifecycle-event", "leaving");
+  await click(view, "Run sample workflow");
+  assert.match(status(view), /confirmed on the first run/);
+  assert.doesNotMatch(status(view), /Retrying/, "no retry claim without a retry");
   await select(view, "#lifecycle-event", "future");
   await click(view, "Run sample workflow");
   assert.match(status(view), /Preparation preserved/);
