@@ -438,6 +438,12 @@
     "gitBlob": "666f05f05de3de494cff79bca29e285eea5a323d"
   },
   {
+    "path": "public/files/projects/ai-video.webp",
+    "bytes": 16664,
+    "sha256": "6f5e7dfb5f7b8597164aaa13fe54f6900d3a62fc22930c2e4f6bbc7271fb34d9",
+    "gitBlob": "5ab95bd7c59869a9f952362c6e065403a3c5f35b"
+  },
+  {
     "path": "public/files/projects/darat.webp",
     "bytes": 16848,
     "sha256": "1e65a2fe49e8189570ec10ef31241a533f9f0abaa9cfbd796031516d0632c737",
