@@ -397,9 +397,9 @@
   },
   {
     "path": "public/files/pdf/ScheiberThomasCV.pdf",
-    "bytes": 583164,
-    "sha256": "104e5bc30ccd50f5f24658a007c0bdbbde8a044bcb925e4552e82767d407926a",
-    "gitBlob": "b2569a957085f71f20133a07b05cd219ea0e81e7"
+    "bytes": 209816,
+    "sha256": "db53f020d47ffcb6857fdb4587a1201de9e3eaf1cbd6ffa559376045f37432d6",
+    "gitBlob": "5e1d642d1de65c9f441929e37a95a00c8d472544"
   },
   {
     "path": "public/files/pdf/makeITsafe_Certificate.pdf",
