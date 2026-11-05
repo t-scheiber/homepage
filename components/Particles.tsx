@@ -71,7 +71,7 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
       particles: {
         color: { value: theme === "light" ? "#365f59" : "#b8d6d4" },
         number: {
-          value: 5,
+          value: 6,
           density: {
             enable: true,
             value_area: 400,
@@ -81,14 +81,14 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
           enable: true,
           distance: 130,
           color: theme === "light" ? "#365f59" : "#b8d6d4",
-          opacity: theme === "light" ? 0.1 : 0.08,
+          opacity: theme === "light" ? 0.15 : 0.12,
         },
         move: {
           enable: true,
           speed: { min: 0.1, max: 0.6 },
         },
         opacity: {
-          value: { min: 0.12, max: theme === "light" ? 0.32 : 0.26 },
+          value: { min: 0.15, max: theme === "light" ? 0.42 : 0.34 },
         },
         size: {
           value: { min: 1, max: 3 },

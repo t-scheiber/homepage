@@ -26,7 +26,7 @@ const demo = async (t, name) => {
   return view;
 };
 const status = (view) =>
-  [...view.container.querySelectorAll('[role="status"]')]
+  [...view.container.querySelectorAll(".demo-status")]
     .map((node) => node.textContent)
     .join(" ");
 
@@ -226,4 +226,15 @@ test("project selection updates the URL, responds to hash navigation and resets 
     ).length,
     1,
   );
+});
+
+test("a demo action that disables itself hands focus to the next action and announces the change", async (t) => {
+  const view = await demo(t, "access");
+  const submitButton = button(view, "Submit sample request");
+  submitButton.focus();
+  await click(view, "Submit sample request");
+  await act(async () => new Promise((resolve) => setTimeout(resolve, 5)));
+  assert.equal(view.document.activeElement, button(view, "Simulate approval"));
+  const live = view.container.querySelector('.work-demo-frame [role="status"]');
+  assert.match(live.textContent, /Pending approval/);
 });

@@ -41,8 +41,7 @@ function CertificatesList() {
       href: "/files/pdf/AWS_Certificate.pdf",
       src: awsLogo,
       alt: "AWS certification logo",
-      title:
-        "AWS Cloud Solutions Architect (Coursera professional certificate)",
+      title: "AWS Cloud Solutions Architect",
       organization: "Amazon Web Services",
       details: "Coursera professional certificate · 2024",
     },

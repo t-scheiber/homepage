@@ -31,11 +31,21 @@ const projectLinks = [
   },
 ];
 
-const socialLinks = [
-  { title: "LinkedIn", href: SOCIAL_LINKS.linkedin },
-  { title: "GitHub", href: SOCIAL_LINKS.github },
-  { title: "Instagram", href: SOCIAL_LINKS.instagram },
-  { title: "Facebook", href: SOCIAL_LINKS.facebook },
+const socialGroups = [
+  {
+    label: "Work",
+    links: [
+      { title: "LinkedIn", href: SOCIAL_LINKS.linkedin },
+      { title: "GitHub", href: SOCIAL_LINKS.github },
+    ],
+  },
+  {
+    label: "Photography",
+    links: [
+      { title: "Instagram", href: SOCIAL_LINKS.instagram },
+      { title: "Facebook", href: SOCIAL_LINKS.facebook },
+    ],
+  },
 ];
 
 export default function Home() {
@@ -49,16 +59,17 @@ export default function Home() {
             Vienna
           </p>
           <p className="page-description home-lede">
-            At Refurbed, a marketplace for refurbished products, I build the
-            internal tools behind employee equipment, identity and onboarding,
-            and ship them through GitLab CI/CD to Google Cloud Run.
+            I build Refurbed&apos;s internal tools for employee equipment,
+            identity and onboarding, and deploy them through GitLab CI/CD to
+            Google Cloud Run.
           </p>
           <ul className="home-status" aria-label="Current status">
             <li>
               <span>Now</span>
               <span>
-                IT Administrator by title, in a two-person IT team. Most of my
-                week goes into building internal tools.
+                IT Administrator at Refurbed, a marketplace for refurbished
+                products, in a two-person IT team. Most of my week goes into
+                building internal tools.
               </span>
             </li>
             <li>
@@ -67,20 +78,15 @@ export default function Home() {
             </li>
             <li>
               <span>Freelance</span>
-              <span>Websites and web apps since 2023</span>
+              <span>
+                Websites and web apps since 2018, self-employed since 2023
+              </span>
             </li>
             <li>
               <span>Off-screen</span>
               <span>
-                <a
-                  href={SOCIAL_LINKS.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Photography (Instagram, opens in new tab)"
-                >
-                  Photography
-                </a>
-                , ski touring and mountain biking
+                Grew up in Saalfelden am Steinernen Meer. Photography, ski
+                touring and mountain biking.
               </span>
             </li>
           </ul>
@@ -159,16 +165,21 @@ export default function Home() {
           )}
         </div>
         <nav className="home-social-links" aria-label="Find me online">
-          {socialLinks.map(({ title, href }) => (
-            <a
-              key={title}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${title} (opens in new tab)`}
-            >
-              {title} <ArrowIcon external />
-            </a>
+          {socialGroups.map(({ label, links }) => (
+            <div key={label} className="home-social-group">
+              <p>{label}</p>
+              {links.map(({ title, href }) => (
+                <a
+                  key={title}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${title}, ${label.toLowerCase()} (opens in new tab)`}
+                >
+                  {title} <ArrowIcon external />
+                </a>
+              ))}
+            </div>
           ))}
         </nav>
       </section>

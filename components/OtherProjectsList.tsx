@@ -30,7 +30,7 @@ export default function OtherProjectsList() {
               )}
             </span>
             <span className="website-copy">
-              <span className="website-name">{site.name}</span>
+              <h2 className="website-name">{site.name}</h2>
               <span className="website-what">{site.what}</span>
               <span className="website-meta">
                 {site.part ? `${site.part} · ` : ""}

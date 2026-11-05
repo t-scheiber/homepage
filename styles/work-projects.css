@@ -1081,7 +1081,7 @@ details[open] .work-index-plus {
   .demo-status,
   .demo-status-warning,
   .demo-run-list li,
-  .home-trace-status {
+  .home-trace-message {
     animation: none;
   }
 }

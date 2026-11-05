@@ -1,6 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  useSyncExternalStore,
+} from "react";
+import { DemoAnnouncer } from "./work-demos/Shared";
+import { useFocusRescue } from "@/lib/use-focus-rescue";
 import { workProjects, type DemoId } from "@/lib/work-projects";
 import EquipmentDemo from "./work-demos/EquipmentDemo";
 import SupportDemo from "./work-demos/SupportDemo";
@@ -47,6 +55,10 @@ export default function WorkShowcase() {
   const [resetCount, setResetCount] = useState(0);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const frameRef = useRef<HTMLDivElement>(null);
+  const [announcement, setAnnouncement] = useState("");
+  const announce = useCallback((message: string) => setAnnouncement(message), []);
+  useFocusRescue(frameRef);
   // A shared link such as /workprojects#platform lands on the demo itself.
   useEffect(() => {
     if (!getSelection()) return;
@@ -112,18 +124,28 @@ export default function WorkShowcase() {
           </h2>
           <p>{project.summary}</p>
         </header>
-        <div className="work-demo-frame">
+        <div className="work-demo-frame" ref={frameRef}>
           <div className="work-demo-toolbar">
             <span>
               <span className="work-demo-dot" aria-hidden="true" />
               Interactive reconstruction
             </span>
-            <button onClick={() => setResetCount((count) => count + 1)}>
+            <button
+              onClick={() => {
+                setResetCount((count) => count + 1);
+                setAnnouncement("Demo reset.");
+              }}
+            >
               Reset demo
             </button>
           </div>
           <p className="work-demo-prompt">{project.scenario}</p>
-          <Demo key={`${selection}-${resetCount}`} />
+          <DemoAnnouncer.Provider value={announce}>
+            <Demo key={`${selection}-${resetCount}`} />
+          </DemoAnnouncer.Provider>
+          <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
+            {announcement}
+          </p>
           <div className="work-demo-footnote">
             Fictional data. Local interactions only. No work-system connections.
           </div>

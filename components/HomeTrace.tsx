@@ -1,13 +1,14 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useId, useRef, useState } from "react";
+import { useFocusRescue } from "@/lib/use-focus-rescue";
 import Link from "next/link";
 import ArrowIcon from "@/components/ArrowIcon";
 
 type Stage = "editing" | "blocked" | "ready" | "labelled" | "uncertain" | "reconciled";
 
 const messages: Record<Stage, { tone: "neutral" | "warning" | "success"; text: string }> = {
-  editing: { tone: "neutral", text: "Check the postal code before a label can be bought." },
+  editing: { tone: "neutral", text: "The sample starts with an incomplete postal code. Check it, then fix it." },
   blocked: { tone: "warning", text: "Shipment blocked. An Austrian postal code has four digits. No label was requested." },
   ready: { tone: "success", text: "Address accepted. The sample label can be prepared." },
   labelled: { tone: "success", text: "Sample label prepared. Further labels are locked for this shipment." },
@@ -21,10 +22,12 @@ export default function HomeTrace() {
   const [stage, setStage] = useState<Stage>("editing");
   const id = useId();
   const message = messages[stage];
+  const rootRef = useRef<HTMLDivElement>(null);
+  useFocusRescue(rootRef);
   const locked = stage === "labelled" || stage === "uncertain" || stage === "reconciled";
 
   return (
-    <div className="home-trace">
+    <div className="home-trace" ref={rootRef}>
       <p className="home-trace-title">
         <span className="home-trace-dot" aria-hidden="true" />
         Try it: equipment handover
@@ -58,12 +61,15 @@ export default function HomeTrace() {
       </form>
       <p
         id={`${id}-status`}
-        key={stage}
         className={`home-trace-status home-trace-${message.tone}`}
         role="status"
         aria-atomic="true"
+        tabIndex={-1}
+        data-focus-target=""
       >
-        {message.text}
+        <span key={stage} className="home-trace-message">
+          {message.text}
+        </span>
       </p>
       <div className="home-trace-actions">
         {stage === "ready" && (

@@ -44,7 +44,7 @@ export const workProjects: WorkProject[] = [
       "Fix an incomplete address, prepare a sample label, then explore an uncertain carrier response.",
     context: "Refurbed · internal application · 2024–2026, updated Sep 2026",
     outcome:
-      "Address checks now run in the employee form and again on the server. Persistent claims stop retries from repeating completed external actions, and an uncertain response is reconciled before another label is bought.",
+      "Address checks now run in the employee form and again on the server. Each external action is recorded once, so a retry can't repeat it, and an uncertain response is reconciled before another label is bought.",
     skills: ["Next.js", "TypeScript", "PostgreSQL", "API integrations"],
   },
   {

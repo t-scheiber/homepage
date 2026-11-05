@@ -129,7 +129,7 @@ export default function CodingProjectsList() {
             <small>
               {courseProjects.reduce((n, g) => n + g.items.length, 0) +
                 archivedSites.length}{" "}
-              course projects, practice apps and an archived site
+              course projects, practice apps and my first paid site
             </small>
           </span>
           <span className="project-archive-toggle" aria-hidden="true">
@@ -146,7 +146,7 @@ export default function CodingProjectsList() {
             </svg>
           </span>
         </summary>
-        {[...courseProjects, { group: "Archived", items: archivedSites }].map(
+        {[...courseProjects, { group: "Earlier paid work", items: archivedSites }].map(
           ({ group, items }) => (
             <div key={group} className="project-archive-group">
               <h3>{group}</h3>
