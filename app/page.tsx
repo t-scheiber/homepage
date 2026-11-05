@@ -90,9 +90,8 @@ export default function Home() {
             Automation &amp; AI tooling for internal operations · Vienna
           </p>
           <p className="page-description home-lede">
-            I build Refurbed&apos;s internal automation, from employee
-            onboarding to an AI pull-request reviewer, and deploy it through
-            GitLab CI/CD to Cloud Run.
+            In Refurbed&apos;s two-person IT team I build internal automation,
+            from employee onboarding to an AI pull-request reviewer.
           </p>
           <ul className="home-status" aria-label="Current status">
             <li className="home-status-open">
@@ -103,8 +102,8 @@ export default function Home() {
               <span>Now</span>
               <span>
                 IT Administrator at Refurbed, a marketplace for refurbished
-                products, in a two-person IT team. Most of my week goes into
-                building internal tools.
+                products. Most of my week goes into building internal tools,
+                which ship through GitLab CI/CD to Google Cloud Run.
               </span>
             </li>
             <li>
