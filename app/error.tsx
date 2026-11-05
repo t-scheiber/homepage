@@ -36,7 +36,8 @@ export default function Error({
           onClick={reset}
           style={{
             padding: '0.75rem 1.5rem',
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            backgroundColor: 'var(--accent-fill)',
+            color: 'var(--on-accent)',
             border: 'none',
             borderRadius: '0.5rem',
             cursor: 'pointer',
@@ -49,7 +50,8 @@ export default function Error({
           href="/"
           style={{
             padding: '0.75rem 1.5rem',
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            backgroundColor: 'var(--accent-fill)',
+            color: 'var(--on-accent)',
             borderRadius: '0.5rem',
             textDecoration: 'none',
             fontSize: '1rem',
