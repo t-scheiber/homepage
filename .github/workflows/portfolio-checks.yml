@@ -1,0 +1,62 @@
+name: Portfolio checks
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: "22.23.2"
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6
+        with:
+          bun-version: "1.4.2"
+      - run: bun install --frozen-lockfile
+      - run: bun run lint
+      - run: bun run build
+      - run: bun run typecheck
+      - run: bun run test
+      - name: Install mobile browser verification runtime
+        run: |
+          npm install --prefix "$RUNNER_TEMP/portfolio-browser" --no-save --no-package-lock playwright@1.56.1
+          "$RUNNER_TEMP/portfolio-browser/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Verify phone, landscape and desktop layouts
+        env:
+          PLAYWRIGHT_MODULE: ${{ runner.temp }}/portfolio-browser/node_modules/playwright/index.mjs
+        run: node scripts/verify-mobile.mjs
+
+  verify-live:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: "22.23.2"
+      - name: Install live browser verification runtime
+        run: |
+          npm install --prefix "$RUNNER_TEMP/portfolio-browser" --no-save --no-package-lock playwright@1.56.1
+          "$RUNNER_TEMP/portfolio-browser/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Wait for deployment and verify the public site
+        env:
+          PLAYWRIGHT_MODULE: ${{ runner.temp }}/portfolio-browser/node_modules/playwright/index.mjs
+          VERIFY_URL: https://thomasscheiber.com
+          DEPLOYMENT_WAIT_MS: "600000"
+        run: node scripts/verify-mobile.mjs
