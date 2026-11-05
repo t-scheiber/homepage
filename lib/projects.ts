@@ -64,11 +64,15 @@ export const selectedProjects: CodingProject[] = [
     name: "AI video generation tool",
     what: "Generates hero-section videos through three provider APIs and ten models.",
     detail:
-      "I built it because the tools I tried for my web projects were too expensive or too limited. It shows a cost estimate before each run and only offers the durations, ratios and resolutions the chosen model supports.",
+      "I built it because the tools I tried for my web projects were too expensive or too limited. It shows a cost estimate before each run and only offers the durations, ratios and resolutions the chosen model supports. Guests can try it with their own provider key. The key stays in their browser and the server passes it on for that one request without storing it.",
     year: "2025",
-    context: "Personal tool",
+    context: "Personal tool · live",
     stack: ["Next.js", "TypeScript", "Video model APIs"],
-    links: [{ label: "Code", href: gh("aivideogeneration") }],
+    links: [
+      { label: "Live app", href: "https://aivideogeneration.thomasscheiber.com/" },
+      { label: "Code", href: gh("aivideogeneration") },
+    ],
+    image: "/files/projects/ai-video.webp",
   },
   {
     id: "mayr-dach",

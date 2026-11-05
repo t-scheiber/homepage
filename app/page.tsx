@@ -51,7 +51,7 @@ const aiWork = [
     title: "AI video generation tool",
     meta: "Personal tool · 2025 · Next.js, video model APIs",
     text: "Generates hero-section videos through three provider APIs and ten models, and shows a cost estimate before each run.",
-    check: "Each model only offers the durations, ratios and resolutions it supports. Code on GitHub.",
+    check: "Each model only offers the durations, ratios and resolutions it supports. Live, with a guest mode that uses your own provider key.",
     href: "/codingprojects#ai-video-title",
   },
   {
