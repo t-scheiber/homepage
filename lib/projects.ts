@@ -168,7 +168,6 @@ export const courseProjects: { group: string; items: ArchiveProject[] }[] = [
         name: "Calculator",
         note: "React basics",
         href: gh("react-basics-simplest-working-calculator"),
-        live: "https://react-basics-simplest-working-calculator.thomasscheiber.com/",
       },
     ],
   },
