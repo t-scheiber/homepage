@@ -94,13 +94,34 @@ export const selectedProjects: CodingProject[] = [
 
 export const personalProjects: CodingProject[] = [
   {
+    id: "wohnly",
+    name: "Wohnly",
+    what: "Household app for shared expenses, chores, shopping lists and calendars.",
+    detail:
+      "One TypeScript codebase for iOS, iPadOS, Android, macOS, Windows and the web. Titles and descriptions are encrypted on the device before they reach the server. It began as a progressive web app, and I rebuilt it as a native app to learn what publishing in the app stores takes.",
+    year: "2026",
+    context: "Personal · App Store and Microsoft Store",
+    stack: ["Expo", "React Native", "Tauri", "Hono", "Prisma", "PostgreSQL"],
+    links: [
+      { label: "Website", href: "https://wohnly.app/" },
+      { label: "App Store", href: "https://apps.apple.com/app/wohnly/id6761035211" },
+      { label: "Microsoft Store", href: "https://apps.microsoft.com/detail/9P5JTRSRMJPB" },
+      { label: "Code", href: gh("wohnly-app") },
+    ],
+  },
+  {
     id: "financeapp",
     name: "FinanceApp",
     what: "Market data, news sentiment and portfolio tools in one dashboard.",
+    detail:
+      "The demo signs you in as a read-only user with fictional prices and news, kept in a separate database from my own instance.",
     year: "2025",
-    context: "Personal · private instance",
+    context: "Personal · live demo",
     stack: ["Next.js", "Better Auth", "Alpha Vantage"],
-    links: [{ label: "Code", href: gh("financeapp") }],
+    links: [
+      { label: "Live demo", href: "https://finance.thomasscheiber.com/auth/signin?demo=1" },
+      { label: "Code", href: gh("financeapp") },
+    ],
   },
   {
     id: "rock-paper-scissors",
@@ -124,10 +145,15 @@ export const personalProjects: CodingProject[] = [
     id: "drone-wallet",
     name: "Drone document wallet",
     what: "Phone-friendly document viewer for drone pilots stopped by authorities.",
+    detail:
+      "The passphrase is checked on the server and the real documents are only served to a signed session. Visitors can open fictional sample documents with the passphrase demo.",
     year: "2025",
-    context: "Personal",
-    stack: ["TypeScript"],
-    links: [{ label: "Code", href: gh("droneapp") }],
+    context: "Personal · live, demo passphrase: demo",
+    stack: ["Next.js", "TypeScript"],
+    links: [
+      { label: "Live app", href: "https://drone.thomasscheiber.com/" },
+      { label: "Code", href: gh("droneapp") },
+    ],
     favicon: "drone-wallet.svg",
   },
   {
@@ -135,9 +161,12 @@ export const personalProjects: CodingProject[] = [
     name: "Coffee guide",
     what: "Espresso settings per bean and grinder, made for checking on a phone.",
     year: "2025",
-    context: "Personal",
-    stack: ["TypeScript"],
-    links: [{ label: "Code", href: gh("coffee-guide") }],
+    context: "Personal · live",
+    stack: ["Next.js", "TypeScript"],
+    links: [
+      { label: "Live app", href: "https://coffee.thomasscheiber.com/" },
+      { label: "Code", href: gh("coffee-guide") },
+    ],
     favicon: "coffee-guide.svg",
   },
 ];
@@ -157,6 +186,7 @@ export const courseProjects: { group: string; items: ArchiveProject[] }[] = [
         name: "Little Lemon restaurant",
         note: "React capstone project",
         href: gh("LittleLemon_capstone-react-course-project"),
+        live: "https://little-lemon.thomasscheiber.com/",
       },
       {
         name: "Portfolio app",
@@ -168,6 +198,7 @@ export const courseProjects: { group: string; items: ArchiveProject[] }[] = [
         name: "Calculator",
         note: "React basics",
         href: gh("react-basics-simplest-working-calculator"),
+        live: "https://react-calculator.thomasscheiber.com/",
       },
     ],
   },
@@ -180,9 +211,30 @@ export const courseProjects: { group: string; items: ArchiveProject[] }[] = [
         href: gh("todo-app"),
         live: "https://todoapp.thomasscheiber.com/",
       },
-      { name: "Weather app", note: "Vue.js", href: gh("ScheiberVueAppAbgabe") },
-      { name: "Weather app", note: "Vanilla JavaScript", href: gh("AK_WeatherApp") },
-      { name: "Player management", note: "Node.js, EJS", href: gh("AK_nodeApp") },
+      {
+        name: "Weather app",
+        note: "Vue.js",
+        href: gh("ScheiberVueAppAbgabe"),
+        live: "https://weatherapp-vue.thomasscheiber.com/",
+      },
+      {
+        name: "Weather app",
+        note: "Vanilla JavaScript",
+        href: gh("AK_WeatherApp"),
+        live: "https://weatherapp-vanillajs.thomasscheiber.com/",
+      },
+      {
+        name: "Player management",
+        note: "Node.js, EJS",
+        href: gh("AK_nodeApp"),
+        live: "https://players.thomasscheiber.com/",
+      },
+      {
+        name: "Calculator",
+        note: "HTML, CSS, vanilla JavaScript",
+        href: gh("CalculatorApp"),
+        live: "https://calculator.thomasscheiber.com/",
+      },
     ],
   },
   {
@@ -192,41 +244,49 @@ export const courseProjects: { group: string; items: ArchiveProject[] }[] = [
         name: "Final project",
         note: "Web development course",
         href: `${gh("WebDevelopment")}/tree/master/Abschlussprojekt`,
+        live: "https://fhtw-abschlussprojekt.thomasscheiber.com/",
       },
       {
         name: "Student database",
         note: "Exercise 7, PHP",
         href: `${gh("WebDevelopment")}/tree/master/FHTW_uebung_7_scheiber`,
+        live: "https://fhtw-uebung7.thomasscheiber.com/",
       },
       {
         name: "Student list and RSS/Atom reader",
         note: "Exercise 6, PHP",
         href: `${gh("WebDevelopment")}/tree/master/FHTW_uebung_6_scheiber`,
+        live: "https://fhtw-uebung6.thomasscheiber.com/",
       },
       {
         name: "Smart home control",
         note: "Exercise 5, PHP",
         href: `${gh("WebDevelopment")}/tree/master/FHTW_uebung_5_scheiber`,
+        live: "https://fhtw-uebung5.thomasscheiber.com/",
       },
       {
         name: "Patient management",
         note: "Exercise 4, PHP",
         href: `${gh("WebDevelopment")}/tree/master/FHTW_uebung_4_scheiber`,
+        live: "https://fhtw-uebung4.thomasscheiber.com/",
       },
       {
         name: "PHP exercises",
         note: "Exercise 3",
         href: `${gh("WebDevelopment")}/tree/master/FHTW_uebung_3_scheiber`,
+        live: "https://fhtw-uebung3.thomasscheiber.com/",
       },
       {
         name: "Smart home controller",
         note: "Exercise 2",
         href: `${gh("WebDevelopment")}/tree/master/FHTW_uebung_2_scheiber`,
+        live: "https://fhtw-uebung2.thomasscheiber.com/",
       },
       {
         name: "First web development exercise",
         note: "Exercise 1",
         href: `${gh("WebDevelopment")}/tree/master/FHTW_uebung_1_scheiber`,
+        live: "https://fhtw-uebung1.thomasscheiber.com/",
       },
     ],
   },
