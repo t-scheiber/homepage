@@ -1,30 +1,30 @@
 import { Metadata } from "next";
-import Footer from "@/components/Footer";
+import PortfolioPage from "@/components/PortfolioPage";
 import OtherProjectsList from "@/components/OtherProjectsList";
 
 export const metadata: Metadata = {
-  title: "WordPress & Client Projects",
+  alternates: { canonical: "/otherprojects" },
+  title: "Websites",
   description:
-    "WordPress websites and client projects including architecture firms, vacation rentals, business websites, and community projects.",
+    "Websites Thomas Scheiber built for an architecture practice, a construction management office, holiday rentals and a massage practice, plus the EuropeTalks member cloud.",
   openGraph: {
-    title: "WordPress & Client Projects | Thomas Scheiber",
+    url: "/otherprojects",
+    title: "Websites | Thomas Scheiber",
     description:
-      "Professional WordPress development and client website projects.",
+      "WordPress sites for small businesses and holiday rentals, plus the EuropeTalks member cloud.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Websites | Thomas Scheiber",
+    description:
+      "WordPress sites for small businesses and holiday rentals, plus the EuropeTalks member cloud.",
   },
 };
 
 export default function OtherProjectsPage() {
   return (
-    <main className="mx-auto flex h-full w-full max-w-[min(95vw,1050px)] 4k:max-w-[min(95vw,1600px)] flex-col items-center justify-center px-[1.5vw] py-[4vh] sm:px-[1.5vw] sm:py-[4vh]">
-      <div className="flex flex-col w-full max-w-[832px] max-h-[65vh]">
-        <div className="text-3xl font-semibold tracking-wider rounded-t-lg bg-white/20 backdrop-blur-md w-full m-0 p-5 text-center relative sm:text-2xl sm:p-4 text-white! border border-white/30 drop-shadow-lg flex items-center justify-center">
-          WordPress &amp; Other Projects
-        </div>
-        <div className="overflow-y-auto custom-scrollbar">
-          <OtherProjectsList />
-        </div>
-        <Footer />
-      </div>
-    </main>
+    <PortfolioPage panel={false} title="Seven sites, all online." eyebrow="Websites · client & community work" description="Five WordPress sites I built for small businesses and holiday rentals, the EuropeTalks member cloud, and a community site. Every entry opens the live site. The EuropeTalks platform and Villa Claudia's guest documents app are on the coding page.">
+      <OtherProjectsList />
+    </PortfolioPage>
   );
 }

@@ -1,5 +1,6 @@
 import { memo } from "react";
 import Image, { StaticImageData } from "next/image";
+import ArrowIcon from "@/components/ArrowIcon";
 // Import images
 import metaLogo from "@/public/files/logos/meta.png";
 import awsLogo from "@/public/files/logos/aws.png";
@@ -12,20 +13,30 @@ import scuolaLdVLogo from "@/public/files/logos/scuolaLdV.png";
 
 interface Certificate {
   href: string;
-  src: StaticImageData;
+  src?: StaticImageData;
   alt: string;
   title: string;
   organization: string;
+  details?: string;
 }
 
 function CertificatesList() {
   const certificates: Certificate[] = [
+    {
+      href: "/files/pdf/BSc_Diploma.pdf",
+      alt: "Academic degree",
+      title: "Bachelor of Science in Engineering (BSc)",
+      organization: "FH Technikum Wien",
+      details:
+        "FH Technikum Wien · Smart Homes and Assistive Technologies · with merit · 2022",
+    },
     {
       href: "/files/pdf/Meta_Certificate.pdf",
       src: metaLogo,
       alt: "Meta certification logo",
       title: "Meta Front-End Developer",
       organization: "Meta",
+      details: "Professional certificate · Coursera · 2024",
     },
     {
       href: "/files/pdf/AWS_Certificate.pdf",
@@ -33,6 +44,7 @@ function CertificatesList() {
       alt: "AWS certification logo",
       title: "AWS Cloud Solutions Architect",
       organization: "Amazon Web Services",
+      details: "Coursera professional certificate · 2024",
     },
     {
       href: "/files/pdf/IT-Automation-Python_Certificate.pdf",
@@ -40,6 +52,7 @@ function CertificatesList() {
       alt: "Google certification logo",
       title: "Google IT Automation with Python",
       organization: "Google",
+      details: "Professional certificate · Coursera · 2023",
     },
     {
       href: "/files/pdf/IT-Support_Certificate.pdf",
@@ -47,13 +60,15 @@ function CertificatesList() {
       alt: "Google certification logo",
       title: "Google IT Support",
       organization: "Google",
+      details: "Professional certificate · Coursera · 2022",
     },
     {
       href: "/files/pdf/EF_Certificate.pdf",
       src: efLogo,
       alt: "EF Education First logo",
-      title: "EF Language School C1",
+      title: "EF English C1",
       organization: "EF Education First",
+      details: "English language certificate · London · 2017",
     },
     {
       href: "/files/pdf/FCE_Certificate.pdf",
@@ -85,28 +100,116 @@ function CertificatesList() {
     },
   ];
 
+  const groups = [
+    { title: "Degrees", items: certificates.slice(0, 1), inProgress: true },
+    { title: "Professional certificates", items: certificates.slice(1, 5) },
+    {
+      title: "Languages and earlier certificates",
+      items: certificates.slice(5),
+    },
+  ];
+
   return (
-    <ul className="list-none w-full m-0 p-0 justify-center relative">
-      {certificates.map(({ href, src, alt, title, organization }, index) => (
-        <li
-          key={href}
-          className="list-none"
+    <>
+      {groups.map((group) => (
+        <section
+          key={group.title}
+          className="credential-group"
+          aria-label={group.title}
         >
-          <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`View ${title} certificate from ${organization}`}
-            className={`bg-white/20 backdrop-blur-md m-0 py-4 px-6 justify-center items-center relative flex transition-all duration-200 sm:py-3 sm:px-4 sm:text-base hover:bg-white/30 hover:backdrop-blur-none text-white! text-lg! font-normal drop-shadow-lg ${index !== certificates.length - 1 ? "border-b border-white" : ""}`}
-          >
-            <span className="flex mr-4 sm:mr-3 bg-white/90 rounded-lg p-2 shrink-0">
-              <Image alt={alt} src={src} width={40} height={40} className="w-10 h-10 sm:w-9 sm:h-9" />
-            </span>
-            <span>{title}</span>
-          </a>
-        </li>
+          <h2 className="credential-group-title">{group.title}</h2>
+          <ul className="list-none w-full m-0 p-0 justify-center relative">
+            {group.inProgress && (
+              <li className="list-none">
+                <div className="collection-row credential-in-progress">
+                  <span className="flex mr-4 sm:mr-3 bg-white/90 rounded-lg p-2 shrink-0">
+                    <svg
+                      className="w-10 h-10 sm:w-9 sm:h-9 text-slate-700"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="m2 9 10-5 10 5-10 5L2 9Z"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M6 11v6c4 3 8 3 12 0v-6M22 9v7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <span>
+                    <span className="block">
+                      Master&apos;s in Software Engineering
+                    </span>
+                    <span className="credential-details">
+                      TU Wien · in progress
+                    </span>
+                  </span>
+                </div>
+              </li>
+            )}
+            {group.items.map(
+              ({ href, src, alt, title, organization, details }) => (
+                <li key={href} className="list-none">
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${title} certificate from ${organization}, PDF opens in a new tab`}
+                    className="collection-row credential-link"
+                  >
+                    <span className="flex mr-4 sm:mr-3 bg-white/90 rounded-lg p-2 shrink-0">
+                      {src ? (
+                        <Image
+                          alt={alt}
+                          src={src}
+                          width={40}
+                          height={40}
+                          className="w-10 h-10 sm:w-9 sm:h-9"
+                        />
+                      ) : (
+                        <svg
+                          className="w-10 h-10 sm:w-9 sm:h-9 text-slate-700"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="m2 9 10-5 10 5-10 5L2 9Z"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M6 11v6c4 3 8 3 12 0v-6M22 9v7"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      )}
+                    </span>
+                    <span className="credential-copy">
+                      <span className="block">{title}</span>
+                      <span className="credential-details">
+                        {details || organization}
+                      </span>
+                      <span className="credential-document" aria-hidden="true">
+                        View PDF <ArrowIcon external />
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              ),
+            )}
+          </ul>
+        </section>
       ))}
-    </ul>
+    </>
   );
 }
 

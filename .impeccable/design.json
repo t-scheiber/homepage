@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-27T07:56:20.575Z",
+  "title": "Design System: Thomas Scheiber portfolio",
+  "extensions": {
+    "colorMeta": {
+      "slate-page-bg": {
+        "role": "neutral",
+        "displayName": "slate page bg",
+        "tonalRamp": [
+          "oklch(15.00% 0.0293 241.22)",
+          "oklch(26.43% 0.0293 241.22)",
+          "oklch(37.86% 0.0293 241.22)",
+          "oklch(49.29% 0.0293 241.22)",
+          "oklch(60.71% 0.0293 241.22)",
+          "oklch(72.14% 0.0293 241.22)",
+          "oklch(83.57% 0.0293 241.22)",
+          "oklch(95.00% 0.0293 241.22)"
+        ]
+      },
+      "slate-page-wash": {
+        "role": "neutral",
+        "displayName": "slate page wash",
+        "tonalRamp": [
+          "oklch(15.00% 0.0291 237.25)",
+          "oklch(26.43% 0.0291 237.25)",
+          "oklch(37.86% 0.0291 237.25)",
+          "oklch(49.29% 0.0291 237.25)",
+          "oklch(60.71% 0.0291 237.25)",
+          "oklch(72.14% 0.0291 237.25)",
+          "oklch(83.57% 0.0291 237.25)",
+          "oklch(95.00% 0.0291 237.25)"
+        ]
+      },
+      "slate-text": {
+        "role": "neutral",
+        "displayName": "slate text",
+        "tonalRamp": [
+          "oklch(15.00% 0.0093 242.84)",
+          "oklch(26.43% 0.0093 242.84)",
+          "oklch(37.86% 0.0093 242.84)",
+          "oklch(49.29% 0.0093 242.84)",
+          "oklch(60.71% 0.0093 242.84)",
+          "oklch(72.14% 0.0093 242.84)",
+          "oklch(83.57% 0.0093 242.84)",
+          "oklch(95.00% 0.0093 242.84)"
+        ]
+      },
+      "slate-muted": {
+        "role": "neutral",
+        "displayName": "slate muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.0206 233.90)",
+          "oklch(26.43% 0.0206 233.90)",
+          "oklch(37.86% 0.0206 233.90)",
+          "oklch(49.29% 0.0206 233.90)",
+          "oklch(60.71% 0.0206 233.90)",
+          "oklch(72.14% 0.0206 233.90)",
+          "oklch(83.57% 0.0206 233.90)",
+          "oklch(95.00% 0.0206 233.90)"
+        ]
+      },
+      "slate-surface": {
+        "role": "neutral",
+        "displayName": "slate surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.0285 236.72)",
+          "oklch(26.43% 0.0285 236.72)",
+          "oklch(37.86% 0.0285 236.72)",
+          "oklch(49.29% 0.0285 236.72)",
+          "oklch(60.71% 0.0285 236.72)",
+          "oklch(72.14% 0.0285 236.72)",
+          "oklch(83.57% 0.0285 236.72)",
+          "oklch(95.00% 0.0285 236.72)"
+        ]
+      },
+      "slate-line": {
+        "role": "neutral",
+        "displayName": "slate line",
+        "tonalRamp": [
+          "oklch(15.00% 0.0301 186.22)",
+          "oklch(26.43% 0.0301 186.22)",
+          "oklch(37.86% 0.0301 186.22)",
+          "oklch(49.29% 0.0301 186.22)",
+          "oklch(60.71% 0.0301 186.22)",
+          "oklch(72.14% 0.0301 186.22)",
+          "oklch(83.57% 0.0301 186.22)",
+          "oklch(95.00% 0.0301 186.22)"
+        ]
+      },
+      "slate-control-border": {
+        "role": "neutral",
+        "displayName": "slate control border",
+        "tonalRamp": [
+          "oklch(15.00% 0.0228 179.06)",
+          "oklch(26.43% 0.0228 179.06)",
+          "oklch(37.86% 0.0228 179.06)",
+          "oklch(49.29% 0.0228 179.06)",
+          "oklch(60.71% 0.0228 179.06)",
+          "oklch(72.14% 0.0228 179.06)",
+          "oklch(83.57% 0.0228 179.06)",
+          "oklch(95.00% 0.0228 179.06)"
+        ]
+      },
+      "slate-hover": {
+        "role": "neutral",
+        "displayName": "slate hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.0301 186.22)",
+          "oklch(26.43% 0.0301 186.22)",
+          "oklch(37.86% 0.0301 186.22)",
+          "oklch(49.29% 0.0301 186.22)",
+          "oklch(60.71% 0.0301 186.22)",
+          "oklch(72.14% 0.0301 186.22)",
+          "oklch(83.57% 0.0301 186.22)",
+          "oklch(95.00% 0.0301 186.22)"
+        ]
+      },
+      "slate-accent": {
+        "role": "primary",
+        "displayName": "slate accent",
+        "tonalRamp": [
+          "oklch(15.00% 0.0625 159.26)",
+          "oklch(26.43% 0.0625 159.26)",
+          "oklch(37.86% 0.0625 159.26)",
+          "oklch(49.29% 0.0625 159.26)",
+          "oklch(60.71% 0.0625 159.26)",
+          "oklch(72.14% 0.0625 159.26)",
+          "oklch(83.57% 0.0625 159.26)",
+          "oklch(95.00% 0.0625 159.26)"
+        ]
+      },
+      "slate-accent-hover": {
+        "role": "primary",
+        "displayName": "slate accent hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.0475 160.50)",
+          "oklch(26.43% 0.0475 160.50)",
+          "oklch(37.86% 0.0475 160.50)",
+          "oklch(49.29% 0.0475 160.50)",
+          "oklch(60.71% 0.0475 160.50)",
+          "oklch(72.14% 0.0475 160.50)",
+          "oklch(83.57% 0.0475 160.50)",
+          "oklch(95.00% 0.0475 160.50)"
+        ]
+      },
+      "slate-on-accent": {
+        "role": "primary",
+        "displayName": "slate on accent",
+        "tonalRamp": [
+          "oklch(15.00% 0.0314 163.67)",
+          "oklch(26.43% 0.0314 163.67)",
+          "oklch(37.86% 0.0314 163.67)",
+          "oklch(49.29% 0.0314 163.67)",
+          "oklch(60.71% 0.0314 163.67)",
+          "oklch(72.14% 0.0314 163.67)",
+          "oklch(83.57% 0.0314 163.67)",
+          "oklch(95.00% 0.0314 163.67)"
+        ]
+      },
+      "mineral-page-bg": {
+        "role": "neutral",
+        "displayName": "mineral page bg",
+        "tonalRamp": [
+          "oklch(15.00% 0.0085 145.51)",
+          "oklch(26.43% 0.0085 145.51)",
+          "oklch(37.86% 0.0085 145.51)",
+          "oklch(49.29% 0.0085 145.51)",
+          "oklch(60.71% 0.0085 145.51)",
+          "oklch(72.14% 0.0085 145.51)",
+          "oklch(83.57% 0.0085 145.51)",
+          "oklch(95.00% 0.0085 145.51)"
+        ]
+      },
+      "mineral-page-wash": {
+        "role": "neutral",
+        "displayName": "mineral page wash",
+        "tonalRamp": [
+          "oklch(15.00% 0.0061 137.77)",
+          "oklch(26.43% 0.0061 137.77)",
+          "oklch(37.86% 0.0061 137.77)",
+          "oklch(49.29% 0.0061 137.77)",
+          "oklch(60.71% 0.0061 137.77)",
+          "oklch(72.14% 0.0061 137.77)",
+          "oklch(83.57% 0.0061 137.77)",
+          "oklch(95.00% 0.0061 137.77)"
+        ]
+      },
+      "mineral-text": {
+        "role": "neutral",
+        "displayName": "mineral text",
+        "tonalRamp": [
+          "oklch(15.00% 0.0272 188.14)",
+          "oklch(26.43% 0.0272 188.14)",
+          "oklch(37.86% 0.0272 188.14)",
+          "oklch(49.29% 0.0272 188.14)",
+          "oklch(60.71% 0.0272 188.14)",
+          "oklch(72.14% 0.0272 188.14)",
+          "oklch(83.57% 0.0272 188.14)",
+          "oklch(95.00% 0.0272 188.14)"
+        ]
+      },
+      "mineral-muted": {
+        "role": "neutral",
+        "displayName": "mineral muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.0337 179.45)",
+          "oklch(26.43% 0.0337 179.45)",
+          "oklch(37.86% 0.0337 179.45)",
+          "oklch(49.29% 0.0337 179.45)",
+          "oklch(60.71% 0.0337 179.45)",
+          "oklch(72.14% 0.0337 179.45)",
+          "oklch(83.57% 0.0337 179.45)",
+          "oklch(95.00% 0.0337 179.45)"
+        ]
+      },
+      "mineral-surface": {
+        "role": "neutral",
+        "displayName": "mineral surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.0061 137.77)",
+          "oklch(26.43% 0.0061 137.77)",
+          "oklch(37.86% 0.0061 137.77)",
+          "oklch(49.29% 0.0061 137.77)",
+          "oklch(60.71% 0.0061 137.77)",
+          "oklch(72.14% 0.0061 137.77)",
+          "oklch(83.57% 0.0061 137.77)",
+          "oklch(95.00% 0.0061 137.77)"
+        ]
+      },
+      "mineral-line": {
+        "role": "neutral",
+        "displayName": "mineral line",
+        "tonalRamp": [
+          "oklch(15.00% 0.0411 177.20)",
+          "oklch(26.43% 0.0411 177.20)",
+          "oklch(37.86% 0.0411 177.20)",
+          "oklch(49.29% 0.0411 177.20)",
+          "oklch(60.71% 0.0411 177.20)",
+          "oklch(72.14% 0.0411 177.20)",
+          "oklch(83.57% 0.0411 177.20)",
+          "oklch(95.00% 0.0411 177.20)"
+        ]
+      },
+      "mineral-control-border": {
+        "role": "neutral",
+        "displayName": "mineral control border",
+        "tonalRamp": [
+          "oklch(15.00% 0.0455 175.37)",
+          "oklch(26.43% 0.0455 175.37)",
+          "oklch(37.86% 0.0455 175.37)",
+          "oklch(49.29% 0.0455 175.37)",
+          "oklch(60.71% 0.0455 175.37)",
+          "oklch(72.14% 0.0455 175.37)",
+          "oklch(83.57% 0.0455 175.37)",
+          "oklch(95.00% 0.0455 175.37)"
+        ]
+      },
+      "mineral-hover": {
+        "role": "neutral",
+        "displayName": "mineral hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.0474 183.83)",
+          "oklch(26.43% 0.0474 183.83)",
+          "oklch(37.86% 0.0474 183.83)",
+          "oklch(49.29% 0.0474 183.83)",
+          "oklch(60.71% 0.0474 183.83)",
+          "oklch(72.14% 0.0474 183.83)",
+          "oklch(83.57% 0.0474 183.83)",
+          "oklch(95.00% 0.0474 183.83)"
+        ]
+      },
+      "mineral-accent": {
+        "role": "primary",
+        "displayName": "mineral accent",
+        "tonalRamp": [
+          "oklch(15.00% 0.0695 167.49)",
+          "oklch(26.43% 0.0695 167.49)",
+          "oklch(37.86% 0.0695 167.49)",
+          "oklch(49.29% 0.0695 167.49)",
+          "oklch(60.71% 0.0695 167.49)",
+          "oklch(72.14% 0.0695 167.49)",
+          "oklch(83.57% 0.0695 167.49)",
+          "oklch(95.00% 0.0695 167.49)"
+        ]
+      },
+      "mineral-accent-hover": {
+        "role": "primary",
+        "displayName": "mineral accent hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.0605 168.72)",
+          "oklch(26.43% 0.0605 168.72)",
+          "oklch(37.86% 0.0605 168.72)",
+          "oklch(49.29% 0.0605 168.72)",
+          "oklch(60.71% 0.0605 168.72)",
+          "oklch(72.14% 0.0605 168.72)",
+          "oklch(83.57% 0.0605 168.72)",
+          "oklch(95.00% 0.0605 168.72)"
+        ]
+      },
+      "mineral-on-accent": {
+        "role": "primary",
+        "displayName": "mineral on accent",
+        "tonalRamp": [
+          "oklch(15.00% 0.0082 157.09)",
+          "oklch(26.43% 0.0082 157.09)",
+          "oklch(37.86% 0.0082 157.09)",
+          "oklch(49.29% 0.0082 157.09)",
+          "oklch(60.71% 0.0082 157.09)",
+          "oklch(72.14% 0.0082 157.09)",
+          "oklch(83.57% 0.0082 157.09)",
+          "oklch(95.00% 0.0082 157.09)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display-home": {
+        "displayName": "Homepage display",
+        "purpose": "Homepage introduction, from styles/portfolio.css."
+      },
+      "headline-collection": {
+        "displayName": "Collection headline",
+        "purpose": "Collection page heading, from styles/portfolio.css."
+      },
+      "title-section": {
+        "displayName": "Section title",
+        "purpose": "Homepage section and contact headings, from styles/portfolio.css."
+      },
+      "body-description": {
+        "displayName": "Description",
+        "purpose": "Introductory description text, from styles/portfolio.css."
+      },
+      "label-action": {
+        "displayName": "Homepage action",
+        "purpose": "Homepage primary and CV action labels, from styles/portfolio.css."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "demo-state",
+        "value": "160ms",
+        "purpose": "Background and border transitions in styles/work-projects.css."
+      },
+      {
+        "name": "portfolio-state",
+        "value": "200ms",
+        "purpose": "Navigation, link and panel transitions in styles/portfolio.css and styles/globals.css."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "Global animation and transition duration with prefers-reduced-motion: reduce; particles are removed."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "work-compact",
+        "value": "1100px"
+      },
+      {
+        "name": "navigation-wrap",
+        "value": "900px"
+      },
+      {
+        "name": "single-column",
+        "value": "600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Homepage primary action",
+      "kind": "button",
+      "refersTo": "home-primary-action",
+      "description": "Accent action with the existing theme-bound hover and keyboard-focus treatment.",
+      "html": "<button class=\"ds-primary\">Explore work</button>",
+      "css": ".ds-primary{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:12px 20px;border-radius:8px;font-size:14px;line-height:1.5;font-weight:600;cursor:pointer;font-family:var(--font-inter,Inter,sans-serif);border:0;background:var(--accent,#bcecd0);color:var(--on-accent,#13271e)}.ds-primary:hover{background:var(--accent-hover,#d4f9e4)}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-demo-button:focus-visible,.ds-demo-secondary:focus-visible,.ds-nav a:focus-visible{outline:2px solid var(--accent,#bcecd0);outline-offset:4px;border-radius:.25rem}"
+    },
+    {
+      "name": "Homepage secondary action",
+      "kind": "button",
+      "refersTo": "home-secondary-action",
+      "description": "Bordered action for the CV and similar secondary destinations.",
+      "html": "<button class=\"ds-secondary\">View CV</button>",
+      "css": ".ds-secondary{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:12px 20px;border-radius:8px;font-size:14px;line-height:1.5;font-weight:600;cursor:pointer;font-family:var(--font-inter,Inter,sans-serif);background:transparent;color:var(--text,#edf3f8);border:1px solid var(--control-border,#b6cac56b);transition:background .2s,border-color .2s}.ds-secondary:hover{background:var(--surface,#182832f5);border-color:var(--accent,#bcecd0)}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-demo-button:focus-visible,.ds-demo-secondary:focus-visible,.ds-nav a:focus-visible{outline:2px solid var(--accent,#bcecd0);outline-offset:4px;border-radius:.25rem}"
+    },
+    {
+      "name": "Demo primary button",
+      "kind": "button",
+      "refersTo": "demo-button",
+      "description": "Compact local workflow action with disabled behavior.",
+      "html": "<button class=\"ds-demo-button\">Check address</button>",
+      "css": ".ds-demo-button{display:inline-flex;justify-content:center;align-items:center;min-height:44px;border:1px solid transparent;border-radius:6px;padding:10px 14px;font-size:12px;line-height:1.5;font-weight:600;cursor:pointer;transition:background-color 160ms;font-family:var(--font-inter,Inter,sans-serif);background:var(--accent-fill,#bcecd0);color:var(--on-accent,#13271e)}.ds-demo-button:hover:not(:disabled){background:var(--accent-hover,#d4f9e4)}.ds-demo-button:disabled{opacity:.42;cursor:not-allowed}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-demo-button:focus-visible,.ds-demo-secondary:focus-visible,.ds-nav a:focus-visible{outline:2px solid var(--accent,#bcecd0);outline-offset:4px;border-radius:.25rem}"
+    },
+    {
+      "name": "Demo secondary button",
+      "kind": "button",
+      "refersTo": "demo-button",
+      "description": "Bordered alternative action within a demo.",
+      "html": "<button class=\"ds-demo-secondary\">Edit address</button>",
+      "css": ".ds-demo-secondary{display:inline-flex;justify-content:center;align-items:center;min-height:44px;border:1px solid transparent;border-radius:6px;padding:10px 14px;font-size:12px;line-height:1.5;font-weight:600;cursor:pointer;transition:background-color 160ms;font-family:var(--font-inter,Inter,sans-serif);border-color:var(--control-border,#b6cac56b);background:var(--surface,#182832f5);color:var(--text,#edf3f8)}.ds-demo-secondary:hover:not(:disabled){background:var(--hover,#c4e0dc0c)}.ds-demo-secondary:disabled{opacity:.42;cursor:not-allowed}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-demo-button:focus-visible,.ds-demo-secondary:focus-visible,.ds-nav a:focus-visible{outline:2px solid var(--accent,#bcecd0);outline-offset:4px;border-radius:.25rem}"
+    },
+    {
+      "name": "Demo text field",
+      "kind": "input",
+      "refersTo": "demo-field",
+      "description": "Labeled native field. Its focus indication is browser-provided in the current implementation.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-example-name\">Recipient</label><input id=\"ds-example-name\" value=\"Alex Example\"></div>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:7px;margin:18px 0;color:var(--text,#edf3f8);font-family:var(--font-inter,Inter,sans-serif);}.ds-field label{font-size:12px;font-weight:550}.ds-field input{width:100%;min-width:0;min-height:44px;background:var(--surface,#182832f5);color:var(--text,#edf3f8);border:1px solid var(--control-border,#b6cac56b);border-radius:6px;padding:10px 11px;font:inherit;font-size:13px;caret-color:var(--accent,#bcecd0)}.ds-field input[readonly]{color:var(--muted,#c0cfd8);background:var(--hover,#c4e0dc0c)}.ds-field input:disabled{opacity:.6;cursor:not-allowed}"
+    },
+    {
+      "name": "Portfolio navigation",
+      "kind": "nav",
+      "description": "Current and hovered destinations share the accent and tinted background.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Example navigation\"><a href=\"#overview\">Overview</a><a href=\"#work\" aria-current=\"page\">Work</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:4px;font-family:var(--font-inter,Inter,sans-serif);}.ds-nav a{padding:12px 14px;color:var(--muted,#c0cfd8);font-size:13px;border-radius:9px;text-decoration:none;transition:background .2s,color .2s}.ds-nav a:hover,.ds-nav a[aria-current=\"page\"]{background:var(--hover,#c4e0dc0c);color:var(--accent,#bcecd0)}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-demo-button:focus-visible,.ds-demo-secondary:focus-visible,.ds-nav a:focus-visible{outline:2px solid var(--accent,#bcecd0);outline-offset:4px;border-radius:.25rem}"
+    },
+    {
+      "name": "Collection panel",
+      "kind": "card",
+      "refersTo": "collection-panel",
+      "description": "Bordered list panel with fine dividers and row hover.",
+      "html": "<div class=\"ds-panel\"><a href=\"#example-one\">Example project</a><a href=\"#example-two\">Another project</a></div>",
+      "css": ".ds-panel{border:1px solid var(--line,#c4e0dc30);border-radius:16px;overflow:hidden;background:var(--surface,#182832f5);font-family:var(--font-inter,Inter,sans-serif);}.ds-panel a{display:flex;align-items:center;padding:22px 26px;color:var(--text,#edf3f8);font-size:17px;line-height:1.5;text-decoration:none;transition:background .2s}.ds-panel a:not(:last-child){border-bottom:1px solid var(--line,#c4e0dc30)}.ds-panel a:hover{background:var(--hover,#c4e0dc0c)}.ds-panel a:focus-visible{outline:2px solid var(--accent,#bcecd0);outline-offset:4px;border-radius:.25rem}"
+    },
+    {
+      "name": "Technology label",
+      "kind": "chip",
+      "description": "Work-page technology label uses an underline separator, not a filled badge.",
+      "html": "<span class=\"ds-technology\">TypeScript</span>",
+      "css": ".ds-technology{display:inline-block;border-bottom:1px solid var(--line,#c4e0dc30);padding-bottom:6px;font-size:11px;color:var(--muted,#c0cfd8);font-family:var(--font-inter,Inter,sans-serif);}"
+    }
+  ],
+  "narrative": {
+    "overview": "The portfolio uses Inter, faceted background images and green accents. Large headings introduce the work; fine borders separate lists, controls and project details. Nearly opaque panels keep interactive examples readable against the background.\n\nThis document records the existing implementation. Mineral and Slate are the approved light and dark treatments. Their application is described below as theme-specific behavior; neither palette is a universal default for new products or unrelated interfaces.",
+    "keyCharacteristics": [
+      "Inter variable typography with compact supporting labels.",
+      "Faceted page backgrounds beneath a translucent color wash.",
+      "Bordered panels and restrained green interaction states.",
+      "Responsive layouts and reduced-motion support."
+    ],
+    "rules": [
+      {
+        "name": "Semantic theme colors",
+        "body": "Shared components use the semantic properties from styles/themes.css so the selected theme supplies their colors.",
+        "section": "colors"
+      },
+      {
+        "name": "Borders before shadows",
+        "body": "The current portfolio panels and work demos establish boundaries through borders and tonal fills; their styles do not use box shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the existing semantic CSS properties when extending this portfolio.",
+      "Do keep keyboard focus visible and preserve native control semantics.",
+      "Do retain both approved background images and theme-aware particle colors.",
+      "Do keep the work demonstrations visibly identified as fictional, local reconstructions."
+    ],
+    "donts": [
+      "Don't hard-code a single theme's text or panel colors into shared components.",
+      "Don't remove the reduced-motion behavior when changing decorative animation.",
+      "Don't turn work-page dimensions, warning colors or demo arrangements into requirements for every page."
+    ]
+  }
+}

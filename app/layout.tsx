@@ -1,73 +1,68 @@
 import { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "@/styles/globals.css";
-import ParticlesComponent from "@/components/Particles";
+import "@/styles/portfolio.css";
+import "@/styles/themes.css";
+import "@/styles/pdf-viewer.css";
+import ParticlesLoader from "@/components/ParticlesLoader";
 import StructuredData from "@/components/StructuredData";
+import SiteHeader from "@/components/SiteHeader";
+import Footer from "@/components/Footer";
+import { themeInitScript } from "@/lib/theme-init";
 
-// Optimize font loading with next/font
+// Latin subset of the upstream Inter variable font (see app/fonts/provenance.json).
 const inter = localFont({
-  src: "./fonts/Inter-variable.ttf",
+  src: "./fonts/Inter-variable-latin.woff2",
   display: "swap",
   weight: "300 700",
   variable: "--font-inter",
+});
+
+// Monospace for status and meta labels only (see DESIGN.md).
+const mono = localFont({
+  src: "./fonts/JetBrainsMono-latin.woff2",
+  display: "swap",
+  weight: "400 600",
+  variable: "--font-mono",
 });
 
 // Viewport configuration for optimal mobile display
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
   maximumScale: 5,
   userScalable: true,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+    { media: "(prefers-color-scheme: light)", color: "#edf2ed" },
+    { media: "(prefers-color-scheme: dark)", color: "#14232e" },
   ],
 };
+
+const description =
+  "Thomas Scheiber builds automation and AI tooling for internal operations at Refurbed in Vienna, including an AI pull-request reviewer. Try interactive reconstructions of his work.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://thomasscheiber.com"),
   title: {
-    default: "Thomas Scheiber - Portfolio",
+    default: "Thomas Scheiber, automation & AI tooling",
     template: "%s | Thomas Scheiber",
   },
-  description:
-    "Professional developer and IT enthusiast portfolio showcasing coding projects, certifications, and WordPress development work. Experienced in React, Next.js, TypeScript, and modern web technologies.",
-  keywords: [
-    "Web Developer",
-    "IT Specialist",
-    "Portfolio",
-    "Certifications",
-    "WordPress",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Thomas Scheiber",
-  ],
+  description,
   authors: [{ name: "Thomas Scheiber", url: "https://thomasscheiber.com" }],
   creator: "Thomas Scheiber",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://thomasscheiber.com",
-    title: "Thomas Scheiber - Web Developer Portfolio",
-    description:
-      "Professional web developer portfolio showcasing coding projects, certifications, and WordPress development work.",
-    siteName: "Thomas Scheiber Portfolio",
-    images: [
-      {
-        url: "/files/portrait.jpg",
-        width: 800,
-        height: 800,
-        alt: "Thomas Scheiber",
-      },
-    ],
+    title: "Thomas Scheiber, automation & AI tooling",
+    description,
+    siteName: "Thomas Scheiber",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Thomas Scheiber - Web Developer Portfolio",
-    description:
-      "Professional web developer portfolio showcasing coding projects and certifications.",
-    images: ["/files/portrait.jpg"],
+    title: "Thomas Scheiber, automation & AI tooling",
+    description,
   },
   icons: {
     icon: [
@@ -110,18 +105,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${mono.variable}`}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <head>
         <StructuredData />
-        {/* Preconnect to external domains for faster loading */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://www.google.com" />
-        {/* DNS prefetch for favicon service */}
-        <link rel="dns-prefetch" href="https://www.google.com" />
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className={inter.className}>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
+        <SiteHeader />
         {children}
-        <ParticlesComponent />
+        <Footer />
+        <ParticlesLoader />
       </body>
     </html>
   );

@@ -60,7 +60,7 @@ test('the production server serves all pages, exact original PDFs, assets, healt
     assert.equal(response.status,200,'original PDF is served');assert.match(response.headers['content-type'],/application\/pdf/);
     assert.equal(response.bytes.length,document.bytes);assert.equal(createHash('sha256').update(response.bytes).digest('hex'),document.sha256,'served PDF byte identity');
   }
-  for(const route of ['/certifications','/codingprojects','/otherprojects']){
+  for(const route of ['/certifications','/codingprojects','/otherprojects','/workprojects']){
     const page=await get(route);assert.equal(page.status,200);assert.match(page.headers['content-type'],/text\/html/);assert.ok(page.bytes.includes(Buffer.from('<main')));
     const localReferences=[...page.bytes.toString().matchAll(/(?:src|href)="([^"<>]+)"/g)].map(match=>match[1].replaceAll('&amp;','&')).filter(url=>url.startsWith('/_next/')||url.startsWith('/files/'));
     assert.ok(localReferences.length>2&&localReferences.length<100);
